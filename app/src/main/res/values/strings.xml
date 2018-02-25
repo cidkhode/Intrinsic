@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Intrinsic</string>
+    <string name="log_in">LOG IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="log_in_to_your_account">Log In To Your Account</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="password">Password:</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="birthdate_mm_dd_yy">Birthdate: MM/DD/YY</string>
+    <string name="answer">Answer:</string>
+    <string name="security_question">Security Question:</string>
+    <string name="name">Name:</string>
+    <string name="submit">SUBMIT</string>
+</resources>
