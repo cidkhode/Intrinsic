@@ -16,10 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"
-            android:windowSoftInputMode="stateVisible|adjustPan" />
-        <activity android:name=".SignUpActivity"
-            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ForgotPassword"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SignUpActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
     </application>
 
 </manifest>

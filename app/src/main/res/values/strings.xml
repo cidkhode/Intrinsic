@@ -12,4 +12,5 @@
     <string name="security_question">Security Question:</string>
     <string name="name">Name:</string>
     <string name="submit">SUBMIT</string>
+    <string name="forgot_your_password">Forgot Your Password?</string>
 </resources>
