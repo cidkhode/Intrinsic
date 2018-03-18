@@ -23,4 +23,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void landingPage(View view)
+    {
+        Intent intent = new Intent(LoginActivity.this, LandingActivity.class);
+        startActivity(intent);
+    }
 }

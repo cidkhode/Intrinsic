@@ -59,6 +59,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:background="@color/black"
+            android:onClick="landingPage"
             android:text="@string/submit"
             android:textColor="@color/white" />
 
