@@ -1,7 +1,9 @@
 package com.intrinsic.cid.intrinsic;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -22,5 +24,11 @@ public class SignUpActivity extends AppCompatActivity {
 
         final Button create_user = (Button) findViewById(R.id.create_user);
 
+    }
+
+    public void mainPage(View view)
+    {
+        Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }
