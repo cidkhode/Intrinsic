@@ -70,12 +70,4 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
-/*
-    public void mainPage(View view)
-    {
-        Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-        startActivity(intent);
-    }*/ //
-    //Put this in activity_sign_up.xml under create_user button attributes
-    //android:onClick="mainPage"
 }

@@ -7,6 +7,7 @@
     android:background="@drawable/login_signup_forgot"
     android:fillViewport="true"
     tools:context="com.intrinsic.cid.intrinsic.SignUpActivity">
+
     <android.widget.RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
