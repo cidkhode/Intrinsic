@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
                                 String name = jsonResponse.getString("name");
                                 String phoneNumber2 = jsonResponse.getString("phoneNumber");
 
-                                Intent intent = new Intent(LoginActivity.this, LandingActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, LandingPage.class);
                                 intent.putExtra("name", name);
                                 intent.putExtra("phoneNumber", phoneNumber2);
 

@@ -13,6 +13,19 @@
     <string name="name">Name:</string>
     <string name="submit">SUBMIT</string>
     <string name="forgot_your_password">Forgot Your Password?</string>
+    <string name="title_activity_landing_page">Welcome!</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu">MENU</string>
+    <string name="order">ORDER</string>
+    <string name="music">MUSIC</string>
+    <string name="rewards">REWARDS</string>
+    <string name="account">ACCOUNT</string>
+    <string name="contactUs">CONTACT US</string>
+    <string name="star">\u2605</string>
+    <string name="howManyStarsLeft">6 stars until next reward!</string>
+    <string name="_4_10">4 / 10</string>
     <string name="welcome">Welcome</string>
     <string name="name_view">Your Name</string>
 </resources>

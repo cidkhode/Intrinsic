@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -50,12 +51,12 @@ public class SignUpActivity extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if (success){
+                                Toast.makeText(SignUpActivity.this,"Login Successful!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 SignUpActivity.this.startActivity(intent);
                             }
                             else{
-                                AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
-                                builder.setMessage("Sign Up Unsuccessful").setNegativeButton("Retry", null).create().show();
+                                Toast.makeText(SignUpActivity.this,"Login Unsuccessful. Please Try Again!", Toast.LENGTH_LONG).show();
                             }
                         }
                         catch (JSONException e){
