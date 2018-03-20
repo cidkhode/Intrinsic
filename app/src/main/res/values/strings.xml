@@ -5,6 +5,7 @@
     <string name="log_in_to_your_account">Log In To Your Account</string>
     <string name="phone_number">Phone Number:</string>
     <string name="password">Password:</string>
+    <string name="email">Email:</string>
     <string name="forgot_password"><u>Forgot Password?</u></string>
     <string name="create_your_account">Create Your Account</string>
     <string name="birthdate_mm_dd_yy">Birthdate: MM/DD/YY</string>
@@ -13,6 +14,8 @@
     <string name="name">Name:</string>
     <string name="submit">SUBMIT</string>
     <string name="forgot_your_password">Forgot Your Password?</string>
+    <string name="email_question">What is the email on your account?</string>
+    <string name="birthdate_question">What is your birthdate?</string>
     <string name="title_activity_landing_page">Welcome!</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

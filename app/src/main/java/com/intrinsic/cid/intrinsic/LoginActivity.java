@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
@@ -26,7 +25,6 @@ public class LoginActivity extends AppCompatActivity {
 
         final EditText phone_Number = (EditText) findViewById(R.id.phone_number);
         final EditText password = (EditText) findViewById(R.id.password);
-
         final Button login_submit = (Button) findViewById(R.id.login_submit);
 
         login_submit.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
                 final String phoneNumber = phone_Number.getText().toString();
                 final String pass = password.getText().toString();
 
-                Response.Listener responseListener = new Response.Listener<String>() {
+                Response.Listener<String> responseListener = new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response) {
                         try {
@@ -67,9 +65,6 @@ public class LoginActivity extends AppCompatActivity {
                 queue.add(loginRequest);
             }
         });
-
-
-
 
         final TextView forgotPassword = (TextView) findViewById(R.id.forgot_password);
         forgotPassword.setOnClickListener(new View.OnClickListener() {
