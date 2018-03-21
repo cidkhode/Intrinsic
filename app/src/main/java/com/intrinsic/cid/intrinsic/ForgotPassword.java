@@ -23,14 +23,14 @@ public class ForgotPassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-        final EditText forgot_password_email = (EditText) findViewById(R.id.retrieve_password_through_email);
+        final EditText forgot_password_phone = (EditText) findViewById(R.id.retrieve_password_through_phone);
         final EditText forgot_password_birthdate = (EditText) findViewById(R.id.retrieve_password_through_birthdate);
         final Button retrieve_password_button = (Button) findViewById(R.id.retrieve_password_submit);
 
         retrieve_password_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String email = forgot_password_email.getText().toString();
+                final String phone = forgot_password_phone.getText().toString();
                 final String birthdate = forgot_password_birthdate.getText().toString();
                 final String step = "one";
 
@@ -43,6 +43,7 @@ public class ForgotPassword extends AppCompatActivity {
                             if (success) {
                                 String secQues = jsonResponse.getString("secQues");
                                 String secAns = jsonResponse.getString("secAns");
+                                String email = jsonResponse.getString("email");
 
                                 Toast.makeText(ForgotPassword.this,"That was correct, one more question.", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(ForgotPassword.this, ForgotPassword2.class);
@@ -59,7 +60,7 @@ public class ForgotPassword extends AppCompatActivity {
                         }
                     }
                 };
-                ForgotRequest forgotRequest = new ForgotRequest(step, email, birthdate, responseListener);
+                ForgotRequest forgotRequest = new ForgotRequest(step, phone, birthdate, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(ForgotPassword.this);
                 queue.add(forgotRequest);
             }

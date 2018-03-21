@@ -15,7 +15,7 @@ public class ForgotRequest extends StringRequest{
         params = new HashMap<>();
         if(step.equals("one")){
             params.put("step", step);
-            params.put("email", field1);
+            params.put("phoneNumber", field1);
             params.put("birthdate", field2);
         }
         else if (step.equals("two")) {
