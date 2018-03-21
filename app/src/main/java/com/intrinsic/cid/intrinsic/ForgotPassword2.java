@@ -28,17 +28,14 @@ public class ForgotPassword2 extends AppCompatActivity {
         final EditText security_answer = (EditText) findViewById(R.id.security_answer);
         Intent intent = getIntent();
         String secQ = intent.getStringExtra("secQues");
-        String secA = intent.getStringExtra("secAns");
         final String email = intent.getStringExtra("email");
 
         security_question.setText(secQ);
-        //security_answer.setText(secA);
 
         final Button get_password_button = (Button) findViewById(R.id.retrieve_password_submit);
         get_password_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final String secQues = security_question.getText().toString();
                 final String secAns = security_answer.getText().toString();
                 final String step = "two";
 
@@ -49,12 +46,8 @@ public class ForgotPassword2 extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if (success) {
-                                //String secQues = jsonResponse.getString("secQues");
-                                //String secAns = jsonResponse.getString("secAns");
                                 Toast.makeText(ForgotPassword2.this,"Please check your email for account info.", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(ForgotPassword2.this, MainActivity.class);
-                                //intent.putExtra("secQues", secQues);
-                                //intent.putExtra("secAns", secAns);
 
                                 ForgotPassword2.this.startActivity(intent);
                             } else {
