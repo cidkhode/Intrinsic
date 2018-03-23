@@ -10,7 +10,6 @@ import android.widget.Button;
 public class MusicActivity extends AppCompatActivity {
 
     Button playlist1;
-    //adapterobject for list view
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
