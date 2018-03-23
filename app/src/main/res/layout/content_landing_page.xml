@@ -85,7 +85,8 @@
             android:layout_marginTop="280dp"
             android:background="@drawable/rounded_button"
             android:text="@string/order"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:onClick="orderOTGPage"/>
 
         <Button
             android:id="@+id/music_button"
@@ -97,7 +98,8 @@
             android:layout_marginTop="32dp"
             android:background="@drawable/rounded_button"
             android:text="@string/music"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:onClick="musicPage"/>
 
         <Button
             android:id="@+id/rewards_button"
@@ -135,7 +137,8 @@
             android:layout_marginBottom="50dp"
             android:background="@drawable/rounded_button"
             android:text="@string/contactUs"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:onClick="contactUsPage"/>
 
         <TextView
             android:id="@+id/textView4"

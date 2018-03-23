@@ -37,12 +37,18 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name=".LandingActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".LandingPage"
             android:label="@string/title_activity_landing_page"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MusicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ContactUsActivity"></activity>
     </application>
 
 </manifest>
