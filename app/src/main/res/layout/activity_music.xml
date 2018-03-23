@@ -8,13 +8,11 @@
     android:background="@drawable/landing_fresh"
     tools:context="com.intrinsic.cid.intrinsic.MusicActivity">
 
-    <TextView
-        android:id="@+id/music_welcome"
+    <Button
+        android:id="@+id/playlist1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="Welcome to the Music Activity"
-        android:textSize="20sp"/>
-
+        android:text="playlist1" />
 </android.widget.RelativeLayout>
