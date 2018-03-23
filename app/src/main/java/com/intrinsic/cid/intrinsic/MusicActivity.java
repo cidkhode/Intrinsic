@@ -22,6 +22,7 @@ public class MusicActivity extends AppCompatActivity {
         playlist1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //replace link with any open.spotify playlist
                 Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://open.spotify.com/album/54OXaFd0PtGtAgauTmARkD"));
                 startActivity(spotifyIntent);
             }
