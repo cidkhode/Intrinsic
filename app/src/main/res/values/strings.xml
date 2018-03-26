@@ -33,7 +33,8 @@
     <string name="name_view">Your Name</string>
     <string name="playlist1">Shower Songs</string>
     <string name="playlist2">Intrinsic</string>
-    <string name="playlist3">windflowers</string>
+    <string name="playlist3">Windflowers</string>
     <string name="playlist4">Morning Commute</string>
-    <string name="playlist5">EDM</string>
+    <string name="playlist5">Mellow Morning</string>
+    <string name="playlist6">EDM</string>
 </resources>
