@@ -10,9 +10,60 @@
 
     <Button
         android:id="@+id/playlist1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="playlist1" />
+        android:layout_marginTop="200dp"
+        android:textSize="17sp"
+        android:textAllCaps="false"
+        android:onClick="openPlaylist1"
+        android:text="@string/playlist1" />
+
+    <Button
+        android:id="@+id/playlist2"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/playlist1"
+        android:layout_marginTop="17dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:textAllCaps="false"
+        android:onClick="openPlaylist2"
+        android:text="@string/playlist2" />
+
+    <Button
+        android:id="@+id/playlist3"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/playlist2"
+        android:layout_marginTop="17dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:textAllCaps="false"
+        android:onClick="openPlaylist3"
+        android:text="@string/playlist3" />
+
+    <Button
+        android:id="@+id/playlist4"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/playlist3"
+        android:layout_marginTop="17dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:textAllCaps="false"
+        android:onClick="openPlaylist4"
+        android:text="@string/playlist4" />
+
+    <Button
+        android:id="@+id/playlist5"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/playlist4"
+        android:layout_marginTop="17dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:textAllCaps="false"
+        android:onClick="openPlaylist5"
+        android:text="@string/playlist5" />
 </android.widget.RelativeLayout>
