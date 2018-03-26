@@ -27,7 +27,7 @@
 
         <EditText
             android:id="@+id/create_phone_number"
-            android:layout_width="250dp"
+            android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
@@ -42,7 +42,7 @@
 
         <EditText
             android:id="@+id/create_password"
-            android:layout_width="250dp"
+            android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_below="@+id/create_phone_number"
             android:layout_centerHorizontal="true"
@@ -57,7 +57,7 @@
 
         <EditText
             android:id="@+id/create_name"
-            android:layout_width="250dp"
+            android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_below="@+id/create_password"
             android:layout_centerHorizontal="true"
@@ -72,7 +72,7 @@
 
         <EditText
             android:id="@+id/create_question"
-            android:layout_width="250dp"
+            android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_below="@+id/create_name"
             android:layout_centerHorizontal="true"
@@ -87,7 +87,7 @@
 
         <EditText
             android:id="@+id/create_answer"
-            android:layout_width="250dp"
+            android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_below="@+id/create_question"
             android:layout_centerHorizontal="true"
@@ -102,7 +102,7 @@
 
         <EditText
             android:id="@+id/create_birthday"
-            android:layout_width="250dp"
+            android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_below="@+id/create_answer"
             android:layout_centerHorizontal="true"
@@ -117,7 +117,7 @@
 
         <EditText
             android:id="@+id/create_email"
-            android:layout_width="250dp"
+            android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_below="@+id/create_birthday"
             android:layout_centerHorizontal="true"

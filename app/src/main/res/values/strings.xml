@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Intrinsic Cafe App</string>
+    <string name="app_name">Intrinsic Cafe</string>
     <string name="log_in">LOG IN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="log_in_to_your_account">Log In To Your Account</string>
-    <string name="phone_number">Phone Number: XXXXXXXXXX</string>
+    <string name="phone_number">Phone Number: ##########</string>
     <string name="password">Password:</string>
     <string name="email">Email:</string>
     <string name="forgot_password"><u>Forgot Password?</u></string>
