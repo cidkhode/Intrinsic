@@ -53,7 +53,9 @@ public class ForgotPassword extends AppCompatActivity {
 
                                 ForgotPassword.this.startActivity(intent);
                             } else {
-                                Toast.makeText(ForgotPassword.this,"Incorrect, please try again.", Toast.LENGTH_LONG).show();
+                                AlertDialog.Builder builder = new AlertDialog.Builder(ForgotPassword.this);
+                                builder.setMessage("Incorrect, please try again.").setNegativeButton("Retry", null).create().show();
+                                //Toast.makeText(ForgotPassword.this,"Incorrect, please try again.", Toast.LENGTH_LONG).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();

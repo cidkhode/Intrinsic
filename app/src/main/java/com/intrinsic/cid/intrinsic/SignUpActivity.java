@@ -51,12 +51,15 @@ public class SignUpActivity extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if (success){
-                                Toast.makeText(SignUpActivity.this,"Login Successful!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this,"Signup Successful!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 SignUpActivity.this.startActivity(intent);
                             }
                             else{
-                                Toast.makeText(SignUpActivity.this,"Login Unsuccessful. Please Try Again!", Toast.LENGTH_LONG).show();
+                                String warnings = jsonResponse.getString("warnings");
+                                AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
+                                builder.setMessage(warnings).setNegativeButton("Retry", null).create().show();
+                                //Toast.makeText(SignUpActivity.this,"Signup Unsuccessful. Please Try Again!", Toast.LENGTH_LONG).show();
                             }
                         }
                         catch (JSONException e){

@@ -126,15 +126,15 @@ public class LandingPage extends AppCompatActivity
         } else if (id == R.id.menu_option) {
 
         } else if (id == R.id.order_option) {
-
+            startActivity(new Intent(LandingPage.this, OrderActivity.class));
         } else if (id == R.id.rewards_option) {
 
         } else if (id == R.id.music_option) {
-
+            startActivity(new Intent(LandingPage.this, MusicActivity.class));
         } else if (id == R.id.specials_option) {
 
         } else if (id == R.id.contact_us_option) {
-
+            startActivity(new Intent(LandingPage.this, ContactUsActivity.class));
         } else if (id == R.id.my_account_option) {
 
         } else if (id == R.id.logout_option) {
