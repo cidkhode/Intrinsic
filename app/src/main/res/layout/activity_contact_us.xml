@@ -5,15 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/landing_fresh"
+    android:background="@drawable/contact"
     tools:context="com.intrinsic.cid.intrinsic.ContactUsActivity">
 
-    <TextView
-        android:id="@+id/contact_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Welcome to the Contact Us Activity"
-        android:textSize="20sp"/>
 </android.widget.RelativeLayout>
