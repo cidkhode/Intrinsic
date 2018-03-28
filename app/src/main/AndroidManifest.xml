@@ -52,6 +52,10 @@
             android:name=".ContactUsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SpotifyActivity"
+            android:label="@string/title_activity_spotify"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

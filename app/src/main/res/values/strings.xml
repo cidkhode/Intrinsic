@@ -37,4 +37,5 @@
     <string name="playlist4">Morning Commute</string>
     <string name="playlist5">Mellow Morning</string>
     <string name="playlist6">EDM</string>
+    <string name="title_activity_spotify">Our Playlists</string>
 </resources>

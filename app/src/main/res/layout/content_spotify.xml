@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:background="@drawable/landing_fresh"
+    android:fillViewport="true"
+    tools:context="com.intrinsic.cid.intrinsic.SpotifyActivity">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:fillViewport="true"
+        android:id="@+id/horizontalScrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <ImageView
+                    android:id="@+id/playlist_shower"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/playlist_shower" />
+
+                <Button
+                    android:id="@+id/playlist1"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/playlist_shower"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="36dp"
+                    android:onClick="openPlaylist1"
+                    android:text="@string/playlist1"
+                    android:textAllCaps="false"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <ImageView
+                    android:id="@+id/playlist_intrinsic"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/playlist_intrinsic" />
+
+                <Button
+                    android:id="@+id/playlist2"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/playlist_intrinsic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginTop="36dp"
+                    android:onClick="openPlaylist2"
+                    android:text="@string/playlist2"
+                    android:textAllCaps="false"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <ImageView
+                    android:id="@+id/playlist_windflowers"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/playlist_windflowers" />
+
+                <Button
+                    android:id="@+id/playlist3"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/playlist_windflowers"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginTop="36dp"
+                    android:textSize="17sp"
+                    android:textAllCaps="false"
+                    android:onClick="openPlaylist3"
+                    android:text="@string/playlist3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <ImageView
+                    android:id="@+id/playlist_commute"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/playlist_commute" />
+
+                <Button
+                    android:id="@+id/playlist4"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/playlist_commute"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginTop="36dp"
+                    android:textSize="17sp"
+                    android:textAllCaps="false"
+                    android:onClick="openPlaylist4"
+                    android:text="@string/playlist4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <ImageView
+                    android:id="@+id/playlist_mellow"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/playlist_mellow" />
+
+                <Button
+                    android:id="@+id/playlist5"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/playlist_mellow"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginTop="36dp"
+                    android:textSize="17sp"
+                    android:textAllCaps="false"
+                    android:onClick="openPlaylist5"
+                    android:text="@string/playlist5" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <ImageView
+                    android:id="@+id/playlist_edm"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/playlist_edm" />
+
+                <Button
+                    android:id="@+id/playlist6"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/playlist_edm"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginTop="36dp"
+                    android:textSize="17sp"
+                    android:textAllCaps="false"
+                    android:onClick="openPlaylist6"
+                    android:text="@string/playlist6" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</android.widget.RelativeLayout>

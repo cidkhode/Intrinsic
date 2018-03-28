@@ -16,6 +16,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <ImageView
+                android:id="@+id/playlist_shower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:src="@drawable/playlist_shower" />
+
             <Button
                 android:id="@+id/playlist1"
                 android:layout_width="300dp"
@@ -26,12 +33,13 @@
                 android:textAllCaps="false"
                 android:onClick="openPlaylist1"
                 android:text="@string/playlist1" />
+
             <ImageView
-                android:id="@+id/playlist_shower"
+                android:id="@+id/playlist_intrinsic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="200dp"
-                android:src="@drawable/playlist_shower" />
+                android:src="@drawable/playlist_intrinsic" />
 
             <Button
                 android:id="@+id/playlist2"
@@ -43,13 +51,13 @@
                 android:textAllCaps="false"
                 android:onClick="openPlaylist2"
                 android:text="@string/playlist2" />
+
             <ImageView
-                android:id="@+id/playlist_intrinsic"
+                android:id="@+id/playlist_windflowers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="200dp"
-                android:src="@drawable/playlist_intrinsic" />
-
+                android:src="@drawable/playlist_windflowers" />
             <Button
                 android:id="@+id/playlist3"
                 android:layout_width="300dp"
@@ -60,13 +68,13 @@
                 android:textAllCaps="false"
                 android:onClick="openPlaylist3"
                 android:text="@string/playlist3" />
+
             <ImageView
-                android:id="@+id/playlist_windflowers"
+                android:id="@+id/playlist_commute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="200dp"
-                android:src="@drawable/playlist_windflowers" />
-
+                android:src="@drawable/playlist_commute" />
             <Button
                 android:id="@+id/playlist4"
                 android:layout_width="300dp"
@@ -77,13 +85,13 @@
                 android:textAllCaps="false"
                 android:onClick="openPlaylist4"
                 android:text="@string/playlist4" />
+
             <ImageView
-                android:id="@+id/playlist_commute"
+                android:id="@+id/playlist_mellow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="200dp"
-                android:src="@drawable/playlist_commute" />
-
+                android:src="@drawable/playlist_mellow" />
             <Button
                 android:id="@+id/playlist5"
                 android:layout_width="300dp"
@@ -94,13 +102,19 @@
                 android:textAllCaps="false"
                 android:onClick="openPlaylist5"
                 android:text="@string/playlist5" />
+
+
+
+
+
+
+
             <ImageView
-                android:id="@+id/playlist_mellow"
+                android:id="@+id/playlist_edm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="200dp"
-                android:src="@drawable/playlist_mellow" />
-
+                android:src="@drawable/playlist_edm" />
             <Button
                 android:id="@+id/playlist6"
                 android:layout_width="300dp"
@@ -111,12 +125,7 @@
                 android:textAllCaps="false"
                 android:onClick="openPlaylist6"
                 android:text="@string/playlist6" />
-            <ImageView
-                android:id="@+id/playlist_edm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="200dp"
-                android:src="@drawable/playlist_edm" />
+
         </LinearLayout>
     </HorizontalScrollView>
 </android.widget.RelativeLayout>
