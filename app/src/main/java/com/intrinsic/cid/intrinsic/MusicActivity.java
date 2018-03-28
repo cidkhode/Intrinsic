@@ -35,6 +35,11 @@ public class MusicActivity extends AppCompatActivity {
     }
     public void openPlaylist5(View view)
     {
+        Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX2MyUCsl25eb"));
+        startActivity(spotifyIntent);
+    }
+    public void openPlaylist6(View view)
+    {
         Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://open.spotify.com/user/intrinsiccafe/playlist/3ktL1Q2N0rsntPJpfYGuSB?si=kcefN64CRr26gTXXa2xudQ"));
         startActivity(spotifyIntent);
     }

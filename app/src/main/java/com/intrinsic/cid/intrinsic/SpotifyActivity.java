@@ -44,13 +44,6 @@ public class SpotifyActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.spotify, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -84,7 +77,7 @@ public class SpotifyActivity extends AppCompatActivity
         } else if (id == R.id.specials_option) {
 
         } else if (id == R.id.contact_us_option) {
-            startActivity(new Intent(SpotifyActivity.this, ContactUsActivity.class));
+            startActivity(new Intent(SpotifyActivity.this, ContactActivity.class));
         } else if (id == R.id.my_account_option) {
 
         } else if (id == R.id.logout_option) {

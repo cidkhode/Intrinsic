@@ -55,6 +55,10 @@
         <activity
             android:name=".SpotifyActivity"
             android:label="@string/title_activity_spotify"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ContactActivity"
+            android:label="@string/title_activity_contact"
             android:theme="@style/AppTheme"></activity>
     </application>
 
