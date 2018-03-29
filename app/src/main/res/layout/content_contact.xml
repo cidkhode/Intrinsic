@@ -10,4 +10,13 @@
     android:fillViewport="true"
     tools:context="com.intrinsic.cid.intrinsic.ContactActivity">
 
+    <TextView
+        android:id="@+id/IntrinsicInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="145dp"
+        android:ems="10"
+        android:background="@color/colorBasic" />
 </android.widget.RelativeLayout>

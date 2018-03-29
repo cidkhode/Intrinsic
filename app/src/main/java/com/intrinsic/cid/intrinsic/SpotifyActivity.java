@@ -65,9 +65,9 @@ public class SpotifyActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home_option) {
-            // Handle the camera action
+            startActivity(new Intent(SpotifyActivity.this, LandingPage.class));
         } else if (id == R.id.menu_option) {
-
+            startActivity(new Intent(SpotifyActivity.this, MenuActivity.class));
         } else if (id == R.id.order_option) {
             startActivity(new Intent(SpotifyActivity.this, OrderActivity.class));
         } else if (id == R.id.rewards_option) {

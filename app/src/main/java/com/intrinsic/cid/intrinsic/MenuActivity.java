@@ -13,23 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
 
-public class LandingPage extends AppCompatActivity
+public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_landing_page);
-
-        final TextView user_name_display = (TextView) findViewById(R.id.user_name_display);
-        Intent intent = getIntent();
-        final String name = intent.getStringExtra("name");
-        final String phoneNumber = intent.getStringExtra("phoneNumber");
-
-        user_name_display.setText("Welcome " + name + "!");
+        setContentView(R.layout.activity_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -41,59 +32,6 @@ public class LandingPage extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
-        /*
-        final Button order_otg = (Button) findViewById(R.id.order_button);
-        order_otg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LandingPage.this, OrderActivity.class);
-                intent.putExtra("phoneNumber", phoneNumber);
-                intent.putExtra("name", name);
-                LandingPage.this.startActivity(intent);
-            }
-        });
-        final Button musicBut = (Button) findViewById(R.id.music_button);
-        order_otg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LandingPage.this, MusicActivity.class);
-                LandingPage.this.startActivity(intent);
-            }
-        });
-        final Button contactBut = (Button) findViewById(R.id.contact_us_button);
-        order_otg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LandingPage.this, ContactUsActivity.class);
-                LandingPage.this.startActivity(intent);
-            }
-        });*/
-    }
-
-    public void menuPage(View view)
-    {
-        Intent intent = new Intent(LandingPage.this, MenuActivity.class);
-        startActivity(intent);
-    }
-
-    public void musicPage(View view)
-    {
-        Intent intent = new Intent(LandingPage.this, SpotifyActivity.class);
-        startActivity(intent);
-    }
-
-    public void contactUsPage(View view)
-    {
-        Intent intent = new Intent(LandingPage.this, ContactActivity.class);
-        startActivity(intent);
-    }
-
-    public void orderOTGPage(View view)
-    { //Here I need to pass in the phone number...
-        Intent intent = new Intent(LandingPage.this, OrderActivity.class);
-        startActivity(intent);
     }
 
     @Override
@@ -128,23 +66,23 @@ public class LandingPage extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home_option) {
-            //do nothing
+            startActivity(new Intent(MenuActivity.this, LandingPage.class));
         } else if (id == R.id.menu_option) {
-            startActivity(new Intent(LandingPage.this, MenuActivity.class));
+            //do nothing
         } else if (id == R.id.order_option) {
-            startActivity(new Intent(LandingPage.this, OrderActivity.class));
+            startActivity(new Intent(MenuActivity.this, OrderActivity.class));
         } else if (id == R.id.rewards_option) {
 
         } else if (id == R.id.music_option) {
-            startActivity(new Intent(LandingPage.this, SpotifyActivity.class));
+            startActivity(new Intent(MenuActivity.this, SpotifyActivity.class));
         } else if (id == R.id.specials_option) {
 
         } else if (id == R.id.contact_us_option) {
-            startActivity(new Intent(LandingPage.this, ContactActivity.class));
+            startActivity(new Intent(MenuActivity.this, ContactActivity.class));
         } else if (id == R.id.my_account_option) {
 
         } else if (id == R.id.logout_option) {
-            startActivity(new Intent(LandingPage.this, MainActivity.class));
+            startActivity(new Intent(MenuActivity.this, MainActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

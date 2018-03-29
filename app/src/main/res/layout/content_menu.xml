@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:background="@drawable/landing_fresh"
+    android:fillViewport="true"
+    tools:context="com.intrinsic.cid.intrinsic.MenuActivity">
+
+    <Button
+        android:id="@+id/bubble_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Bubble Teas"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/brewed_button"
+        android:text="Brewed Teas"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/bubble_button"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/smoothies_button"
+        android:text="Smoothies/Slushies"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/brewed_button"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/milkshake_button"
+        android:text="Milkshakes"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/smoothies_button"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/coffee_button"
+        android:text="Coffee/Other Drinks"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/milkshake_button"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+</android.widget.RelativeLayout>
