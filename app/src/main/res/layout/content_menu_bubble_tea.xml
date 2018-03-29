@@ -6,16 +6,15 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_marginTop="?android:attr/actionBarSize"
-    android:background="@drawable/landing_fresh"
+    android:background="@drawable/menu_bubble"
     android:fillViewport="true"
-    tools:context="com.intrinsic.cid.intrinsic.MenuActivity">
+    tools:context="com.intrinsic.cid.intrinsic.MenuBubbleTeaActivity">
 
     <Button
         android:id="@+id/bubble_button"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:text="Bubble Teas"
-        android:onClick="bubblePage"
         android:textAlignment="center"
         android:textSize="20sp"
         android:layout_marginTop="40dp"
@@ -23,7 +22,6 @@
     <Button
         android:id="@+id/brewed_button"
         android:text="Brewed Teas"
-        android:onClick="brewedPage"
         android:textAlignment="center"
         android:textSize="20sp"
         android:layout_width="match_parent"
@@ -34,7 +32,6 @@
     <Button
         android:id="@+id/smoothies_button"
         android:text="Smoothies/Slushies"
-        android:onClick="smoothiePage"
         android:textAlignment="center"
         android:textSize="20sp"
         android:layout_width="match_parent"
@@ -45,7 +42,6 @@
     <Button
         android:id="@+id/milkshake_button"
         android:text="Milkshakes"
-        android:onClick="milkshakePage"
         android:textAlignment="center"
         android:textSize="20sp"
         android:layout_width="match_parent"
@@ -56,7 +52,6 @@
     <Button
         android:id="@+id/coffee_button"
         android:text="Coffee/Other Drinks"
-        android:onClick="coffeePage"
         android:textAlignment="center"
         android:textSize="20sp"
         android:layout_width="match_parent"

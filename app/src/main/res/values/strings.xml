@@ -44,4 +44,9 @@
     <string name="int_web">www.intrinsiccafe.com</string>
     <string name="int_email">intrinsiccafe@gmail.com</string>
     <string name="title_activity_menu">Our Menu</string>
+    <string name="title_activity_bubble_tea">Bubble Teas</string>
+    <string name="title_activity_brewed_tea">Brewed Teas</string>
+    <string name="title_activity_smoothie">Smoothie/Slushies</string>
+    <string name="title_activity_menu_milkshake">Milkshakes</string>
+    <string name="title_activity_menu_coffee">Coffee/Other Drinks</string>
 </resources>

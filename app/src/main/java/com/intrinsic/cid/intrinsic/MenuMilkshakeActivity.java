@@ -2,6 +2,8 @@ package com.intrinsic.cid.intrinsic;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,15 +11,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 
-public class MenuActivity extends AppCompatActivity
+public class MenuMilkshakeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_menu_milkshake);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -63,57 +66,27 @@ public class MenuActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home_option) {
-            startActivity(new Intent(MenuActivity.this, LandingPage.class));
+            startActivity(new Intent(MenuMilkshakeActivity.this, LandingPage.class));
         } else if (id == R.id.menu_option) {
-            //do nothing
+            startActivity(new Intent(MenuMilkshakeActivity.this, MenuActivity.class));
         } else if (id == R.id.order_option) {
-            startActivity(new Intent(MenuActivity.this, OrderActivity.class));
+            startActivity(new Intent(MenuMilkshakeActivity.this, OrderActivity.class));
         } else if (id == R.id.rewards_option) {
 
         } else if (id == R.id.music_option) {
-            startActivity(new Intent(MenuActivity.this, SpotifyActivity.class));
+            startActivity(new Intent(MenuMilkshakeActivity.this, SpotifyActivity.class));
         } else if (id == R.id.specials_option) {
 
         } else if (id == R.id.contact_us_option) {
-            startActivity(new Intent(MenuActivity.this, ContactActivity.class));
+            startActivity(new Intent(MenuMilkshakeActivity.this, ContactActivity.class));
         } else if (id == R.id.my_account_option) {
 
         } else if (id == R.id.logout_option) {
-            startActivity(new Intent(MenuActivity.this, MainActivity.class));
+            startActivity(new Intent(MenuMilkshakeActivity.this, MainActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public void bubblePage(View view)
-    {
-        Intent intent = new Intent(MenuActivity.this, MenuBubbleTeaActivity.class);
-        startActivity(intent);
-    }
-
-    public void brewedPage(View view)
-    {
-        Intent intent = new Intent(MenuActivity.this, MenuBrewedTeaActivity.class);
-        startActivity(intent);
-    }
-
-    public void smoothiePage(View view)
-    {
-        Intent intent = new Intent(MenuActivity.this, MenuSmoothieActivity.class);
-        startActivity(intent);
-    }
-
-    public void milkshakePage(View view)
-    {
-        Intent intent = new Intent(MenuActivity.this, MenuMilkshakeActivity.class);
-        startActivity(intent);
-    }
-
-    public void coffeePage(View view)
-    {
-        Intent intent = new Intent(MenuActivity.this, MenuCoffeeActivity.class);
-        startActivity(intent);
     }
 }
