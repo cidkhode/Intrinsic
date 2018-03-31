@@ -34,7 +34,7 @@
                     android:layout_height="300dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/playlist_shower" />
 
                 <Button
@@ -43,11 +43,29 @@
                     android:layout_height="80dp"
                     android:layout_below="@+id/playlist_shower"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="30dp"
                     android:onClick="openPlaylist1"
                     android:text="@string/playlist1"
                     android:textAllCaps="false"
                     android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:text="Scroll Right"
+                    android:layout_below="@+id/playlist1"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:id="@+id/right_arrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/playlist1"
+                    android:layout_toEndOf="@+id/message"
+                    android:layout_toRightOf="@+id/message"
+                    android:contentDescription="right arrow"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
             </RelativeLayout>
 
@@ -63,7 +81,7 @@
                     android:layout_height="300dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/playlist_intrinsic" />
 
                 <Button
@@ -73,7 +91,7 @@
                     android:layout_below="@+id/playlist_intrinsic"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="100dp"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="30dp"
                     android:onClick="openPlaylist2"
                     android:text="@string/playlist2"
                     android:textAllCaps="false"
@@ -92,7 +110,7 @@
                     android:layout_height="300dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/playlist_windflowers" />
 
                 <Button
@@ -102,7 +120,7 @@
                     android:layout_below="@+id/playlist_windflowers"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="100dp"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="30dp"
                     android:textSize="17sp"
                     android:textAllCaps="false"
                     android:onClick="openPlaylist3"
@@ -121,7 +139,7 @@
                     android:layout_height="300dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/playlist_commute" />
 
                 <Button
@@ -131,7 +149,7 @@
                     android:layout_below="@+id/playlist_commute"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="100dp"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="30dp"
                     android:textSize="17sp"
                     android:textAllCaps="false"
                     android:onClick="openPlaylist4"
@@ -150,7 +168,7 @@
                     android:layout_height="300dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/playlist_mellow" />
 
                 <Button
@@ -160,7 +178,7 @@
                     android:layout_below="@+id/playlist_mellow"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="100dp"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="30dp"
                     android:textSize="17sp"
                     android:textAllCaps="false"
                     android:onClick="openPlaylist5"
@@ -179,7 +197,7 @@
                     android:layout_height="300dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/playlist_edm" />
 
                 <Button
@@ -189,7 +207,7 @@
                     android:layout_below="@+id/playlist_edm"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="100dp"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="30dp"
                     android:textSize="17sp"
                     android:textAllCaps="false"
                     android:onClick="openPlaylist6"
