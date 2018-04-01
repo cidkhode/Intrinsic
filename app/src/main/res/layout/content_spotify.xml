@@ -59,8 +59,8 @@
 
                 <ImageView
                     android:id="@+id/right_arrow"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
                     android:layout_below="@+id/playlist1"
                     android:layout_toRightOf="@+id/playlist1"
                     android:contentDescription="right arrow"
