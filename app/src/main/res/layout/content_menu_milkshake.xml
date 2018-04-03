@@ -1,68 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_marginTop="?android:attr/actionBarSize"
     android:background="@drawable/menu_milkshake"
     android:fillViewport="true"
     tools:context="com.intrinsic.cid.intrinsic.MenuMilkshakeActivity">
 
-    <Button
-        android:id="@+id/button1"
-        android:clickable="false"
+    <android.widget.RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="Almond"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:id="@+id/button2"
-        android:clickable="false"
-        android:text="Banana"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:id="@+id/button3"
-        android:clickable="false"
-        android:text="Blueberry"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_below="@+id/button2"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true" />
-    <Button
-        android:id="@+id/button4"
-        android:clickable="false"
-        android:text="Chocolate"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_below="@+id/button3"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true" />
-    <Button
-        android:id="@+id/button5"
-        android:clickable="false"
-        android:text="Coconut"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_below="@+id/button4"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="match_parent" >
 
-</android.widget.RelativeLayout>
+        <Button
+            android:id="@+id/button1"
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Almond"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/button2"
+            android:clickable="false"
+            android:text="Banana"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/button1"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/button3"
+            android:clickable="false"
+            android:text="Blueberry"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/button2"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/button4"
+            android:clickable="false"
+            android:text="Chocolate"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/button3"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/button5"
+            android:clickable="false"
+            android:text="Coconut"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/button4"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true" />
+
+    </android.widget.RelativeLayout>
+</ScrollView>
