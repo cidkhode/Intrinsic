@@ -30,6 +30,7 @@ public class SpotifyActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.getMenu().getItem(4).setChecked(true);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -64,9 +65,7 @@ public class SpotifyActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.home_option) {
-            startActivity(new Intent(SpotifyActivity.this, LandingPage.class));
-        } else if (id == R.id.menu_option) {
+        if (id == R.id.menu_option) {
             startActivity(new Intent(SpotifyActivity.this, MenuActivity.class));
         } else if (id == R.id.order_option) {
             startActivity(new Intent(SpotifyActivity.this, OrderActivity.class));
@@ -78,10 +77,10 @@ public class SpotifyActivity extends AppCompatActivity
 
         } else if (id == R.id.contact_us_option) {
             startActivity(new Intent(SpotifyActivity.this, ContactActivity.class));
-        } else if (id == R.id.my_account_option) {
-
         } else if (id == R.id.logout_option) {
             startActivity(new Intent(SpotifyActivity.this, MainActivity.class));
+        } else if (id == R.id.my_account_option) {
+            startActivity(new Intent(SpotifyActivity.this, LandingPage.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

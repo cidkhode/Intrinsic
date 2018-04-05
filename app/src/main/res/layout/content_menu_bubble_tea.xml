@@ -14,59 +14,104 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
+        <TextView
+            android:id="@+id/bubble_tea_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="BUBBLE TEAS"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+        <TextView
+            android:id="@+id/bubble_tea_submenu_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bubble_tea_menu_text"
+            android:layout_centerHorizontal="true"
+            android:text="TEAS (CREAMY)"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/small_large_prices_bubble_teas_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bubble_tea_submenu_text"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toLeftOf="@+id/bubble_tea_submenu_text"
+            android:layout_toStartOf="@+id/bubble_tea_submenu_text"
+            android:text="SMALL - $2.00\nLARGE - $3.00"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/not_vegan_tex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/small_large_prices_bubble_teas_text"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:text="NOT VEGAN"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/almond_bubble_tea_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="Almond"
+            android:layout_below="@+id/small_large_prices_bubble_teas_text"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/banana_bubble_tea_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Banana"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button1"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/almond_bubble_tea_button"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/blueberry_bubble_tea_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Blueberry"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button2"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/banana_bubble_tea_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/chocolate_bubble_tea_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Chocolate"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button3"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/blueberry_bubble_tea_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/coconut_bubble_tea_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Coconut"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button4"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/chocolate_bubble_tea_button"
+            android:layout_marginBottom="40dp"
             android:layout_centerHorizontal="true" />
+
     </android.widget.RelativeLayout>
 </ScrollView>

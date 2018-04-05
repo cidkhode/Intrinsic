@@ -125,7 +125,7 @@
             android:background="@color/colorBasic"
             android:layout_marginTop="10dp"
             android:inputType="textEmailAddress"
-            android:hint="Email:"
+            android:hint="@string/email"
             android:paddingHorizontal="10dp"
             android:textColorHint="@color/black"
             android:textColor="@color/black" />

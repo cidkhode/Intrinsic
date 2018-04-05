@@ -5,9 +5,9 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/home_option"
-            android:icon="@drawable/ic_home_black_24dp"
-            android:title="Home" />
+            android:id="@+id/my_account_option"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="My Account" />
         <item
             android:id="@+id/menu_option"
             android:icon="@drawable/ic_restaurant_menu_black_24dp"
@@ -32,10 +32,6 @@
             android:id="@+id/contact_us_option"
             android:icon="@drawable/ic_message_black_24dp"
             android:title="Contact Us" />
-        <item
-            android:id="@+id/my_account_option"
-            android:icon="@drawable/ic_person_black_24dp"
-            android:title="My Account" />
     </group>
 
     <item android:title="Other">

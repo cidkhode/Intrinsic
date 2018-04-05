@@ -14,59 +14,92 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
+        <TextView
+            android:id="@+id/brewed_tea_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="BREWED TEAS"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/brewed_tea_submenu_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/brewed_tea_menu_text"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/small_large_prices_brewed_teas_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/brewed_tea_submenu_text"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:text="SMALL - $2.00\nLARGE - $3.00"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/english_breakfast_brewed_tea_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:layout_below="@id/small_large_prices_brewed_teas_text"
             android:text="English Breakfast"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/wild_rasberry_hibiscus_brewed_tea_button"
             android:clickable="false"
+            android:background="@color/colorBasic"
             android:text="Wild Raspberry Hibiscus"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button1"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/english_breakfast_brewed_tea_button"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/pomegranate_raspberry_brewed_tea_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Pomegranate Raspberry"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button2"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/wild_rasberry_hibiscus_brewed_tea_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/wild_rasberry_brewed_tea_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Wild Raspberry"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button3"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/pomegranate_raspberry_brewed_tea_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/chai_spice_brewed_tea_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Chai Spice"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button4"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/wild_rasberry_brewed_tea_button"
+            android:layout_marginBottom="40dp"
             android:layout_centerHorizontal="true" />
 
     </android.widget.RelativeLayout>

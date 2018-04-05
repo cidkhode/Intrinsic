@@ -16,53 +16,65 @@
         android:layout_marginTop="?android:attr/actionBarSize" >
 
         <Button
-            android:id="@+id/bubble_button"
+            android:id="@+id/yatte_coffee_button"
+            android:background="@color/colorBasic"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:text="Bubble Teas"
+            android:text="Yatte"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/brewed_button"
-            android:text="Brewed Teas"
+            android:id="@+id/cappuccino_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="Cappuccino"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/bubble_button"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/yatte_coffee_button"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/smoothies_button"
-            android:text="Smoothies/Slushies"
+            android:id="@+id/caramel_macchiato_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="Caramel Macchiato"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/brewed_button"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/cappuccino_coffee_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/milkshake_button"
-            android:text="Milkshakes"
+            android:id="@+id/mocha_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="Mocha"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/smoothies_button"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/caramel_macchiato_coffee_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/coffee_button"
-            android:text="Coffee/Other Drinks"
+            android:id="@+id/white_mocha_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="White Mocha"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/milkshake_button"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/mocha_coffee_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/black_and_white_mocha_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="Black + White Mocha"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/white_mocha_coffee_button"
+            android:layout_marginBottom="40dp"
             android:layout_centerHorizontal="true" />
     </android.widget.RelativeLayout>
 </ScrollView>

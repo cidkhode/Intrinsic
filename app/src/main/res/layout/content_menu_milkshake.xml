@@ -14,59 +14,100 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
+        <TextView
+            android:id="@+id/milkshake_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="MILKSHAKES"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+        <TextView
+            android:id="@+id/milkshake_submenu_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/milkshake_menu_text"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/small_large_prices_milkshake_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/milkshake_submenu_text"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toLeftOf="@+id/milkshake_submenu_text"
+            android:layout_toStartOf="@+id/milkshake_submenu_text"
+            android:text="SMALL - $2.00\nLARGE - $3.00"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/almond_milkshake_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="Almond"
             android:textAlignment="center"
+            android:layout_below="@id/small_large_prices_milkshake_text"
             android:textSize="20sp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/banana_milkshake_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Banana"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button1"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/almond_milkshake_button"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/blueberry_milkshake_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Blueberry"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button2"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/banana_milkshake_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/chocolate_milkshake_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Chocolate"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button3"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/blueberry_milkshake_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/coconut_milkshake_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Coconut"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button4"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/chocolate_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/green_tea_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Green Tea"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/coconut_milkshake_button"
             android:layout_centerHorizontal="true" />
 
     </android.widget.RelativeLayout>

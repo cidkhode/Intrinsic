@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="?android:attr/actionBarSize"
-    android:background="@drawable/landing_fresh"
+    android:background="@drawable/menu_page"
     android:fillViewport="true"
     tools:context="com.intrinsic.cid.intrinsic.MenuActivity">
 
@@ -14,18 +14,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="MENU"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+
         <Button
             android:id="@+id/bubble_button"
+            android:background="@color/colorBasic"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="Bubble Teas"
             android:onClick="bubblePage"
             android:textAlignment="center"
             android:textSize="20sp"
+            android:layout_below="@+id/menu_text"
             android:layout_marginTop="40dp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true" />
         <Button
             android:id="@+id/brewed_button"
+            android:background="@color/colorBasic"
             android:text="Brewed Teas"
             android:onClick="brewedPage"
             android:textAlignment="center"
@@ -37,6 +49,7 @@
             android:layout_centerHorizontal="true"/>
         <Button
             android:id="@+id/smoothies_button"
+            android:background="@color/colorBasic"
             android:text="Smoothies/Slushies"
             android:onClick="smoothiePage"
             android:textAlignment="center"
@@ -48,6 +61,7 @@
             android:layout_centerHorizontal="true" />
         <Button
             android:id="@+id/milkshake_button"
+            android:background="@color/colorBasic"
             android:text="Milkshakes"
             android:onClick="milkshakePage"
             android:textAlignment="center"
@@ -59,6 +73,7 @@
             android:layout_centerHorizontal="true" />
         <Button
             android:id="@+id/coffee_button"
+            android:background="@color/colorBasic"
             android:text="Coffee/Other Drinks"
             android:onClick="coffeePage"
             android:textAlignment="center"
@@ -67,6 +82,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/milkshake_button"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
             android:layout_centerHorizontal="true" />
     </android.widget.RelativeLayout>
 </ScrollView>

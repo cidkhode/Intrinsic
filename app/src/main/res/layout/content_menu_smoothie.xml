@@ -14,59 +14,102 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
+        <TextView
+            android:id="@+id/smoothies_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="SMOOTHIES / SLUSHIES"
+            android:textColor="@color/black"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/smoothies_submenu_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/smoothies_menu_text"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/small_large_prices_smoothies_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/smoothies_menu_text"
+            android:layout_alignStart="@+id/smoothies_menu_text"
+            android:layout_below="@+id/smoothies_submenu_text"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:text="SMOOTHIE SMALL - $3.00\nSMOOTHIE LARGE - $3.75\n\nSLUSHIE SMALL - $2.50\nSLUSHIE LARGE - $3.50"
+            android:textColor="@color/black" />
+
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/almond_smoothie_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="Almond"
             android:textAlignment="center"
+            android:layout_below="@+id/small_large_prices_smoothies_text"
             android:textSize="20sp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/banana_smoothie_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Banana"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button1"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/almond_smoothie_button"
             android:layout_centerHorizontal="true"/>
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/blueberry_smoothie_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Blueberry"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button2"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/banana_smoothie_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/wild_rasberry_smoothie_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Chocolate"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button3"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/blueberry_smoothie_button"
             android:layout_centerHorizontal="true" />
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/chai_spice_smoothie_button"
+            android:background="@color/colorBasic"
             android:clickable="false"
             android:text="Coconut"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/button4"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/wild_rasberry_smoothie_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/green_tea_smoothie_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Coconut"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/chai_spice_smoothie_button"
             android:layout_centerHorizontal="true" />
     </android.widget.RelativeLayout>
 </ScrollView>

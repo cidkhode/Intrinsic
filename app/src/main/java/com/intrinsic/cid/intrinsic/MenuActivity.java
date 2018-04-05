@@ -28,12 +28,14 @@ public class MenuActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.getMenu().getItem(1).setChecked(true);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -62,9 +64,7 @@ public class MenuActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.home_option) {
-            startActivity(new Intent(MenuActivity.this, LandingPage.class));
-        } else if (id == R.id.menu_option) {
+        if (id == R.id.menu_option) {
             //do nothing
         } else if (id == R.id.order_option) {
             startActivity(new Intent(MenuActivity.this, OrderActivity.class));
@@ -76,10 +76,10 @@ public class MenuActivity extends AppCompatActivity
 
         } else if (id == R.id.contact_us_option) {
             startActivity(new Intent(MenuActivity.this, ContactActivity.class));
-        } else if (id == R.id.my_account_option) {
-
-        } else if (id == R.id.logout_option) {
+        }  else if (id == R.id.logout_option) {
             startActivity(new Intent(MenuActivity.this, MainActivity.class));
+        } else if (id == R.id.my_account_option) {
+            startActivity(new Intent(MenuActivity.this, LandingPage.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
