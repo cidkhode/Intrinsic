@@ -1,5 +1,6 @@
 package com.intrinsic.cid.intrinsic;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,7 +15,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class LandingPage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,9 +37,9 @@ public class LandingPage extends AppCompatActivity
         final TextView user_name_display = (TextView) findViewById(R.id.user_name_display);
         Intent intent = getIntent();
         final String name = intent.getStringExtra("name");
-        final String phoneNumber = intent.getStringExtra("phoneNumber");
+        final String oldNum = intent.getStringExtra("phoneNumber");
 
-        user_name_display.setText(name + "'s Account");
+        user_name_display.setText(name + "'s Account " + oldNum);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -43,58 +53,53 @@ public class LandingPage extends AppCompatActivity
         navigationView.getMenu().getItem(0).setChecked(true);
         navigationView.setNavigationItemSelectedListener(this);
 
+        final EditText edit_phone_number = (EditText) findViewById(R.id.edit_phone_number);
+        final EditText edit_password = (EditText) findViewById(R.id.edit_password);
+        final EditText edit_name = (EditText) findViewById(R.id.edit_name);
+        final EditText edit_question = (EditText) findViewById(R.id.edit_question);
+        final EditText edit_answer = (EditText) findViewById(R.id.edit_answer);
+        final EditText edit_birthday = (EditText) findViewById(R.id.edit_birthday);
+        final EditText edit_email = (EditText) findViewById(R.id.edit_email);
 
-        /*
-        final Button order_otg = (Button) findViewById(R.id.order_button);
-        order_otg.setOnClickListener(new View.OnClickListener() {
+        final Button edit_user = (Button) findViewById(R.id.edit_user);
+
+        edit_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LandingPage.this, OrderActivity.class);
-                intent.putExtra("phoneNumber", phoneNumber);
-                intent.putExtra("name", name);
-                LandingPage.this.startActivity(intent);
+                final String phoneNumber = edit_phone_number.getText().toString();
+                final String password = edit_password.getText().toString();
+                final String name = edit_name.getText().toString();
+                final String secQues = edit_question.getText().toString();
+                final String secAns = edit_answer.getText().toString();
+                final String birthdate = edit_birthday.getText().toString();
+                final String email = edit_email.getText().toString();
+
+                Response.Listener<String> responseListener = new Response.Listener<String>(){
+                    @Override
+                    public void onResponse(String response){
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
+                            if (success){
+                                Toast.makeText(LandingPage.this,"Successfully Edited profile!", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                String warnings = jsonResponse.getString("warnings");
+                                AlertDialog.Builder builder = new AlertDialog.Builder(LandingPage.this);
+                                builder.setMessage(warnings).setNegativeButton("Retry", null).create().show();
+                            }
+                        }
+                        catch (JSONException e){
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                LandingRequest landingRequest = new LandingRequest(oldNum, phoneNumber, password, name, secQues, secAns, birthdate, email,responseListener);
+                RequestQueue queue = Volley.newRequestQueue(LandingPage.this);
+                queue.add(landingRequest);
             }
         });
-        final Button musicBut = (Button) findViewById(R.id.music_button);
-        order_otg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LandingPage.this, MusicActivity.class);
-                LandingPage.this.startActivity(intent);
-            }
-        });
-        final Button contactBut = (Button) findViewById(R.id.contact_us_button);
-        order_otg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LandingPage.this, ContactUsActivity.class);
-                LandingPage.this.startActivity(intent);
-            }
-        });*/
-    }
-
-    public void menuPage(View view)
-    {
-        Intent intent = new Intent(LandingPage.this, MenuActivity.class);
-        startActivity(intent);
-    }
-
-    public void musicPage(View view)
-    {
-        Intent intent = new Intent(LandingPage.this, SpotifyActivity.class);
-        startActivity(intent);
-    }
-
-    public void contactUsPage(View view)
-    {
-        Intent intent = new Intent(LandingPage.this, ContactActivity.class);
-        startActivity(intent);
-    }
-
-    public void orderOTGPage(View view)
-    { //Here I need to pass in the phone number...
-        Intent intent = new Intent(LandingPage.this, OrderActivity.class);
-        startActivity(intent);
     }
 
     @Override
