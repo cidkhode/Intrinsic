@@ -21,7 +21,8 @@
             android:layout_centerHorizontal="true"
             android:text="MILKSHAKES"
             android:textColor="@color/black"
-            android:textSize="36sp" />
+            android:textSize="36sp"
+            android:layout_marginTop="20dp" />
         <TextView
             android:id="@+id/milkshake_submenu_text"
             android:layout_width="150dp"
@@ -108,6 +109,303 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/coconut_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/honeydew_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Honeydew"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/green_tea_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/jasmine_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Jasmine"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/honeydew_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/mango_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Mango"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/jasmine_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/milk_tea_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Milk Tea"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/mango_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/papaya_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Papaya"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/milk_tea_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/red_bean_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Red Bean"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/papaya_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/strawberry_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Strawberry"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/red_bean_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/taro_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Taro"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/strawberry_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/thai_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Thai"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/taro_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/watermelon_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Watermelon"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/thai_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/kiwi_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Kiwi"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/watermelon_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/acai_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Acai"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/kiwi_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/cherry_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Cherry"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/acai_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/green_apple_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Green Apple"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cherry_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/guava_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Guava"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/green_apple_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/kumquat_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Kumquat"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/guava_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/pina_colada_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Pina Colada"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/kumquat_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/margarita_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Margarita"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/pina_colada_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/lemon_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Lemon"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/margarita_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/lychee_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Lychee"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/lemon_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/mint_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Mint"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/lychee_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/orange_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Orange"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/mint_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/passionfruit_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Passion Fruit"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/orange_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/peach_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Peach"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/passionfruit_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/pomegranate_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Pomegranate"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/peach_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/pineapple_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Pineapple"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/pomegranate_milkshake_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/yogurt_milkshake_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Yogurt"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/pineapple_milkshake_button"
             android:layout_centerHorizontal="true" />
 
     </android.widget.RelativeLayout>

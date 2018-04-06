@@ -21,7 +21,8 @@
             android:layout_centerHorizontal="true"
             android:text="BREWED TEAS"
             android:textColor="@color/black"
-            android:textSize="36sp" />
+            android:textSize="36sp"
+            android:layout_marginTop="20dp" />
 
         <TextView
             android:id="@+id/brewed_tea_submenu_text"
@@ -99,7 +100,105 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/wild_rasberry_brewed_tea_button"
-            android:layout_marginBottom="40dp"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/chamoline_brewed_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Chamoline"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/chai_spice_brewed_tea_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/lemon_ginger_brewed_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Lemon Ginger"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/chamoline_brewed_tea_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/mango_passionfruit_brewed_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Mango Passion Fruit"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/lemon_ginger_brewed_tea_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/earl_gray_decaf_brewed_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Earl Gray / Decaf"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/mango_passionfruit_brewed_tea_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/black_brewed_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Black Tea"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/earl_gray_decaf_brewed_tea_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/green_brewed_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Green Tea"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/black_brewed_tea_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/white_brewed_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="White Tea"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/green_brewed_tea_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/oolong_brewed_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Oolong Tea"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/white_brewed_tea_button"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/jasmine_green_brewed_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Jasmine Green Tea"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/oolong_brewed_tea_button"
             android:layout_centerHorizontal="true" />
 
     </android.widget.RelativeLayout>

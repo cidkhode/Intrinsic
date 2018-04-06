@@ -63,23 +63,23 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MenuBubbleTeaActivity"
-            android:label="@string/title_activity_bubble_tea"
+            android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MenuBrewedTeaActivity"
-            android:label="@string/title_activity_brewed_tea"
+            android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MenuSmoothieActivity"
-            android:label="@string/title_activity_smoothie"
+            android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MenuMilkshakeActivity"
-            android:label="@string/title_activity_menu_milkshake"
+            android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MenuCoffeeActivity"
-            android:label="@string/title_activity_menu_coffee"
+            android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme"></activity>
     </application>
 

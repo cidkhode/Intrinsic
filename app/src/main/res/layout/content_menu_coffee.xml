@@ -6,75 +6,310 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="?android:attr/actionBarSize"
-    android:background="@drawable/menu_coffee"
+    android:background="@drawable/menu_page"
     android:fillViewport="true"
     tools:context="com.intrinsic.cid.intrinsic.MenuCoffeeActivity">
 
     <android.widget.RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?android:attr/actionBarSize" >
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/coffees_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="COFFEE / OTHER"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:layout_marginTop="20dp" />
 
         <Button
             android:id="@+id/yatte_coffee_button"
-            android:background="@color/colorBasic"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:background="@color/colorBasic"
             android:text="Yatte"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:layout_marginTop="40dp"
-            android:layout_centerHorizontal="true"/>
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:layout_below="@+id/coffees_menu_text"
+            android:layout_marginTop="30dp"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/cappuccino_coffee_button"
-            android:background="@color/colorBasic"
-            android:text="Cappuccino"
-            android:textAlignment="center"
-            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/yatte_coffee_button"
-            android:layout_centerHorizontal="true"/>
+            android:background="@color/colorBasic"
+            android:text="Cappuccino"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/caramel_macchiato_coffee_button"
-            android:background="@color/colorBasic"
-            android:text="Caramel Macchiato"
-            android:textAlignment="center"
-            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/cappuccino_coffee_button"
-            android:layout_centerHorizontal="true" />
+            android:background="@color/colorBasic"
+            android:text="Caramel Macchiato"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/mocha_coffee_button"
-            android:background="@color/colorBasic"
-            android:text="Mocha"
-            android:textAlignment="center"
-            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/caramel_macchiato_coffee_button"
-            android:layout_centerHorizontal="true" />
+            android:background="@color/colorBasic"
+            android:text="Mocha"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/white_mocha_coffee_button"
-            android:background="@color/colorBasic"
-            android:text="White Mocha"
-            android:textAlignment="center"
-            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/mocha_coffee_button"
-            android:layout_centerHorizontal="true" />
-        <Button
-            android:id="@+id/black_and_white_mocha_coffee_button"
             android:background="@color/colorBasic"
-            android:text="Black + White Mocha"
-            android:textAlignment="center"
-            android:textSize="20sp"
+            android:text="White Mocha"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/black_white_mocha_coffee_button"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/white_mocha_coffee_button"
-            android:layout_marginBottom="40dp"
-            android:layout_centerHorizontal="true" />
+            android:background="@color/colorBasic"
+            android:text="Black + White Mocha"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/coffee_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/black_white_mocha_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="Coffee"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/vietnamese_coffee_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/coffee_button"
+            android:background="@color/colorBasic"
+            android:text="Vietnamese Coffee"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/yover_coffee_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/vietnamese_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="The Yover"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/expresso_coffee_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/yover_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="Expresso"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/con_panna_coffee_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/expresso_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="Con Panna"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/americano_coffee_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/con_panna_coffee_button"
+            android:background="@color/colorBasic"
+            android:text="Americano"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/yatte_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/yatte_coffee_button"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $2.65\nLARGE - $3.65"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/cappuccino_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/yatte_prices"
+            android:layout_alignStart="@+id/yatte_prices"
+            android:layout_below="@+id/yatte_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $3.15\nLARGE - $4.15"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/caramel_macchiato_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/cappuccino_prices"
+            android:layout_alignStart="@+id/cappuccino_prices"
+            android:layout_below="@+id/cappuccino_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $3.15\nLARGE - $4.15"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/mocha_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/caramel_macchiato_prices"
+            android:layout_alignStart="@+id/caramel_macchiato_prices"
+            android:layout_below="@+id/caramel_macchiato_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $2.90\nLARGE - $3.90"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/white_mocha_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mocha_prices"
+            android:layout_alignStart="@+id/mocha_prices"
+            android:layout_below="@+id/mocha_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $3.15\nLARGE - $4.15"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/black_white_mocha_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/white_mocha_prices"
+            android:layout_alignStart="@+id/white_mocha_prices"
+            android:layout_below="@+id/white_mocha_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $3.15\nLARGE - $4.15"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/coffee_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/black_white_mocha_prices"
+            android:layout_alignStart="@+id/black_white_mocha_prices"
+            android:layout_below="@+id/black_white_mocha_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $3.50\nLARGE - $4.50"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/vietnamese_coffee_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/coffee_prices"
+            android:layout_alignStart="@+id/coffee_prices"
+            android:layout_below="@+id/coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $3.50\nLARGE - $4.50"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/yover_coffee_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/vietnamese_coffee_prices"
+            android:layout_alignStart="@+id/vietnamese_coffee_prices"
+            android:layout_below="@+id/vietnamese_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $2.90\nLARGE - $3.40"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/expresso_coffee_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/yover_coffee_prices"
+            android:layout_alignStart="@+id/yover_coffee_prices"
+            android:layout_below="@+id/yover_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $1.90\nLARGE - $3.40"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/con_panna_coffee_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/expresso_coffee_prices"
+            android:layout_alignStart="@+id/expresso_coffee_prices"
+            android:layout_below="@+id/expresso_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $2.15\nLARGE - $2.90"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/americano_coffee_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/con_panna_coffee_prices"
+            android:layout_alignStart="@+id/con_panna_coffee_prices"
+            android:layout_below="@+id/con_panna_coffee_button"
+            android:layout_marginTop="10dp"
+            android:text="SMALL - $1.90\nLARGE - $2.65"
+            android:textColor="@color/black" />
+
     </android.widget.RelativeLayout>
 </ScrollView>
