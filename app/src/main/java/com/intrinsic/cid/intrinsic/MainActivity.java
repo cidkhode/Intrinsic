@@ -29,6 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //do nothing to prevent logging back in
+        //do nothing to prevent logging back in 
     }
 }
