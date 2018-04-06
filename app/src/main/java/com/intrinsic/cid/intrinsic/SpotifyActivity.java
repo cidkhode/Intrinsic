@@ -1,8 +1,10 @@
 package com.intrinsic.cid.intrinsic;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -79,6 +81,11 @@ public class SpotifyActivity extends AppCompatActivity
             startActivity(new Intent(SpotifyActivity.this, ContactActivity.class));
         } else if (id == R.id.logout_option) {
             startActivity(new Intent(SpotifyActivity.this, MainActivity.class));
+            SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            SharedPreferences.Editor editor = UserInfo.edit();
+            editor.putString("logout","1");
+            editor.putString("password","");
+            editor.apply();
         } else if (id == R.id.my_account_option) {
             startActivity(new Intent(SpotifyActivity.this, LandingPage.class));
         }

@@ -147,6 +147,11 @@ public class LandingPage extends AppCompatActivity
             startActivity(new Intent(LandingPage.this, ContactActivity.class));
         } else if (id == R.id.logout_option) {
             startActivity(new Intent(LandingPage.this, MainActivity.class));
+            SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            SharedPreferences.Editor editor = UserInfo.edit();
+            editor.putString("logout","1");
+            editor.putString("password","");
+            editor.apply();
         } else if (id == R.id.my_account_option) {
 
         }

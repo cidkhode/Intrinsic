@@ -2,9 +2,11 @@ package com.intrinsic.cid.intrinsic;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
@@ -83,6 +85,11 @@ public class ContactActivity extends AppCompatActivity
             //do nothing
         } else if (id == R.id.logout_option) {
             startActivity(new Intent(ContactActivity.this, MainActivity.class));
+            SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            SharedPreferences.Editor editor = UserInfo.edit();
+            editor.putString("logout","1");
+            editor.putString("password","");
+            editor.apply();
         } else if (id == R.id.my_account_option) {
             startActivity(new Intent(ContactActivity.this, LandingPage.class));
         }

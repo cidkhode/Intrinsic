@@ -42,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
 
         String savedPhone = displayUserInfo.getString("phoneNumber", "");
         String savedPassword = displayUserInfo.getString("password", "");
+        String logoutcue = displayUserInfo.getString("logout", "");
+
         try{
             savedPassword = decrypt(savedPassword);
             phone_Number.setText(savedPhone);
@@ -73,6 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                                 SharedPreferences.Editor editor = UserInfo.edit();
                                 editor.putString("name",name);
                                 editor.putString("phoneNumber",phoneNumber2);
+                                editor.putString("logout","");
 
                                 if(checkbox.isChecked()){
                                     try{
@@ -116,5 +119,10 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        if(logoutcue == "" && !"".equals(savedPassword)) {
+            login_submit.performClick();
+        }
+
     }
 }
