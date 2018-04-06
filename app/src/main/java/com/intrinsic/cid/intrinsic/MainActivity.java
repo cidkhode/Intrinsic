@@ -26,4 +26,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        //do nothing to prevent logging back in
+    }
 }
