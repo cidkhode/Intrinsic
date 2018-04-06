@@ -37,9 +37,16 @@ public class LandingPage extends AppCompatActivity
         setContentView(R.layout.activity_landing_page);
 
         Intent intent = getIntent();
-        final String name = intent.getStringExtra("name");
         final String oldNum = intent.getStringExtra("phoneNumber");
 
+        //display name using shared preferences
+        SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String name = displayUserInfo.getString("name", "");
+
+        final TextView user_name_display = (TextView) findViewById(R.id.user_name_display);
+        user_name_display.setText(name + "'s Account");
+
+        //toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -196,15 +203,5 @@ public class LandingPage extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    @Override
-    public void onResume(){
-        super.onResume();
-        SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String name = displayUserInfo.getString("name", "");
-
-        final TextView user_name_display = (TextView) findViewById(R.id.user_name_display);
-        user_name_display.setText(name + "'s Account");
-
-    }
+    
 }
