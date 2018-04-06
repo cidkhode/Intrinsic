@@ -60,12 +60,33 @@ public class LandingPage extends AppCompatActivity
         final EditText edit_answer = (EditText) findViewById(R.id.edit_answer);
         final EditText edit_birthday = (EditText) findViewById(R.id.edit_birthday);
         final EditText edit_email = (EditText) findViewById(R.id.edit_email);
-
         final Button edit_user = (Button) findViewById(R.id.edit_user);
+        edit_phone_number.setEnabled(false);
+        edit_password.setEnabled(false);
+        edit_name.setEnabled(false);
+        edit_question.setEnabled(false);
+        edit_answer.setEnabled(false);
+        edit_birthday.setEnabled(false);
+        edit_email.setEnabled(false);
 
         edit_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                edit_user.setText("Save");
+                edit_phone_number.setEnabled(true);
+                edit_password.setEnabled(true);
+                edit_name.setEnabled(true);
+                edit_question.setEnabled(true);
+                edit_answer.setEnabled(true);
+                edit_birthday.setEnabled(true);
+                edit_email.setEnabled(true);
+                edit_phone_number.setBackgroundResource(R.color.colorBasicFull);
+                edit_password.setBackgroundResource(R.color.colorBasicFull);
+                edit_name.setBackgroundResource(R.color.colorBasicFull);
+                edit_question.setBackgroundResource(R.color.colorBasicFull);
+                edit_answer.setBackgroundResource(R.color.colorBasicFull);
+                edit_birthday.setBackgroundResource(R.color.colorBasicFull);
+                edit_email.setBackgroundResource(R.color.colorBasicFull);
                 final String phoneNumber = edit_phone_number.getText().toString();
                 final String password = edit_password.getText().toString();
                 final String name = edit_name.getText().toString();
@@ -82,8 +103,23 @@ public class LandingPage extends AppCompatActivity
                             boolean success = jsonResponse.getBoolean("success");
                             if (success){
                                 Toast.makeText(LandingPage.this,"Successfully Edited profile!", Toast.LENGTH_SHORT).show();
+                                edit_user.setText("Edit");
+                                edit_phone_number.setEnabled(false);
+                                edit_password.setEnabled(false);
+                                edit_name.setEnabled(false);
+                                edit_question.setEnabled(false);
+                                edit_answer.setEnabled(false);
+                                edit_birthday.setEnabled(false);
+                                edit_email.setEnabled(false);
+                                edit_phone_number.setBackgroundResource(R.color.colorBasic);
+                                edit_password.setBackgroundResource(R.color.colorBasic);
+                                edit_name.setBackgroundResource(R.color.colorBasic);
+                                edit_question.setBackgroundResource(R.color.colorBasic);
+                                edit_answer.setBackgroundResource(R.color.colorBasic);
+                                edit_birthday.setBackgroundResource(R.color.colorBasic);
+                                edit_email.setBackgroundResource(R.color.colorBasic);
                             }
-                            else{
+                            else {
                                 String warnings = jsonResponse.getString("warnings");
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LandingPage.this);
                                 builder.setMessage(warnings).setNegativeButton("Retry", null).create().show();
