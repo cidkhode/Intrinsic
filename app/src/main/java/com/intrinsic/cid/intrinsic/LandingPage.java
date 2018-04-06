@@ -2,7 +2,9 @@ package com.intrinsic.cid.intrinsic;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -34,12 +36,10 @@ public class LandingPage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
 
-        final TextView user_name_display = (TextView) findViewById(R.id.user_name_display);
         Intent intent = getIntent();
         final String name = intent.getStringExtra("name");
         final String oldNum = intent.getStringExtra("phoneNumber");
 
-        user_name_display.setText(name + "'s Account " + oldNum);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -154,5 +154,16 @@ public class LandingPage extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String name = displayUserInfo.getString("name", "");
+
+        final TextView user_name_display = (TextView) findViewById(R.id.user_name_display);
+        user_name_display.setText(name + "'s Account");
+
     }
 }

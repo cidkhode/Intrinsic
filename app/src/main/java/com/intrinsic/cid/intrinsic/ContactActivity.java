@@ -81,8 +81,6 @@ public class ContactActivity extends AppCompatActivity
 
         } else if (id == R.id.contact_us_option) {
             //do nothing
-        } else if (id == R.id.my_account_option) {
-
         } else if (id == R.id.logout_option) {
             startActivity(new Intent(ContactActivity.this, MainActivity.class));
         } else if (id == R.id.my_account_option) {

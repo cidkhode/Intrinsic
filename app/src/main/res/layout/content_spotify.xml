@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="?android:attr/actionBarSize"
-    android:background="@drawable/landing_fresh"
+    android:background="@drawable/menu_page"
     android:fillViewport="true"
     tools:context="com.intrinsic.cid.intrinsic.SpotifyActivity">
 
@@ -78,9 +78,9 @@
                     android:id="@+id/playlist_intrinsic"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/horizontalScrollView"
                     android:src="@drawable/playlist_intrinsic" />
 
                 <Button
@@ -215,4 +215,13 @@
 
         </LinearLayout>
     </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/spotifytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="Feel free to listen to our playlists to get the\n Intrinsic vibe, even while you're on the go." />
 </android.widget.RelativeLayout>

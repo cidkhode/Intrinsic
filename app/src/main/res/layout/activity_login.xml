@@ -66,9 +66,18 @@
         android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/password"
-        android:layout_alignRight="@+id/password"
+        android:layout_alignLeft="@+id/login_submit"
+        android:layout_alignStart="@+id/login_submit"
         android:layout_below="@+id/password"
-        android:layout_marginTop="9dp"
         android:text="@string/forgot_password" />
+
+    <CheckBox
+        android:id="@+id/saveCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/forgot_password"
+        android:layout_alignRight="@+id/forgot_password"
+        android:layout_below="@+id/login_submit"
+        android:text="save password?" />
+
 </android.widget.RelativeLayout>
