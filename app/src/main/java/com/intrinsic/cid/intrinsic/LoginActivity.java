@@ -81,6 +81,12 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.putString("name", name);
                                 editor.putString("phoneNumber", phoneNumber2);
                                 editor.putString("logout","");
+                                editor.putString("oldPhoneNumber", phoneNumber2);
+                                editor.putString("oldSecQues", secQues);
+                                editor.putString("oldSecAns", secAns);
+                                editor.putString("oldBirthdate", birthdate);
+                                editor.putString("oldEmail", email);
+                                editor.putInt("custID", custID);
 
                                 if(checkbox.isChecked()){
                                     try{
@@ -96,12 +102,12 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.apply();
 
                                 Intent intent = new Intent(LoginActivity.this, LandingPage.class);
-                                intent.putExtra("custID", custID);
+                                /*intent.putExtra("custID", custID);
                                 intent.putExtra("phoneNumber", phoneNumber2);
                                 intent.putExtra("secQues", secQues);
                                 intent.putExtra("secAns", secAns);
                                 intent.putExtra("birthdate", birthdate);
-                                intent.putExtra("email", email);
+                                intent.putExtra("email", email);*/
                                 LoginActivity.this.startActivity(intent);
                             }
                             else{

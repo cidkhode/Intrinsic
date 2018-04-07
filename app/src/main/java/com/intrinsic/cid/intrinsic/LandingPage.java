@@ -37,17 +37,24 @@ public class LandingPage extends AppCompatActivity
         setContentView(R.layout.activity_landing_page);
 
         Intent intent = getIntent();
-        int custIDint = intent.getIntExtra("custID", 0);
+        /*int custIDint = intent.getIntExtra("custID", 0);
         final String custID = Integer.toString(custIDint);
         String oldPhoneNumber = intent.getStringExtra("phoneNumber");
         String oldSecQues = intent.getStringExtra("secQues");
         String oldSecAns = intent.getStringExtra("secAns");
         String oldBirthdate = intent.getStringExtra("birthdate");
-        String oldEmail = intent.getStringExtra("email");
+        String oldEmail = intent.getStringExtra("email");*/
 
         //display name using shared preferences
         SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String name = displayUserInfo.getString("name", "");
+        String oldPhoneNumber = displayUserInfo.getString("oldPhoneNumber", "");
+        String oldSecQues = displayUserInfo.getString("oldSecQues", "");
+        String oldSecAns = displayUserInfo.getString("oldSecAns", "");
+        String oldBirthdate = displayUserInfo.getString("oldBirthdate", "");
+        String oldEmail = displayUserInfo.getString("oldEmail", "");
+        int custIDint = displayUserInfo.getInt("custID", 0);
+        final String custID = Integer.toString(custIDint);
 
         final TextView user_name_display = (TextView) findViewById(R.id.user_name_display);
         user_name_display.setText(name + "'s Account");
