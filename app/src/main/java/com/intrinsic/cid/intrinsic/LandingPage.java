@@ -135,7 +135,7 @@ public class LandingPage extends AppCompatActivity
                                 JSONObject jsonResponse = new JSONObject(response);
                                 boolean success = jsonResponse.getBoolean("success");
                                 if (success) {
-                                    Toast.makeText(LandingPage.this, "Successfully edited profile!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LandingPage.this, "Successfully edited profile! Please check your spam folder if you don't get an email.", Toast.LENGTH_LONG).show();
                                     edit_user.setText("Edit");
                                     editMode = "false";
                                     edit_phone_number.setEnabled(false);
