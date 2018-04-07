@@ -25,14 +25,15 @@
         android:id="@+id/phone_number"
         android:layout_width="260dp"
         android:layout_height="40dp"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password"
         android:layout_below="@+id/login_text"
-        android:layout_centerHorizontal="true"
-        android:paddingHorizontal="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="21dp"
         android:background="@color/colorBasic"
         android:ems="10"
-        android:inputType="phone"
         android:hint="@string/phone_number"
+        android:inputType="phone"
+        android:paddingHorizontal="10dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
 
@@ -66,18 +67,20 @@
         android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/login_submit"
-        android:layout_alignStart="@+id/login_submit"
+        android:layout_alignEnd="@+id/password"
+        android:layout_alignRight="@+id/password"
         android:layout_below="@+id/password"
+        android:layout_marginTop="11dp"
         android:text="@string/forgot_password" />
 
     <CheckBox
         android:id="@+id/saveCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/forgot_password"
-        android:layout_alignRight="@+id/forgot_password"
-        android:layout_below="@+id/login_submit"
-        android:text="save password?" />
+        android:layout_alignBaseline="@+id/forgot_password"
+        android:layout_alignBottom="@+id/forgot_password"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:text="Remember me" />
 
 </android.widget.RelativeLayout>

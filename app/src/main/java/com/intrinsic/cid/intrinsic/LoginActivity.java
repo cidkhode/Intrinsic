@@ -67,14 +67,19 @@ public class LoginActivity extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if (success){
-                                String name = jsonResponse.getString("name");
                                 String phoneNumber2 = jsonResponse.getString("phoneNumber");
                                 String pass2 = password.getText().toString();
+                                int custID = jsonResponse.getInt("custID");
+                                String name = jsonResponse.getString("name");
+                                String secQues = jsonResponse.getString("secQues");
+                                String secAns = jsonResponse.getString("secAns");
+                                String birthdate = jsonResponse.getString("birthdate");
+                                String email = jsonResponse.getString("email");
 
                                 SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                                 SharedPreferences.Editor editor = UserInfo.edit();
-                                editor.putString("name",name);
-                                editor.putString("phoneNumber",phoneNumber2);
+                                editor.putString("name", name);
+                                editor.putString("phoneNumber", phoneNumber2);
                                 editor.putString("logout","");
 
                                 if(checkbox.isChecked()){
@@ -91,6 +96,12 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.apply();
 
                                 Intent intent = new Intent(LoginActivity.this, LandingPage.class);
+                                intent.putExtra("custID", custID);
+                                intent.putExtra("phoneNumber", phoneNumber2);
+                                intent.putExtra("secQues", secQues);
+                                intent.putExtra("secAns", secAns);
+                                intent.putExtra("birthdate", birthdate);
+                                intent.putExtra("email", email);
                                 LoginActivity.this.startActivity(intent);
                             }
                             else{

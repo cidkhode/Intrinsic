@@ -151,7 +151,7 @@ public class ContactActivity extends AppCompatActivity
     }
     public void intrinsicWebsite(View view)
     {
-        Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.intrinsiccafe.com/"));
+        Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://intrinsiccafeweb.wixsite.com/intrinsiccafe"));
         startActivity(spotifyIntent);
     }
 

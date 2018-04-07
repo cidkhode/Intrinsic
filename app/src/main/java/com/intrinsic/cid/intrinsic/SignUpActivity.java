@@ -51,7 +51,7 @@ public class SignUpActivity extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if (success){
-                                Toast.makeText(SignUpActivity.this,"Signup Successful!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this,"Signup Successful! If you don't see an email right away, please check your spam folder.", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 SignUpActivity.this.startActivity(intent);
                             }

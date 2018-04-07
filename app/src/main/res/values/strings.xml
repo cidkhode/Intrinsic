@@ -40,7 +40,7 @@
     <string name="title_activity_contact">Contact Us</string>
     <string name="int_address">5 Sussex Ave, Newark, NJ 07103</string>
     <string name="int_phone">(201) 618-2689</string>
-    <string name="int_web">www.intrinsiccafe.com</string>
+    <string name="int_web">Visit our full site!</string>
     <string name="int_email">intrinsiccafe@gmail.com</string>
     <string name="title_activity_menu">Our Menu</string>
     <string name="title_activity_bubble_tea">Bubble Teas</string>
