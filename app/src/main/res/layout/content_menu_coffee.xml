@@ -25,11 +25,11 @@
             android:layout_marginTop="20dp" />
 
         <Button
-            android:id="@+id/yatte_coffee_button"
+            android:id="@+id/latte_coffee_button"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@color/colorBasic"
-            android:text="Yatte"
+            android:text="Latte"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_gravity="start"
@@ -42,7 +42,7 @@
             android:id="@+id/cappuccino_coffee_button"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/yatte_coffee_button"
+            android:layout_below="@+id/latte_coffee_button"
             android:background="@color/colorBasic"
             android:text="Cappuccino"
             android:paddingLeft="10dp"
@@ -129,12 +129,12 @@
             android:textAlignment="textStart"
             android:textSize="20sp" />
         <Button
-            android:id="@+id/yover_coffee_button"
+            android:id="@+id/lover_coffee_button"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/vietnamese_coffee_button"
             android:background="@color/colorBasic"
-            android:text="The Yover"
+            android:text="The Lover"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_gravity="start"
@@ -144,7 +144,7 @@
             android:id="@+id/expresso_coffee_button"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/yover_coffee_button"
+            android:layout_below="@+id/lover_coffee_button"
             android:background="@color/colorBasic"
             android:text="Expresso"
             android:paddingLeft="10dp"
@@ -178,12 +178,12 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/yatte_prices"
+            android:id="@+id/latte_prices"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/yatte_coffee_button"
+            android:layout_alignTop="@+id/latte_coffee_button"
             android:layout_marginEnd="17dp"
             android:layout_marginRight="17dp"
             android:layout_marginTop="10dp"
@@ -194,9 +194,9 @@
             android:id="@+id/cappuccino_prices"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/yatte_prices"
-            android:layout_alignStart="@+id/yatte_prices"
-            android:layout_below="@+id/yatte_coffee_button"
+            android:layout_alignLeft="@+id/latte_prices"
+            android:layout_alignStart="@+id/latte_prices"
+            android:layout_below="@+id/latte_coffee_button"
             android:layout_marginTop="10dp"
             android:text="SMALL - $3.15\nLARGE - $4.15"
             android:textColor="@color/black" />
@@ -268,7 +268,7 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/yover_coffee_prices"
+            android:id="@+id/lover_coffee_prices"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/vietnamese_coffee_prices"
@@ -282,9 +282,9 @@
             android:id="@+id/expresso_coffee_prices"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/yover_coffee_prices"
-            android:layout_alignStart="@+id/yover_coffee_prices"
-            android:layout_below="@+id/yover_coffee_button"
+            android:layout_alignLeft="@+id/lover_coffee_prices"
+            android:layout_alignStart="@+id/lover_coffee_prices"
+            android:layout_below="@+id/lover_coffee_button"
             android:layout_marginTop="10dp"
             android:text="SMALL - $1.90\nLARGE - $3.40"
             android:textColor="@color/black" />
