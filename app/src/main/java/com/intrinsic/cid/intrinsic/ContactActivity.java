@@ -154,5 +154,10 @@ public class ContactActivity extends AppCompatActivity
         Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://intrinsiccafeweb.wixsite.com/intrinsiccafe"));
         startActivity(spotifyIntent);
     }
+    public void googlemaps(View view)
+    {
+        Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/dir/40.4912673,-74.6291711/5+Sussex+Ave,+Newark,+NJ+07103/@40.624217,-74.5489622,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c25481f20711d5:0x46f779575594fa5b!2m2!1d-74.1760292!2d40.7437935"));
+        startActivity(spotifyIntent);
+    }
 
 }
