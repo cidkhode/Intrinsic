@@ -156,7 +156,7 @@ public class ContactActivity extends AppCompatActivity
     }
     public void googlemaps(View view)
     {
-        Intent mapsIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/dir/40.4912673,-74.6291711/5+Sussex+Ave,+Newark,+NJ+07103/@40.624217,-74.5489622,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c25481f20711d5:0x46f779575594fa5b!2m2!1d-74.1760292!2d40.7437935"));
+        Intent mapsIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/dir/Current+location/5+Sussex+Ave,+Newark,+NJ+07103/@40.5914594,-74.5586823,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c25481f20711d5:0x46f779575594fa5b!2m2!1d-74.1760292!2d40.7437935"));
         startActivity(mapsIntent);
     }
 
