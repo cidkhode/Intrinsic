@@ -12,7 +12,7 @@
 
     <android.widget.RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/call"
@@ -99,6 +99,18 @@
             android:layout_marginEnd="29dp"
             android:layout_marginRight="29dp"
             android:background="@drawable/twitter" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/twitterButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_corner"
+            android:text="\n                 HOURS:\n  Monday	8AM–12AM \n  Tuesday	8AM–12AM \n  Wednesday	8AM–12AM \n  Thursday	8AM–12AM \n  Friday	8AM–12AM \n  Saturday	Closed \n  Sunday	12PM–12AM\n"
+            android:textColor="@color/black" />
 
     </android.widget.RelativeLayout>
 </ScrollView>
