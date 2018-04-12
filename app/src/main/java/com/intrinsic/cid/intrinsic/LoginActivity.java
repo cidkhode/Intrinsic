@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                                 SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                                 SharedPreferences.Editor editor = UserInfo.edit();
                                 editor.putString("name", name);
-                                editor.putString("phoneNumber", phoneNumber2);
+                                //editor.putString("phoneNumber", phoneNumber2);
                                 editor.putString("logout","");
                                 editor.putString("oldPhoneNumber", phoneNumber2);
                                 editor.putString("oldSecQues", secQues);

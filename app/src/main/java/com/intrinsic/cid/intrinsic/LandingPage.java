@@ -100,13 +100,13 @@ public class LandingPage extends AppCompatActivity
         edit_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phoneNumber = "";
+                /*String phoneNumber = "";
                 String password = "";
                 String name = "";
                 String secQues = "";
                 String secAns = "";
                 String birthdate = "";
-                String email = "";
+                String email = "";*/
 
                 if (editMode.equals("false")) {
                     edit_user.setText("Save");
@@ -127,13 +127,13 @@ public class LandingPage extends AppCompatActivity
                     edit_email.setBackgroundResource(R.color.colorBasicFull);
                 }
                 else {
-                    phoneNumber = edit_phone_number.getText().toString();
-                    password = edit_password.getText().toString();
-                    name = edit_name.getText().toString();
-                    secQues = edit_question.getText().toString();
-                    secAns = edit_answer.getText().toString();
-                    birthdate = edit_birthday.getText().toString();
-                    email = edit_email.getText().toString();
+                    final String phoneNumber = edit_phone_number.getText().toString();
+                    final String password = edit_password.getText().toString();
+                    final String name = edit_name.getText().toString();
+                    final String secQues = edit_question.getText().toString();
+                    final String secAns = edit_answer.getText().toString();
+                    final String birthdate = edit_birthday.getText().toString();
+                    final String email = edit_email.getText().toString();
 
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
                         @Override
@@ -159,6 +159,20 @@ public class LandingPage extends AppCompatActivity
                                     edit_answer.setBackgroundResource(R.color.colorBasic);
                                     edit_birthday.setBackgroundResource(R.color.colorBasic);
                                     edit_email.setBackgroundResource(R.color.colorBasic);
+
+                                    //update sharedpreferences
+                                    SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                                    SharedPreferences.Editor editor = UserInfo.edit();
+                                    editor.putString("name", name);
+                                    editor.putString("logout","");
+                                    editor.putString("oldPhoneNumber", phoneNumber);
+                                    editor.putString("oldSecQues", secQues);
+                                    editor.putString("oldSecAns", secAns);
+                                    editor.putString("oldBirthdate", birthdate);
+                                    editor.putString("oldEmail", email);
+                                    editor.apply();
+                                    user_name_display.setText(name + "'s Account");
+
                                 } else {
                                     String warnings = jsonResponse.getString("warnings");
                                     AlertDialog.Builder builder = new AlertDialog.Builder(LandingPage.this);
