@@ -30,6 +30,7 @@
             android:layout_below="@+id/bubble_tea_menu_text"
             android:layout_centerHorizontal="true"
             android:text="TEAS (CREAMY)"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp" />
         <TextView
@@ -67,7 +68,8 @@
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/banana_bubble_tea_button"
             android:background="@color/colorBasic"
@@ -78,7 +80,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/almond_bubble_tea_button"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/blueberry_bubble_tea_button"
             android:background="@color/colorBasic"
@@ -89,7 +92,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/banana_bubble_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/chocolate_bubble_tea_button"
             android:background="@color/colorBasic"
@@ -100,7 +104,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/blueberry_bubble_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/coconut_bubble_tea_button"
             android:background="@color/colorBasic"
@@ -111,7 +116,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/chocolate_bubble_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/honeydew_tea_button"
             android:background="@color/colorBasic"
@@ -122,7 +128,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/coconut_bubble_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/jasmine_tea_button"
             android:background="@color/colorBasic"
@@ -133,7 +140,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/honeydew_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/mango_tea_button"
             android:background="@color/colorBasic"
@@ -144,7 +152,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/jasmine_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/milk_tea_button"
             android:background="@color/colorBasic"
@@ -155,7 +164,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/mango_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/papaya_tea_button"
             android:background="@color/colorBasic"
@@ -166,7 +176,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/milk_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/red_bean_tea_button"
             android:background="@color/colorBasic"
@@ -177,7 +188,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/papaya_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/strawberry_tea_button"
             android:background="@color/colorBasic"
@@ -188,7 +200,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/red_bean_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/taro_tea_button"
             android:background="@color/colorBasic"
@@ -199,7 +212,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/strawberry_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/thai_tea_button"
             android:background="@color/colorBasic"
@@ -210,7 +224,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/taro_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
         <Button
             android:id="@+id/watermelon_tea_button"
             android:background="@color/colorBasic"
@@ -221,7 +236,189 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/thai_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+
+        <TextView
+            android:id="@+id/bubble_juice_submenu_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/watermelon_tea_button"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="TEAS (JUICE)"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/kumquat_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Kumquat"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/bubble_juice_submenu_text"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/pina_colada_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Pina Colada"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/kumquat_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/margarita_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Margarita"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/pina_colada_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/lemon_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Lemon"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/margarita_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/lychee_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Lychee"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/lemon_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/mango_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Mango"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/lychee_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/mint_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Mint"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/mango_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/orange_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Orange"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/mint_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/passionfruit_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Passionfruit"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/orange_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/peach_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Peach"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/passionfruit_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/pomegranate_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Pomegranate"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/peach_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/pineapple_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Pineapple"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/pomegranate_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/strawberry_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Strawberry"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/pineapple_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/yogurt_juice_tea_button"
+            android:background="@color/colorBasic"
+            android:clickable="false"
+            android:text="Yogurt"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/strawberry_juice_tea_button"
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null" />
 
     </android.widget.RelativeLayout>
 </ScrollView>

@@ -56,7 +56,8 @@
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/wild_rasberry_hibiscus_brewed_tea_button"
             android:clickable="false"
@@ -67,7 +68,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/english_breakfast_brewed_tea_button"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/pomegranate_raspberry_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -78,7 +80,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/wild_rasberry_hibiscus_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/wild_rasberry_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -89,7 +92,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/pomegranate_raspberry_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/chai_spice_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -100,7 +104,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/wild_rasberry_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/chamoline_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -111,7 +116,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/chai_spice_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/lemon_ginger_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -122,7 +128,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/chamoline_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/mango_passionfruit_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -133,7 +140,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/lemon_ginger_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/earl_gray_decaf_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -144,7 +152,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/mango_passionfruit_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/black_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -155,7 +164,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/earl_gray_decaf_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/green_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -166,7 +176,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/black_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/white_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -177,7 +188,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/green_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/oolong_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -188,7 +200,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/white_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/jasmine_green_brewed_tea_button"
             android:background="@color/colorBasic"
@@ -199,7 +212,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/oolong_brewed_tea_button"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:stateListAnimator="@null"/>
 
     </android.widget.RelativeLayout>
 </ScrollView>
