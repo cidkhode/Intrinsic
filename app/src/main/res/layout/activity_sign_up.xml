@@ -69,6 +69,7 @@
             android:paddingHorizontal="10dp"
             android:textColorHint="@color/black"
             android:textColor="@color/black"/>
+
         <EditText
             android:id="@+id/create_name"
             android:layout_width="260dp"

@@ -75,6 +75,7 @@ public class LandingPage extends AppCompatActivity
 
         final EditText edit_phone_number = (EditText) findViewById(R.id.edit_phone_number);
         final EditText edit_password = (EditText) findViewById(R.id.edit_password);
+        final EditText confirm_edit_password = (EditText) findViewById(R.id.confirm_edit_password);
         final EditText edit_name = (EditText) findViewById(R.id.edit_name);
         final EditText edit_question = (EditText) findViewById(R.id.edit_question);
         final EditText edit_answer = (EditText) findViewById(R.id.edit_answer);
@@ -83,6 +84,7 @@ public class LandingPage extends AppCompatActivity
         final Button edit_user = (Button) findViewById(R.id.edit_user);
         edit_phone_number.setText(oldPhoneNumber);
         //edit_password.setText();
+        //confirm_edit_password.setText();
         edit_name.setText(name);
         edit_question.setText(oldSecQues);
         edit_answer.setText(oldSecAns);
@@ -91,6 +93,7 @@ public class LandingPage extends AppCompatActivity
 
         edit_phone_number.setEnabled(false);
         edit_password.setEnabled(false);
+        confirm_edit_password.setEnabled(false);
         edit_name.setEnabled(false);
         edit_question.setEnabled(false);
         edit_answer.setEnabled(false);
@@ -100,19 +103,12 @@ public class LandingPage extends AppCompatActivity
         edit_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*String phoneNumber = "";
-                String password = "";
-                String name = "";
-                String secQues = "";
-                String secAns = "";
-                String birthdate = "";
-                String email = "";*/
-
                 if (editMode.equals("false")) {
                     edit_user.setText("Save");
                     editMode = "true";
                     edit_phone_number.setEnabled(true);
                     edit_password.setEnabled(true);
+                    confirm_edit_password.setEnabled(true);
                     edit_name.setEnabled(true);
                     edit_question.setEnabled(true);
                     edit_answer.setEnabled(true);
@@ -120,6 +116,7 @@ public class LandingPage extends AppCompatActivity
                     edit_email.setEnabled(true);
                     edit_phone_number.setBackgroundResource(R.color.colorBasicFull);
                     edit_password.setBackgroundResource(R.color.colorBasicFull);
+                    confirm_edit_password.setBackgroundResource(R.color.colorBasicFull);
                     edit_name.setBackgroundResource(R.color.colorBasicFull);
                     edit_question.setBackgroundResource(R.color.colorBasicFull);
                     edit_answer.setBackgroundResource(R.color.colorBasicFull);
@@ -129,6 +126,7 @@ public class LandingPage extends AppCompatActivity
                 else {
                     final String phoneNumber = edit_phone_number.getText().toString();
                     final String password = edit_password.getText().toString();
+                    final String confirmPassword = confirm_edit_password.getText().toString();
                     final String name = edit_name.getText().toString();
                     final String secQues = edit_question.getText().toString();
                     final String secAns = edit_answer.getText().toString();
@@ -138,48 +136,57 @@ public class LandingPage extends AppCompatActivity
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            try {
-                                JSONObject jsonResponse = new JSONObject(response);
-                                boolean success = jsonResponse.getBoolean("success");
-                                if (success) {
-                                    Toast.makeText(LandingPage.this, "Successfully edited profile! Please check your spam folder if you don't get an email.", Toast.LENGTH_LONG).show();
-                                    edit_user.setText("Edit");
-                                    editMode = "false";
-                                    edit_phone_number.setEnabled(false);
-                                    edit_password.setEnabled(false);
-                                    edit_name.setEnabled(false);
-                                    edit_question.setEnabled(false);
-                                    edit_answer.setEnabled(false);
-                                    edit_birthday.setEnabled(false);
-                                    edit_email.setEnabled(false);
-                                    edit_phone_number.setBackgroundResource(R.color.colorBasic);
-                                    edit_password.setBackgroundResource(R.color.colorBasic);
-                                    edit_name.setBackgroundResource(R.color.colorBasic);
-                                    edit_question.setBackgroundResource(R.color.colorBasic);
-                                    edit_answer.setBackgroundResource(R.color.colorBasic);
-                                    edit_birthday.setBackgroundResource(R.color.colorBasic);
-                                    edit_email.setBackgroundResource(R.color.colorBasic);
+                            if (password.equals(confirmPassword)) {
+                                try {
+                                    JSONObject jsonResponse = new JSONObject(response);
+                                    boolean success = jsonResponse.getBoolean("success");
+                                    if (success) {
+                                        Toast.makeText(LandingPage.this, "Successfully edited profile! Please check your spam folder if you don't get an email.", Toast.LENGTH_LONG).show();
+                                        edit_user.setText("Edit");
+                                        editMode = "false";
+                                        edit_phone_number.setEnabled(false);
+                                        edit_password.setEnabled(false);
+                                        confirm_edit_password.setEnabled(false);
+                                        edit_name.setEnabled(false);
+                                        edit_question.setEnabled(false);
+                                        edit_answer.setEnabled(false);
+                                        edit_birthday.setEnabled(false);
+                                        edit_email.setEnabled(false);
+                                        edit_phone_number.setBackgroundResource(R.color.colorBasic);
+                                        edit_password.setBackgroundResource(R.color.colorBasic);
+                                        confirm_edit_password.setBackgroundResource(R.color.colorBasicFull);
+                                        edit_name.setBackgroundResource(R.color.colorBasic);
+                                        edit_question.setBackgroundResource(R.color.colorBasic);
+                                        edit_answer.setBackgroundResource(R.color.colorBasic);
+                                        edit_birthday.setBackgroundResource(R.color.colorBasic);
+                                        edit_email.setBackgroundResource(R.color.colorBasic);
 
-                                    //update sharedpreferences
-                                    SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                                    SharedPreferences.Editor editor = UserInfo.edit();
-                                    editor.putString("name", name);
-                                    editor.putString("logout","");
-                                    editor.putString("oldPhoneNumber", phoneNumber);
-                                    editor.putString("oldSecQues", secQues);
-                                    editor.putString("oldSecAns", secAns);
-                                    editor.putString("oldBirthdate", birthdate);
-                                    editor.putString("oldEmail", email);
-                                    editor.apply();
-                                    user_name_display.setText(name + "'s Account");
+                                        //update sharedpreferences
+                                        SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                                        SharedPreferences.Editor editor = UserInfo.edit();
+                                        editor.putString("name", name);
+                                        editor.putString("logout", "");
+                                        editor.putString("oldPhoneNumber", phoneNumber);
+                                        editor.putString("oldSecQues", secQues);
+                                        editor.putString("oldSecAns", secAns);
+                                        editor.putString("oldBirthdate", birthdate);
+                                        editor.putString("oldEmail", email);
+                                        editor.apply();
+                                        user_name_display.setText(name + "'s Account");
 
-                                } else {
-                                    String warnings = jsonResponse.getString("warnings");
-                                    AlertDialog.Builder builder = new AlertDialog.Builder(LandingPage.this);
-                                    builder.setMessage(warnings).setNegativeButton("Retry", null).create().show();
+                                    } else {
+                                        String warnings = jsonResponse.getString("warnings");
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(LandingPage.this);
+                                        builder.setMessage(warnings).setNegativeButton("Retry", null).create().show();
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
                                 }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                            }
+                            else
+                            {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(LandingPage.this);
+                                builder.setMessage("Passwords must match!").setNegativeButton("Retry", null).create().show();
                             }
                         }
                     };
