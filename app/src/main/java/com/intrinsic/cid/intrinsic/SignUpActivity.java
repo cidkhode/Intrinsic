@@ -49,33 +49,26 @@ public class SignUpActivity extends AppCompatActivity {
                 Response.Listener<String> responseListener = new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response){
-                        if (password.equals(confirmPassword)) {
-                            try {
-                                JSONObject jsonResponse = new JSONObject(response);
-                                boolean success = jsonResponse.getBoolean("success");
-                                if (success) {
-                                    Toast.makeText(SignUpActivity.this, "Signup Successful! If you don't see an email right away, please check your spam folder.", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-                                    SignUpActivity.this.startActivity(intent);
-                                } else {
-                                    String warnings = jsonResponse.getString("warnings");
-                                    AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
-                                    builder.setMessage(warnings).setNegativeButton("Retry", null).create().show();
-                                    //Toast.makeText(SignUpActivity.this,"Signup Unsuccessful. Please Try Again!", Toast.LENGTH_LONG).show();
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
+                            if (success) {
+                                Toast.makeText(SignUpActivity.this, "Signup Successful! If you don't see an email right away, please check your spam folder.", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                                SignUpActivity.this.startActivity(intent);
+                            } else {
+                                String warnings = jsonResponse.getString("warnings");
+                                AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
+                                builder.setMessage(warnings).setNegativeButton("Retry", null).create().show();
+                                //Toast.makeText(SignUpActivity.this,"Signup Unsuccessful. Please Try Again!", Toast.LENGTH_LONG).show();
                             }
-                        }
-                        else
-                        {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
-                            builder.setMessage("Passwords must match!").setNegativeButton("Retry", null).create().show();
+                        } catch (JSONException e) {
+                                e.printStackTrace();
                         }
                     }
                 };
 
-                SignUpRequest signUpRequest = new SignUpRequest(phoneNumber, password, name, secQues, secAns, birthdate, email,responseListener);
+                SignUpRequest signUpRequest = new SignUpRequest(phoneNumber, password, confirmPassword, name, secQues, secAns, birthdate, email,responseListener);
                 RequestQueue queue = Volley.newRequestQueue(SignUpActivity.this);
                 queue.add(signUpRequest);
             }

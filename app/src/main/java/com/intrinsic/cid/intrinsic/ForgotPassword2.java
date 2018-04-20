@@ -46,14 +46,13 @@ public class ForgotPassword2 extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if (success) {
-                                Toast.makeText(ForgotPassword2.this,"Please check your email for account info.", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(ForgotPassword2.this, MainActivity.class);
-
+                                Toast.makeText(ForgotPassword2.this,"Please reset your password.", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(ForgotPassword2.this, ForgotPassword3.class);
+                                intent.putExtra("email", email);
                                 ForgotPassword2.this.startActivity(intent);
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(ForgotPassword2.this);
                                 builder.setMessage("Incorrect, please try again.").setNegativeButton("Retry", null).create().show();
-                                //Toast.makeText(ForgotPassword2.this,"Incorrect, please try again.", Toast.LENGTH_LONG).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();

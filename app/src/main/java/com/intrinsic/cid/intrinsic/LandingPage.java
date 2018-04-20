@@ -136,61 +136,54 @@ public class LandingPage extends AppCompatActivity
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            if (password.equals(confirmPassword)) {
-                                try {
-                                    JSONObject jsonResponse = new JSONObject(response);
-                                    boolean success = jsonResponse.getBoolean("success");
-                                    if (success) {
-                                        Toast.makeText(LandingPage.this, "Successfully edited profile! Please check your spam folder if you don't get an email.", Toast.LENGTH_LONG).show();
-                                        edit_user.setText("Edit");
-                                        editMode = "false";
-                                        edit_phone_number.setEnabled(false);
-                                        edit_password.setEnabled(false);
-                                        confirm_edit_password.setEnabled(false);
-                                        edit_name.setEnabled(false);
-                                        edit_question.setEnabled(false);
-                                        edit_answer.setEnabled(false);
-                                        edit_birthday.setEnabled(false);
-                                        edit_email.setEnabled(false);
-                                        edit_phone_number.setBackgroundResource(R.color.colorBasic);
-                                        edit_password.setBackgroundResource(R.color.colorBasic);
-                                        confirm_edit_password.setBackgroundResource(R.color.colorBasicFull);
-                                        edit_name.setBackgroundResource(R.color.colorBasic);
-                                        edit_question.setBackgroundResource(R.color.colorBasic);
-                                        edit_answer.setBackgroundResource(R.color.colorBasic);
-                                        edit_birthday.setBackgroundResource(R.color.colorBasic);
-                                        edit_email.setBackgroundResource(R.color.colorBasic);
+                            try {
+                                JSONObject jsonResponse = new JSONObject(response);
+                                boolean success = jsonResponse.getBoolean("success");
+                                if (success) {
+                                    Toast.makeText(LandingPage.this, "Successfully edited profile! Please check your spam folder if you don't get an email.", Toast.LENGTH_LONG).show();
+                                    edit_user.setText("Edit");
+                                    editMode = "false";
+                                    edit_phone_number.setEnabled(false);
+                                    edit_password.setEnabled(false);
+                                    confirm_edit_password.setEnabled(false);
+                                    edit_name.setEnabled(false);
+                                    edit_question.setEnabled(false);
+                                    edit_answer.setEnabled(false);
+                                    edit_birthday.setEnabled(false);
+                                    edit_email.setEnabled(false);
+                                    edit_phone_number.setBackgroundResource(R.color.colorBasic);
+                                    edit_password.setBackgroundResource(R.color.colorBasic);
+                                    confirm_edit_password.setBackgroundResource(R.color.colorBasicFull);
+                                    edit_name.setBackgroundResource(R.color.colorBasic);
+                                    edit_question.setBackgroundResource(R.color.colorBasic);
+                                    edit_answer.setBackgroundResource(R.color.colorBasic);
+                                    edit_birthday.setBackgroundResource(R.color.colorBasic);
+                                    edit_email.setBackgroundResource(R.color.colorBasic);
 
-                                        //update sharedpreferences
-                                        SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                                        SharedPreferences.Editor editor = UserInfo.edit();
-                                        editor.putString("name", name);
-                                        editor.putString("logout", "");
-                                        editor.putString("oldPhoneNumber", phoneNumber);
-                                        editor.putString("oldSecQues", secQues);
-                                        editor.putString("oldSecAns", secAns);
-                                        editor.putString("oldBirthdate", birthdate);
-                                        editor.putString("oldEmail", email);
-                                        editor.apply();
-                                        user_name_display.setText(name + "'s Account");
+                                    //update sharedpreferences
+                                    SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                                    SharedPreferences.Editor editor = UserInfo.edit();
+                                    editor.putString("name", name);
+                                    editor.putString("logout", "");
+                                    editor.putString("oldPhoneNumber", phoneNumber);
+                                    editor.putString("oldSecQues", secQues);
+                                    editor.putString("oldSecAns", secAns);
+                                    editor.putString("oldBirthdate", birthdate);
+                                    editor.putString("oldEmail", email);
+                                    editor.apply();
+                                    user_name_display.setText(name + "'s Account");
 
-                                    } else {
-                                        String warnings = jsonResponse.getString("warnings");
-                                        AlertDialog.Builder builder = new AlertDialog.Builder(LandingPage.this);
-                                        builder.setMessage(warnings).setNegativeButton("Retry", null).create().show();
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
+                                } else {
+                                    String warnings = jsonResponse.getString("warnings");
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(LandingPage.this);
+                                    builder.setMessage(warnings).setNegativeButton("Retry", null).create().show();
                                 }
-                            }
-                            else
-                            {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(LandingPage.this);
-                                builder.setMessage("Passwords must match!").setNegativeButton("Retry", null).create().show();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                             }
                         }
                     };
-                    LandingRequest landingRequest = new LandingRequest(custID, phoneNumber, password, name, secQues, secAns, birthdate, email, responseListener);
+                    LandingRequest landingRequest = new LandingRequest(custID, phoneNumber, password, confirmPassword, name, secQues, secAns, birthdate, email, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(LandingPage.this);
                     queue.add(landingRequest);
                 }
