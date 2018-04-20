@@ -56,10 +56,24 @@
             android:textColor="@color/black" />
 
         <EditText
-            android:id="@+id/create_name"
+            android:id="@+id/confirm_password"
             android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_below="@+id/create_password"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:background="@color/colorBasic"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            android:hint="@string/confirmPassword"
+            android:paddingHorizontal="10dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/create_name"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/confirm_password"
             android:layout_centerHorizontal="true"
             android:ems="10"
             android:background="@color/colorBasic"
