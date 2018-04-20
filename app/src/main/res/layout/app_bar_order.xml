@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.intrinsic.cid.intrinsic.MenuBubbleTeaActivity">
+    tools:context=".OrderActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -15,11 +15,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            android:theme="@style/MyTheme.ActionBar.TitleTextStyle" />
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_menu_bubble_tea" />
+    <include layout="@layout/content_order" />
 
 </android.support.design.widget.CoordinatorLayout>
