@@ -9,9 +9,15 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MenuSmoothieActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    double smallSmoothiePrice = 3.00;
+    double largeSmoothiePrice = 3.75;
+    double smallSlushiePrice = 2.50;
+    double largeSlushiePrice = 3.55;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,5 +89,18 @@ public class MenuSmoothieActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void selectSize(View view) {
+        Button itemButton = (Button) view;
+        String itemName = "SMOOTHIE: " + itemButton.getText().toString();
+        Intent selectSize = new Intent(MenuSmoothieActivity.this, SelectSizeSlushieSmoothie.class);
+        selectSize
+                .putExtra("itemName", itemName)
+                .putExtra("smallSmoothieSize", smallSmoothiePrice)
+                .putExtra("largeSmoothieSize", largeSmoothiePrice)
+                .putExtra("smallSlushieSize", smallSlushiePrice)
+                .putExtra("largeSlushieSize", largeSlushiePrice);
+        startActivity(selectSize);
     }
 }

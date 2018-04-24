@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="?android:attr/actionBarSize"
     android:fillViewport="true"
-    tools:context=".SelectSize">
+    tools:context=".SelectSizeBrewedBubbleMilkshakeCoffee">
 
     <android.widget.RelativeLayout
         android:layout_width="match_parent"
@@ -55,24 +55,24 @@
             android:id="@+id/smallPriceTextView"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/smallSize"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/smallSize"
             android:layout_marginTop="174dp"
-            android:textColor="@color/black"
+            android:text="Price: $2.00"
             android:textAlignment="center"
-            android:text="Price: "
-            android:layout_alignLeft="@+id/smallSize" />
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/largePriceTextView"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/largeSize"
             android:layout_alignStart="@+id/largeSize"
             android:layout_alignTop="@+id/smallPriceTextView"
-            android:textColor="@color/black"
+            android:text="Price: $3.00"
             android:textAlignment="center"
-            android:text="Price: "
-            android:layout_alignLeft="@+id/largeSize" />
+            android:textColor="@color/black" />
 
 
     </android.widget.RelativeLayout>

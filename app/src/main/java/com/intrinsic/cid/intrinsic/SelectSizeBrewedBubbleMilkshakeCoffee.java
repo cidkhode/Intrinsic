@@ -7,17 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class SelectSize extends AppCompatActivity {
+public class SelectSizeBrewedBubbleMilkshakeCoffee extends AppCompatActivity {
 
     String itemName;
-    double itemPrice;
+    double itemPrice = 0.0;
     double smallSize;
     double largeSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_size);
+        setContentView(R.layout.activity_select_size_brewed_bubble_milkshake_coffee);
         Intent intent = this.getIntent();
         itemName = intent.getStringExtra("itemName");
         smallSize = intent.getDoubleExtra("smallSize", 0);
@@ -33,6 +33,6 @@ public class SelectSize extends AppCompatActivity {
         }
         LandingPage.cart.put(itemName, itemPrice);
         Toast.makeText(this, "Added to cart!", Toast.LENGTH_LONG).show();
-        startActivity(new Intent(SelectSize.this, MenuActivity.class));
+        startActivity(new Intent(SelectSizeBrewedBubbleMilkshakeCoffee.this, MenuActivity.class));
     }
 }

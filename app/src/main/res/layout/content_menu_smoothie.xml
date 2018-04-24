@@ -57,6 +57,7 @@
             android:textSize="20sp"
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/banana_smoothie_button"
@@ -69,6 +70,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/almond_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/blueberry_smoothie_button"
@@ -81,6 +83,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/banana_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/chocolate_smoothie_button"
@@ -93,6 +96,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/blueberry_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/coconut_smoothie_button"
@@ -105,6 +109,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/chocolate_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/green_tea_smoothie_button"
@@ -117,6 +122,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/coconut_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/honeydew_smoothie_button"
@@ -129,6 +135,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/green_tea_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/jasmine_smoothie_button"
@@ -141,6 +148,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/honeydew_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/mango_smoothie_button"
@@ -153,6 +161,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/jasmine_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/milk_tea_smoothie_button"
@@ -165,6 +174,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/mango_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/papaya_smoothie_button"
@@ -177,6 +187,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/milk_tea_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/red_bean_smoothie_button"
@@ -189,6 +200,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/papaya_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/strawberry_smoothie_button"
@@ -201,6 +213,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/red_bean_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/taro_smoothie_button"
@@ -213,6 +226,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/strawberry_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/thai_smoothie_button"
@@ -225,6 +239,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/taro_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/watermelon_smoothie_button"
@@ -237,6 +252,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/thai_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/kiwi_smoothie_button"
@@ -249,6 +265,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/watermelon_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/acai_smoothie_button"
@@ -261,6 +278,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/kiwi_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/cherry_smoothie_button"
@@ -273,6 +291,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/acai_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/green_apple_smoothie_button"
@@ -285,6 +304,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/cherry_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/guava_smoothie_button"
@@ -297,6 +317,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/green_apple_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/kumquat_smoothie_button"
@@ -309,6 +330,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/guava_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/pina_colada_smoothie_button"
@@ -321,6 +343,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/kumquat_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/margarita_smoothie_button"
@@ -333,6 +356,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/pina_colada_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/lemon_smoothie_button"
@@ -345,6 +369,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/margarita_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/lychee_smoothie_button"
@@ -357,6 +382,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/lemon_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/mint_smoothie_button"
@@ -369,6 +395,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/lychee_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/orange_smoothie_button"
@@ -381,6 +408,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/mint_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/passionfruit_smoothie_button"
@@ -393,6 +421,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/orange_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/peach_smoothie_button"
@@ -405,6 +434,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/passionfruit_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/pomegranate_smoothie_button"
@@ -417,6 +447,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/peach_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/pineapple_smoothie_button"
@@ -429,6 +460,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/pomegranate_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/yogurt_smoothie_button"
@@ -441,6 +473,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/pineapple_smoothie_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
 
     </android.widget.RelativeLayout>

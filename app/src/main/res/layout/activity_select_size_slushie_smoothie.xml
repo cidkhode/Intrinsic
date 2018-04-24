@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:fillViewport="true"
+    tools:context=".SelectSizeBrewedBubbleMilkshakeCoffee">
+
+    <android.widget.RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/selectTypeSlushieSmoothieTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:text="SELECT SIZE:"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/small_smoothie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="163dp"
+            android:background="@color/black"
+            android:text="S M A L L"
+            android:textColor="@color/white"
+            android:onClick="addToCart"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp" />
+
+        <Button
+            android:id="@+id/small_slushie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/small_smoothie"
+            android:layout_marginEnd="40dp"
+            android:background="@color/black"
+            android:text="S M A L L"
+            android:textColor="@color/white"
+            android:onClick="addToCart"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp" />
+
+        <Button
+            android:id="@+id/large_smoothie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/small_smoothie"
+            android:layout_marginBottom="205dp"
+            android:background="@color/black"
+            android:text="L A R G E"
+            android:textColor="@color/white"
+            android:onClick="addToCart"
+            android:layout_alignLeft="@+id/small_smoothie" />
+
+        <Button
+            android:id="@+id/large_slushie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/large_smoothie"
+            android:layout_alignStart="@+id/small_slushie"
+            android:background="@color/black"
+            android:text="L A R G E"
+            android:textColor="@color/white"
+            android:onClick="addToCart"
+            android:layout_alignLeft="@+id/small_slushie" />
+
+        <TextView
+            android:id="@+id/slushie_price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/small_slushie"
+            android:layout_alignTop="@+id/smoothie_price_textview"
+            android:text="Slushies"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_alignRight="@+id/small_slushie" />
+
+        <TextView
+            android:id="@+id/smoothie_price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/small_smoothie"
+            android:layout_marginTop="115dp"
+            android:text="Smoothies"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_alignLeft="@+id/small_smoothie" />
+
+    </android.widget.RelativeLayout>
+</ScrollView>

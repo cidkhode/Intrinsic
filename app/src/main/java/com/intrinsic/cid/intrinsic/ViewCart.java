@@ -29,17 +29,17 @@ double totalPrice;
             placeOrder.setEnabled(false);
         } else {
             StringBuilder sb = new StringBuilder();
-            sb.append("Cart: \n");
+            sb.append("Cart: \n---\n");
             for(String key: LandingPage.cart.keySet()) {
                 double priceOfEach = LandingPage.cart.get(key);
                 totalPrice+=priceOfEach;
-                sb.append(key + " -- " + priceOfEach + "\n");
+                sb.append(key + " \n$" + String.format("%.2f", priceOfEach) + "\n---\n");
             }
             String cartText = sb.toString();
             cart.setText(cartText);
             placeOrder.setEnabled(true);
         }
-        priceOfCart.setText("$" + totalPrice);
+        priceOfCart.setText("$" + String.format("%.2f", totalPrice));
 
     }
 

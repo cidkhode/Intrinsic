@@ -61,31 +61,46 @@
         <activity
             android:name=".MenuBubbleTeaActivity"
             android:label="@string/title_activity_menu"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MenuBrewedTeaActivity"
             android:label="@string/title_activity_menu"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MenuSmoothieActivity"
             android:label="@string/title_activity_menu"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MenuMilkshakeActivity"
             android:label="@string/title_activity_menu"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MenuCoffeeActivity"
             android:label="@string/title_activity_menu"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".OrderActivity"
             android:label="@string/title_activity_order"
             android:theme="@style/AppTheme" />
-        <activity android:name=".PaymentDetails" />
-        <activity android:name=".ForgotPassword3" />
-        <activity android:name=".SelectSize" />
-        <activity android:name=".ViewCart"></activity>
+        <activity
+            android:name=".PaymentDetails"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ForgotPassword3"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SelectSizeBrewedBubbleMilkshakeCoffee"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ViewCart"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SelectSizeSlushieSmoothie"
+            android:screenOrientation="portrait"/>
     </application>
-
 </manifest>

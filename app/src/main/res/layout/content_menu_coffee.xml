@@ -38,6 +38,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
 
         <Button
@@ -53,6 +54,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
 
         <Button
@@ -68,6 +70,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
 
         <Button
@@ -83,6 +86,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
 
         <Button
@@ -98,6 +102,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
 
         <Button
@@ -113,6 +118,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
 
         <Button
@@ -128,6 +134,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
 
         <Button
@@ -143,6 +150,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
         <Button
             android:id="@+id/lover_coffee_button"
@@ -157,26 +165,29 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
+
         <Button
-            android:id="@+id/expresso_coffee_button"
+            android:id="@+id/espresso_coffee_button"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@+id/lover_coffee_button"
+            android:layout_gravity="start"
             android:background="@color/colorBasic"
-            android:text="Expresso"
+            android:clickable="true"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:layout_gravity="start"
-            android:textAlignment="textStart"
-            android:textSize="20sp"
             android:stateListAnimator="@null"
-            android:clickable="true"/>
+            android:onClick="selectSize"
+            android:text="Espresso"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
         <Button
             android:id="@+id/con_panna_coffee_button"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/expresso_coffee_button"
+            android:layout_below="@+id/espresso_coffee_button"
             android:background="@color/colorBasic"
             android:text="Con Panna"
             android:paddingLeft="10dp"
@@ -185,6 +196,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
         <Button
             android:id="@+id/americano_coffee_button"
@@ -199,6 +211,7 @@
             android:textAlignment="textStart"
             android:textSize="20sp"
             android:stateListAnimator="@null"
+            android:onClick="selectSize"
             android:clickable="true"/>
 
         <TextView
@@ -319,7 +332,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/expresso_coffee_prices"
             android:layout_alignStart="@+id/expresso_coffee_prices"
-            android:layout_below="@+id/expresso_coffee_button"
+            android:layout_below="@+id/espresso_coffee_button"
             android:layout_marginTop="10dp"
             android:text="SMALL - $2.15\nLARGE - $2.90"
             android:textColor="@color/black" />

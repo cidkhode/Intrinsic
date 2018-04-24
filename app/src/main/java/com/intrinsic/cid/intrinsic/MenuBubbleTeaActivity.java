@@ -91,20 +91,22 @@ public class MenuBubbleTeaActivity extends AppCompatActivity
     public void selectCreamySize(View view) {
         Button itemButton = (Button) view;
         String itemName = "BUBBLE CREAMY: " + itemButton.getText().toString();
-        Intent selectSize = new Intent(MenuBubbleTeaActivity.this, SelectSize.class);
+        Intent selectSize = new Intent(MenuBubbleTeaActivity.this, SelectSizeBrewedBubbleMilkshakeCoffee.class);
         selectSize
                 .putExtra("itemName", itemName)
                 .putExtra("smallSize", smallPrice)
                 .putExtra("largeSize", largePrice);
+        startActivity(selectSize);
     }
 
     public void selectJuiceSize(View view) {
         Button itemButton = (Button) view;
         String itemName = "BUBBLE JUICE: " + itemButton.getText().toString();
-        Intent selectSize = new Intent(MenuBubbleTeaActivity.this, SelectSize.class);
+        Intent selectSize = new Intent(MenuBubbleTeaActivity.this, SelectSizeBrewedBubbleMilkshakeCoffee.class);
         selectSize
                 .putExtra("itemName", itemName)
                 .putExtra("smallSize", smallPrice)
                 .putExtra("largeSize", largePrice);
+        startActivity(selectSize);
     }
 }
