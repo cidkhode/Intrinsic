@@ -43,6 +43,7 @@
             android:background="@color/black"
             android:padding="5dp"
             android:text="Place Order"
+            android:onClick="payOrder"
             android:textColor="@color/white" />
 
     </android.widget.RelativeLayout>

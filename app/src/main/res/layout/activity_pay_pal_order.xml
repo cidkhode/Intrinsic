@@ -6,25 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".OrderActivity"
-    tools:showIn="@layout/app_bar_order">
+    tools:context=".PayPalOrder">
 
-    <EditText
+    <TextView
         android:id="@+id/amount"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/rounded_red_textbox"
+        android:background="@drawable/rounded_black_textbox"
         android:textAllCaps="true"
         android:textAlignment="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center"
         android:layout_marginTop="124dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        android:hint="@string/amount"
+        android:text="@string/amount"
         android:layout_marginBottom="20dp"
-        android:textColorHint="@android:color/holo_red_dark"
-        android:textColor="@android:color/holo_red_dark" />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/pay_button"
@@ -34,8 +34,8 @@
         android:layout_marginLeft="20dp"
         android:layout_below="@id/amount"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/rounded_blue_button"
-        android:textColor="@android:color/holo_blue_dark"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/black"
         android:text="PAY USING PAY PAL" />
 
 

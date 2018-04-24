@@ -45,21 +45,6 @@ public class MenuActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -68,8 +53,6 @@ public class MenuActivity extends AppCompatActivity
 
         if (id == R.id.menu_option) {
             //do nothing
-        } else if (id == R.id.order_option) {
-            startActivity(new Intent(MenuActivity.this, OrderActivity.class));
         } else if (id == R.id.rewards_option) {
 
         } else if (id == R.id.music_option) {

@@ -1,5 +1,6 @@
 package com.intrinsic.cid.intrinsic;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,8 @@ TextView cart;
 TextView priceOfCart;
 Button placeOrder;
 double totalPrice;
+String formattedPrice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,11 +42,14 @@ double totalPrice;
             cart.setText(cartText);
             placeOrder.setEnabled(true);
         }
-        priceOfCart.setText("$" + String.format("%.2f", totalPrice));
+        formattedPrice = String.format("%.2f", totalPrice);
+        priceOfCart.setText("$" + formattedPrice);
 
     }
 
-    public void placeOrder(View view) {
-        Toast.makeText(this, "Ready to order!", Toast.LENGTH_LONG).show();
+    public void payOrder(View view) {
+        Intent intent = new Intent(ViewCart.this, PayPalOrder.class);
+        intent.putExtra("amount", formattedPrice);
+        startActivity(intent);
     }
 }

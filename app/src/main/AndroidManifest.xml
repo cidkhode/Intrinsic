@@ -84,23 +84,23 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".OrderActivity"
-            android:label="@string/title_activity_order"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".PaymentDetails"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ForgotPassword3"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SelectSizeBrewedBubbleMilkshakeCoffee"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ViewCart"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SelectSizeSlushieSmoothie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PayPalOrder"
             android:screenOrientation="portrait"/>
     </application>
+
 </manifest>
