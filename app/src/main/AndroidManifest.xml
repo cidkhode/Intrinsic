@@ -83,7 +83,9 @@
             android:label="@string/title_activity_order"
             android:theme="@style/AppTheme" />
         <activity android:name=".PaymentDetails" />
-        <activity android:name=".ForgotPassword3"></activity>
+        <activity android:name=".ForgotPassword3" />
+        <activity android:name=".SelectSize" />
+        <activity android:name=".ViewCart"></activity>
     </application>
 
 </manifest>

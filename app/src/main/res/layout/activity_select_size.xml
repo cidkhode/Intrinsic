@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:fillViewport="true"
+    tools:context=".SelectSize">
+
+    <android.widget.RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/selectSizeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:text="SELECT SIZE:"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/smallSize"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/selectSizeTextView"
+            android:padding="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="50dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:onClick="addToCart"
+            android:text="S M A L L" />
+
+        <Button
+            android:id="@+id/largeSize"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/smallSize"
+            android:layout_marginEnd="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="41dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:onClick="addToCart"
+            android:text="L A R G E" />
+
+        <TextView
+            android:id="@+id/smallPriceTextView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/smallSize"
+            android:layout_marginTop="174dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:text="Price: "
+            android:layout_alignLeft="@+id/smallSize" />
+
+        <TextView
+            android:id="@+id/largePriceTextView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/largeSize"
+            android:layout_alignTop="@+id/smallPriceTextView"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:text="Price: "
+            android:layout_alignLeft="@+id/largeSize" />
+
+
+    </android.widget.RelativeLayout>
+</ScrollView>

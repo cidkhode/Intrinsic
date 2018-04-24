@@ -48,7 +48,7 @@
         <Button
             android:id="@+id/almond_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="Almond"
@@ -61,7 +61,7 @@
         <Button
             android:id="@+id/banana_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Banana"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -73,7 +73,7 @@
         <Button
             android:id="@+id/blueberry_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Blueberry"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -85,7 +85,7 @@
         <Button
             android:id="@+id/chocolate_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Chocolate"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -97,7 +97,7 @@
         <Button
             android:id="@+id/coconut_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Coconut"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -109,7 +109,7 @@
         <Button
             android:id="@+id/green_tea_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Green Tea"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -121,7 +121,7 @@
         <Button
             android:id="@+id/honeydew_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Honeydew"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -133,7 +133,7 @@
         <Button
             android:id="@+id/jasmine_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Jasmine"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -145,7 +145,7 @@
         <Button
             android:id="@+id/mango_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Mango"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -157,7 +157,7 @@
         <Button
             android:id="@+id/milk_tea_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Milk Tea"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -169,7 +169,7 @@
         <Button
             android:id="@+id/papaya_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Papaya"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -181,7 +181,7 @@
         <Button
             android:id="@+id/red_bean_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Red Bear"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -193,7 +193,7 @@
         <Button
             android:id="@+id/strawberry_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Strawberry"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -205,7 +205,7 @@
         <Button
             android:id="@+id/taro_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Taro"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -217,7 +217,7 @@
         <Button
             android:id="@+id/thai_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Thai"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -229,7 +229,7 @@
         <Button
             android:id="@+id/watermelon_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Watermelon"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -241,7 +241,7 @@
         <Button
             android:id="@+id/kiwi_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Kiwi"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -253,7 +253,7 @@
         <Button
             android:id="@+id/acai_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Acai"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -265,7 +265,7 @@
         <Button
             android:id="@+id/cherry_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Cherry"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -277,7 +277,7 @@
         <Button
             android:id="@+id/green_apple_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Green Apple"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -289,7 +289,7 @@
         <Button
             android:id="@+id/guava_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Guava"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -301,7 +301,7 @@
         <Button
             android:id="@+id/kumquat_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Kumquat"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -313,7 +313,7 @@
         <Button
             android:id="@+id/pina_colada_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Pina Colada"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -325,7 +325,7 @@
         <Button
             android:id="@+id/margarita_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Margarita"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -337,7 +337,7 @@
         <Button
             android:id="@+id/lemon_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Lemon"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -349,7 +349,7 @@
         <Button
             android:id="@+id/lychee_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Lychee"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -361,7 +361,7 @@
         <Button
             android:id="@+id/mint_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Mint"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -373,7 +373,7 @@
         <Button
             android:id="@+id/orange_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Orange"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -385,7 +385,7 @@
         <Button
             android:id="@+id/passionfruit_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Passion Fruit"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -397,7 +397,7 @@
         <Button
             android:id="@+id/peach_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Peach"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -409,7 +409,7 @@
         <Button
             android:id="@+id/pomegranate_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Pomegranate"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -421,7 +421,7 @@
         <Button
             android:id="@+id/pineapple_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Pineapple"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -433,7 +433,7 @@
         <Button
             android:id="@+id/yogurt_smoothie_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Yogurt"
             android:textAlignment="center"
             android:textSize="20sp"

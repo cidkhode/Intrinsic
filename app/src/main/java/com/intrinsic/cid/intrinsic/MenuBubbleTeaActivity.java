@@ -9,9 +9,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MenuBubbleTeaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    double smallPrice = 2.00;
+    double largePrice = 3.00;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,5 +86,25 @@ public class MenuBubbleTeaActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void selectCreamySize(View view) {
+        Button itemButton = (Button) view;
+        String itemName = "BUBBLE CREAMY: " + itemButton.getText().toString();
+        Intent selectSize = new Intent(MenuBubbleTeaActivity.this, SelectSize.class);
+        selectSize
+                .putExtra("itemName", itemName)
+                .putExtra("smallSize", smallPrice)
+                .putExtra("largeSize", largePrice);
+    }
+
+    public void selectJuiceSize(View view) {
+        Button itemButton = (Button) view;
+        String itemName = "BUBBLE JUICE: " + itemButton.getText().toString();
+        Intent selectSize = new Intent(MenuBubbleTeaActivity.this, SelectSize.class);
+        selectSize
+                .putExtra("itemName", itemName)
+                .putExtra("smallSize", smallPrice)
+                .putExtra("largeSize", largePrice);
     }
 }

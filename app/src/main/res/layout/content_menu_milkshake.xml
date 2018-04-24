@@ -46,7 +46,7 @@
         <Button
             android:id="@+id/almond_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="Almond"
@@ -55,11 +55,12 @@
             android:textSize="20sp"
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/banana_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Banana"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -67,11 +68,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/almond_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/blueberry_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Blueberry"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -79,11 +81,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/banana_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/chocolate_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Chocolate"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -91,11 +94,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/blueberry_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/coconut_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Coconut"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -103,11 +107,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/chocolate_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/green_tea_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Green Tea"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -115,11 +120,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/coconut_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/honeydew_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Honeydew"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -127,11 +133,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/green_tea_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/jasmine_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Jasmine"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -139,11 +146,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/honeydew_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/mango_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Mango"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -151,11 +159,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/jasmine_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/milk_tea_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Milk Tea"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -163,11 +172,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/mango_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/papaya_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Papaya"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -175,11 +185,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/milk_tea_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/red_bean_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Red Bean"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -187,11 +198,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/papaya_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/strawberry_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Strawberry"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -199,11 +211,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/red_bean_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/taro_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Taro"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -211,11 +224,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/strawberry_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/thai_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Thai"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -223,11 +237,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/taro_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/watermelon_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Watermelon"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -235,11 +250,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/thai_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/kiwi_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Kiwi"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -247,11 +263,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/watermelon_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/acai_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Acai"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -259,11 +276,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/kiwi_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/cherry_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Cherry"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -271,11 +289,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/acai_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/green_apple_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Green Apple"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -283,11 +302,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/cherry_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/guava_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Guava"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -295,11 +315,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/green_apple_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/kumquat_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Kumquat"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -307,11 +328,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/guava_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/pina_colada_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Pina Colada"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -319,11 +341,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/kumquat_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/margarita_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Margarita"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -331,11 +354,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/pina_colada_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/lemon_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Lemon"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -343,11 +367,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/margarita_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/lychee_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Lychee"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -355,11 +380,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/lemon_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/mint_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Mint"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -367,11 +393,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/lychee_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/orange_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Orange"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -379,11 +406,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/mint_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/passionfruit_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Passion Fruit"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -391,11 +419,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/orange_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/peach_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Peach"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -403,11 +432,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/passionfruit_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/pomegranate_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Pomegranate"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -415,11 +445,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/peach_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/pineapple_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Pineapple"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -427,11 +458,12 @@
             android:layout_height="70dp"
             android:layout_below="@+id/pomegranate_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
             android:id="@+id/yogurt_milkshake_button"
             android:background="@color/colorBasic"
-            android:clickable="false"
+            android:clickable="true"
             android:text="Yogurt"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -439,6 +471,7 @@
             android:layout_height="70dp"
             android:layout_below="@+id/pineapple_milkshake_button"
             android:layout_centerHorizontal="true"
+            android:onClick="selectSize"
             android:stateListAnimator="@null"/>
 
     </android.widget.RelativeLayout>

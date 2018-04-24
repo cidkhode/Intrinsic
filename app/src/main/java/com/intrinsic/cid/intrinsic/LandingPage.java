@@ -26,10 +26,13 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 public class LandingPage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-   String editMode = "false"; //this represents if the user is in edit mode or not
+    public static HashMap<String, Double> cart;
+    String editMode = "false"; //this represents if the user is in edit mode or not
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,7 @@ public class LandingPage extends AppCompatActivity
         String oldEmail = intent.getStringExtra("email");*/
 
         //display name using shared preferences
+        cart = new HashMap<String, Double>();
         SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String name = displayUserInfo.getString("name", "");
         String oldPhoneNumber = displayUserInfo.getString("oldPhoneNumber", "");

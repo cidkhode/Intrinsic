@@ -13,9 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MenuMilkshakeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    double smallPrice = 2.00;
+    double largePrice = 3.00;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,5 +90,16 @@ public class MenuMilkshakeActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void selectSize(View view) {
+        Button itemButton = (Button) view;
+        String itemName = "MILKSHAKE: " + itemButton.getText().toString();
+        Intent selectSize = new Intent(MenuMilkshakeActivity.this, SelectSize.class);
+        selectSize
+                .putExtra("itemName", itemName)
+                .putExtra("smallSize", smallPrice)
+                .putExtra("largeSize", largePrice);
+        startActivity(selectSize);
     }
 }

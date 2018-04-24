@@ -123,4 +123,9 @@ public class MenuActivity extends AppCompatActivity
         Intent intent = new Intent(MenuActivity.this, MenuCoffeeActivity.class);
         startActivity(intent);
     }
+
+    public void viewCart(View view) {
+        Intent intent = new Intent(MenuActivity.this, MenuCoffeeActivity.class);
+        startActivity(intent);
+    }
 }

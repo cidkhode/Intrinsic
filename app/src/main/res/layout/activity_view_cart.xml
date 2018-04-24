@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:fillViewport="true"
+    tools:context=".ViewCart">
+    <android.widget.RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/cartView"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:text="Cart:"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/priceOfCartTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cartView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:text="Price:"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/placeOrder"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/priceOfCartTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="74dp"
+            android:background="@color/black"
+            android:padding="5dp"
+            android:text="Place Order"
+            android:textColor="@color/white" />
+
+    </android.widget.RelativeLayout>
+</ScrollView>

@@ -37,7 +37,8 @@
             android:layout_marginTop="30dp"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/cappuccino_coffee_button"
@@ -51,7 +52,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/caramel_macchiato_coffee_button"
@@ -65,7 +67,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/mocha_coffee_button"
@@ -79,7 +82,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/white_mocha_coffee_button"
@@ -93,7 +97,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/black_white_mocha_coffee_button"
@@ -107,7 +112,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/coffee_button"
@@ -121,7 +127,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/vietnamese_coffee_button"
@@ -135,7 +142,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
         <Button
             android:id="@+id/lover_coffee_button"
             android:layout_width="match_parent"
@@ -148,7 +156,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
         <Button
             android:id="@+id/expresso_coffee_button"
             android:layout_width="match_parent"
@@ -161,7 +170,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
         <Button
             android:id="@+id/con_panna_coffee_button"
             android:layout_width="match_parent"
@@ -174,7 +184,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
         <Button
             android:id="@+id/americano_coffee_button"
             android:layout_width="match_parent"
@@ -187,7 +198,8 @@
             android:layout_gravity="start"
             android:textAlignment="textStart"
             android:textSize="20sp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null"
+            android:clickable="true"/>
 
         <TextView
             android:id="@+id/latte_prices"
