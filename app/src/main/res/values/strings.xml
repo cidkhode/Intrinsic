@@ -62,4 +62,16 @@
     <string name="price_dollar_sign">Price: $</string>
     <string name="l_a_r_g_e">L A R G E</string>
     <string name="s_m_a_l_l">S M A L L</string>
+    <string-array name="quantities">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 </resources>

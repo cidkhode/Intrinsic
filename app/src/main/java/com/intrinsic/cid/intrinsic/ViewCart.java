@@ -18,7 +18,7 @@ public class ViewCart extends AppCompatActivity {
 TextView cart;
 ListView cartListView;
 static TextView priceOfCart;
-Button placeOrder;
+static Button placeOrder;
 static double totalPrice;
 String formattedPrice;
 ArrayList<ItemInCart> itemNames;

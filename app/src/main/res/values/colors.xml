@@ -4,8 +4,12 @@
     <color name="colorBasicFull">#E6F8F7F7</color>
     <color name="colorRose">#EFE5DE</color>
     <color name="black">#000000</color>
+    <color name="fadedBlack">#60000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="fadedWhite">#60FFFFFF</color>
     <color name="purple">#800080</color>
     <color name="red">#FF0000</color>
     <color name="fadedRed">#60FF0000</color>
+    <color name="blue">#0080FF</color>
+    <color name="fadedBlue">#600080FF</color>
 </resources>
