@@ -17,7 +17,7 @@ public class MenuSmoothieActivity extends AppCompatActivity
     double smallSmoothiePrice = 3.00;
     double largeSmoothiePrice = 3.75;
     double smallSlushiePrice = 2.50;
-    double largeSlushiePrice = 3.55;
+    double largeSlushiePrice = 3.50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +76,7 @@ public class MenuSmoothieActivity extends AppCompatActivity
 
     public void selectSize(View view) {
         Button itemButton = (Button) view;
-        String itemName = "SMOOTHIE: " + itemButton.getText().toString();
+        String itemName = itemButton.getText().toString();
         Intent selectSize = new Intent(MenuSmoothieActivity.this, SelectSizeSlushieSmoothie.class);
         selectSize
                 .putExtra("itemName", itemName)

@@ -58,4 +58,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="amount">AMOUNT</string>
+    <string name="price">Price</string>
+    <string name="price_dollar_sign">Price: $</string>
+    <string name="l_a_r_g_e">L A R G E</string>
+    <string name="s_m_a_l_l">S M A L L</string>
 </resources>

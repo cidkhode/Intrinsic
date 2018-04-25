@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@drawable/cart_list_background">
+
+    <TextView
+        android:id="@+id/itemNameInCart"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_green_outline"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Name of Item"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/quantityOfItemInCart"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/itemNameInCart"
+        android:background="@drawable/rounded_blue_button"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="2dp"
+        android:text="#"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/deleteItemFromCart"
+        android:layout_width="51dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/quantityOfItemInCart"
+        android:background="@drawable/rounded_red_outline"
+        android:text="X"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/itemPriceInCart"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@id/itemNameInCart"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_black_outline"
+        android:padding="5dp"
+        android:text="@string/price"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+</RelativeLayout>
