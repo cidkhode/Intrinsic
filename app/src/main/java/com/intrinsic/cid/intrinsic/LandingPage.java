@@ -39,15 +39,6 @@ public class LandingPage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
 
-        Intent intent = getIntent();
-        /*int custIDint = intent.getIntExtra("custID", 0);
-        final String custID = Integer.toString(custIDint);
-        String oldPhoneNumber = intent.getStringExtra("phoneNumber");
-        String oldSecQues = intent.getStringExtra("secQues");
-        String oldSecAns = intent.getStringExtra("secAns");
-        String oldBirthdate = intent.getStringExtra("birthdate");
-        String oldEmail = intent.getStringExtra("email");*/
-
         //display name using shared preferences
         cart = new HashMap<String, Double>();
         SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -59,6 +50,8 @@ public class LandingPage extends AppCompatActivity
         String oldEmail = displayUserInfo.getString("oldEmail", "");
         int custIDint = displayUserInfo.getInt("custID", 0);
         final String custID = Integer.toString(custIDint);
+        final int stars = displayUserInfo.getInt("stars", 0);
+        final String reward = displayUserInfo.getString("reward", "");
 
         final TextView user_name_display = (TextView) findViewById(R.id.user_name_display);
         user_name_display.setText(name + "'s Account");
@@ -174,6 +167,8 @@ public class LandingPage extends AppCompatActivity
                                     editor.putString("oldSecAns", secAns);
                                     editor.putString("oldBirthdate", birthdate);
                                     editor.putString("oldEmail", email);
+                                    editor.putInt("stars", stars);
+                                    editor.putString("reward", reward);
                                     editor.apply();
                                     user_name_display.setText(name + "'s Account");
 
@@ -209,7 +204,7 @@ public class LandingPage extends AppCompatActivity
         if (id == R.id.menu_option) {
             startActivity(new Intent(LandingPage.this, MenuActivity.class));
         } else if (id == R.id.rewards_option) {
-
+            startActivity(new Intent(LandingPage.this, RewardsActivity.class));
         } else if (id == R.id.music_option) {
             startActivity(new Intent(LandingPage.this, SpotifyActivity.class));
         } else if (id == R.id.specials_option) {
@@ -223,8 +218,6 @@ public class LandingPage extends AppCompatActivity
             editor.putString("logout","1");
             editor.putString("password","");
             editor.apply();
-        } else if (id == R.id.my_account_option) {
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
