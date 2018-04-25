@@ -34,6 +34,10 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
+            android:name=".ForgotPassword3"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
             android:name=".SignUpActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
@@ -87,9 +91,6 @@
             android:name=".PaymentDetails"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ForgotPassword3"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".SelectSizeBrewedBubbleMilkshakeCoffee"
             android:screenOrientation="portrait" />
         <activity
@@ -100,7 +101,12 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".PayPalOrder"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RewardsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_rewards"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

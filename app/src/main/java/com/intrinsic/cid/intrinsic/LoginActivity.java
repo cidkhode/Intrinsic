@@ -75,6 +75,8 @@ public class LoginActivity extends AppCompatActivity {
                                 String secAns = jsonResponse.getString("secAns");
                                 String birthdate = jsonResponse.getString("birthdate");
                                 String email = jsonResponse.getString("email");
+                                int stars = jsonResponse.getInt("stars");
+                                String reward = jsonResponse.getString("reward");
 
                                 SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                                 SharedPreferences.Editor editor = UserInfo.edit();
@@ -87,6 +89,8 @@ public class LoginActivity extends AppCompatActivity {
                                 editor.putString("oldBirthdate", birthdate);
                                 editor.putString("oldEmail", email);
                                 editor.putInt("custID", custID);
+                                editor.putInt("stars", stars);
+                                editor.putString("reward", reward);
 
                                 if(checkbox.isChecked()){
                                     try{
