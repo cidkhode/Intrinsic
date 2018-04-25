@@ -23,8 +23,8 @@ public class MenuCoffeeActivity extends AppCompatActivity
     double smallCaramelMacchiatoPrice = 3.15;
     double largeCaramelMacchiatoPrice = 4.15;
 
-    double smallMochaPrice = 2.65;
-    double largeMochaPrice = 3.65;
+    double smallMochaPrice = 2.90;
+    double largeMochaPrice = 3.90;
 
     double smallWhiteBlackMochasPrice = 3.15;
     double largeWhiteBlackMochasPrice = 4.15;

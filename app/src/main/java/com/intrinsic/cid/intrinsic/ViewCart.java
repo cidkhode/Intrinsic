@@ -1,21 +1,28 @@
 package com.intrinsic.cid.intrinsic;
 
 import android.content.Intent;
+import android.database.DataSetObserver;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 public class ViewCart extends AppCompatActivity {
 TextView cart;
-TextView priceOfCart;
-Button placeOrder;
-double totalPrice;
+ListView cartListView;
+static TextView priceOfCart;
+static Button placeOrder;
+static double totalPrice;
 String formattedPrice;
+ArrayList<ItemInCart> itemNames;
+CartListAdapter cartListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,33 +30,36 @@ String formattedPrice;
         setContentView(R.layout.activity_view_cart);
 
         cart = (TextView) findViewById(R.id.cartView);
+        cartListView = (ListView) findViewById(R.id.cartListView);
         priceOfCart = (TextView) findViewById(R.id.priceOfCartTextView);
         placeOrder = (Button) findViewById(R.id.placeOrder);
-
+        itemNames = new ArrayList<ItemInCart>();
+        totalPrice = 0;
         if(LandingPage.cart.size() == 0) {
-            cart.setText("Cart: \nNo Items to Show!");
+            cart.setText("Cart: No Items to Show!");
+            itemNames.add(new ItemInCart("EMPTY", 0, 0));
             totalPrice = 0.00;
             placeOrder.setEnabled(false);
         } else {
-            StringBuilder sb = new StringBuilder();
-            sb.append("Cart: \n---\n");
+            cart.setText("Cart:");
             for(String key: LandingPage.cart.keySet()) {
-                double priceOfEach = LandingPage.cart.get(key);
+                double priceOfEach = LandingPage.cart.get(key)[0];
+                itemNames.add(new ItemInCart(key, priceOfEach, 1));
                 totalPrice+=priceOfEach;
-                sb.append(key + " \n$" + String.format("%.2f", priceOfEach) + "\n---\n");
             }
-            String cartText = sb.toString();
-            cart.setText(cartText);
             placeOrder.setEnabled(true);
         }
+
+        cartListAdapter = new CartListAdapter(this, R.layout.cart_list, itemNames);
+        cartListView.setAdapter(cartListAdapter);
+
         formattedPrice = String.format("%.2f", totalPrice);
         priceOfCart.setText("$" + formattedPrice);
-
     }
 
     public void payOrder(View view) {
         Intent intent = new Intent(ViewCart.this, PayPalOrder.class);
-        intent.putExtra("amount", formattedPrice);
+        intent.putExtra("amount", priceOfCart.getText().toString().replaceAll("$", ""));
         startActivity(intent);
     }
 }

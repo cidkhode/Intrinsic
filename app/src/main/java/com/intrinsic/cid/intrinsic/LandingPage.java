@@ -31,7 +31,7 @@ import java.util.HashMap;
 public class LandingPage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public static HashMap<String, Double> cart;
+    public static HashMap<String, double[]> cart;
     String editMode = "false"; //this represents if the user is in edit mode or not
 
     @Override
@@ -39,8 +39,10 @@ public class LandingPage extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
 
+        Intent intent = getIntent();
+
         //display name using shared preferences
-        cart = new HashMap<String, Double>();
+        cart = new HashMap<String, double[]>();
         SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String name = displayUserInfo.getString("name", "");
         String oldPhoneNumber = displayUserInfo.getString("oldPhoneNumber", "");

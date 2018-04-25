@@ -3,28 +3,38 @@ package com.intrinsic.cid.intrinsic;
 import java.util.HashMap;
 
 public class Cart {
-    public HashMap<String, Double> items_with_prices;
-    public Cart(HashMap<String, Double> item_with_prices) {
+    public HashMap<String, double[]> items_with_prices;
+    public Cart(HashMap<String, double[]> item_with_prices) {
         this.items_with_prices = item_with_prices;
     }
 
-    public HashMap<String, Double> getItems_with_prices() {
+    public HashMap<String, double[]> getItems_with_prices() {
         System.out.println("---CART: " + items_with_prices.toString() + " ---");
         return items_with_prices;
     }
 
-    public void addItem(String item, double price) {
-        items_with_prices.put(item, price);
-        System.out.println("---PUT ITEM: " + item + " IN THE CART WITH PRICE: " + price + " + !");
+    public void addItem(String item, double price, double quantity) {
+        items_with_prices.put(item, new double[]{price, quantity});
+        System.out.println("---PUT ITEM: " + item + " IN THE CART WITH PRICE: " + price + " + AND QUANTITY: " + quantity + " !");
     }
 
     public double getPriceOfItem(String item) {
         if(items_with_prices.containsKey(item)) {
-            return items_with_prices.get(item);
+            return items_with_prices.get(item)[0];
         }
         else {
             System.out.println("---KEY: " + item + " DOES NOT EXIST---");
             return 0.00;
+        }
+    }
+
+    public double getQuantityOfItem(String item) {
+        if(items_with_prices.containsKey(item)) {
+            return items_with_prices.get(item)[1];
+        }
+        else {
+            System.out.println("---KEY: " + item + " DOES NOT EXIST---");
+            return 0;
         }
     }
 }
