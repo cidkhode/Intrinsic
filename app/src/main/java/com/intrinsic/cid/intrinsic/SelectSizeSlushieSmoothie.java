@@ -18,6 +18,7 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
     double largeSmoothieSize;
     double smallSlushieSize;
     double largeSlushieSize;
+    final int maxQuantity = 10;
 
     TextView smallSmoothiePrice;
     TextView largeSmoothiePrice;
@@ -50,6 +51,7 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
     public void addToCart(View view) {
         Button b = (Button) view;
         String newItemName = "";
+        String itemNameWithSize = "";
 
         int id = b.getId();
         if(id == R.id.small_smoothie || id == R.id.large_smoothie) {
@@ -63,15 +65,29 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
             } else if(newItemName.contains("SLUSHIE")){
                 itemPrice = smallSlushieSize;
             }
+            itemNameWithSize = "SMALL " + newItemName;
         } else if(b.getText().toString().equalsIgnoreCase("L A R G E")) {
             if(newItemName.contains("SMOOTHIE")) {
                 itemPrice = largeSmoothieSize;
             } else if(newItemName.contains("SLUSHIE")){
                 itemPrice = largeSlushieSize;
             }
+            itemNameWithSize = "LARGE " + newItemName;
         }
-        LandingPage.cart.put(newItemName, new double[]{itemPrice, 1});
-        Toast.makeText(this, "Added to cart!", Toast.LENGTH_LONG).show();
+        if(LandingPage.cart.containsKey(itemNameWithSize)) {
+            double quantity = LandingPage.cart.get(itemName)[1];
+            quantity++;
+            double price=itemPrice*quantity;
+            if((int) quantity == maxQuantity) {
+                Toast.makeText(this, "Cannot add anymore of this item! Reached max limit!", Toast.LENGTH_LONG).show();
+            } else {
+                LandingPage.cart.put(itemNameWithSize, new double[]{price, quantity});
+                Toast.makeText(this, "Added to cart!", Toast.LENGTH_LONG).show();
+            }
+        } else {
+            LandingPage.cart.put(itemNameWithSize, new double[]{itemPrice, 1});
+            Toast.makeText(this, "Added to cart!", Toast.LENGTH_LONG).show();
+        }
         startActivity(new Intent(SelectSizeSlushieSmoothie.this, MenuActivity.class));
         finish();
     }

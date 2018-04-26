@@ -60,7 +60,29 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
         if (p != null && !p.getItemName().equals("EMPTY")) {
             price = p.getPriceOfItems();
             final String itemName = p.getItemName();
-            quantity = 1;
+            quantity = p.getQuantity();
+            if((int) quantity == 1) {
+                quantityOfItemInCart.setSelection(0);
+            } else if((int) quantity == 2) {
+                quantityOfItemInCart.setSelection(1);
+            } else if((int) quantity == 3) {
+                quantityOfItemInCart.setSelection(2);
+            } else if((int) quantity == 4) {
+                quantityOfItemInCart.setSelection(3);
+            } else if((int) quantity == 5) {
+                quantityOfItemInCart.setSelection(4);
+            } else if((int) quantity == 6) {
+                quantityOfItemInCart.setSelection(5);
+            } else if((int) quantity == 7) {
+                quantityOfItemInCart.setSelection(6);
+            } else if((int) quantity == 8) {
+                quantityOfItemInCart.setSelection(7);
+            } else if((int) quantity == 9) {
+                quantityOfItemInCart.setSelection(8);
+            } else if((int) quantity == 10) {
+                quantityOfItemInCart.setSelection(9);
+            }
+
             itemPriceInCart.setText("$ " + String.format("%.2f", price));
 
             quantityOfItemInCart.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -117,7 +139,6 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
             itemPriceInCart.setText("$ " + String.format("%.2f", 0.00));
             disableButton(deleteItemFromCart, quantityOfItemInCart, itemPriceInCart);
         }
-
         return v;
     }
 

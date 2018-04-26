@@ -44,8 +44,9 @@ CartListAdapter cartListAdapter;
             cart.setText("Cart:");
             for(String key: LandingPage.cart.keySet()) {
                 double priceOfEach = LandingPage.cart.get(key)[0];
-                itemNames.add(new ItemInCart(key, priceOfEach, 1));
-                totalPrice+=priceOfEach;
+                int quantityOfEach = (int) LandingPage.cart.get(key)[1];
+                itemNames.add(new ItemInCart(key, priceOfEach, quantityOfEach));
+                totalPrice+=(priceOfEach*quantityOfEach);
             }
             placeOrder.setEnabled(true);
         }
