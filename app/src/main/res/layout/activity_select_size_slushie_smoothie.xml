@@ -25,11 +25,36 @@
             android:textColor="@color/black"
             android:textSize="24sp" />
 
+
+        <Spinner
+            android:id="@+id/flavorOption1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/selectFlavorsView"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentLeft="true" />
+
+        <Spinner
+            android:id="@+id/flavorOption2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/flavorOption1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentLeft="true" />
+
         <TextView
             android:id="@+id/selectTypeSlushieSmoothieTextView"
             android:layout_width="282dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/selectFlavorsView"
+            android:layout_below="@+id/flavorOption2"
             android:layout_centerHorizontal="true"
             android:text="SELECT SIZE:"
             android:layout_marginTop="20dp"
@@ -114,7 +139,7 @@
             android:textAlignment="center"
             android:paddingRight="2dp"
             android:paddingLeft="2dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="20dp"
             android:textColor="@color/black"
             android:layout_alignLeft="@+id/large_smoothie" />
 
@@ -169,7 +194,7 @@
             android:textAlignment="center"
             android:paddingRight="2dp"
             android:paddingLeft="2dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="20dp"
             android:textColor="@color/black"
             android:layout_alignLeft="@+id/large_slushie" />
 

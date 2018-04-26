@@ -74,7 +74,7 @@ public class MenuBrewedTeaActivity extends AppCompatActivity
 
     public void selectSize(View view) {
         Button itemButton = (Button) view;
-        String itemName = "BREWED TEA: " + itemButton.getText().toString();
+        String itemName = "BREWED TEA: " + itemButton.getText().toString().toUpperCase();
         Intent selectSize = new Intent(MenuBrewedTeaActivity.this, SelectSizeBrewedBubbleMilkshakeCoffee.class);
         selectSize
                .putExtra("itemName", itemName)

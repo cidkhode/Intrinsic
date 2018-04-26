@@ -76,7 +76,7 @@ public class MenuSmoothieActivity extends AppCompatActivity
 
     public void selectSize(View view) {
         Button itemButton = (Button) view;
-        String itemName = itemButton.getText().toString();
+        String itemName = itemButton.getText().toString().toUpperCase();
         Intent selectSize = new Intent(MenuSmoothieActivity.this, SelectSizeSlushieSmoothie.class);
         selectSize
                 .putExtra("itemName", itemName)

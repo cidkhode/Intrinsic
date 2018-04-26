@@ -112,10 +112,10 @@
             android:onClick="selectSize"
             android:stateListAnimator="@null"/>
         <Button
-            android:id="@+id/chamoline_brewed_tea_button"
+            android:id="@+id/chamomile_brewed_tea_button"
             android:background="@color/colorBasic"
             android:clickable="true"
-            android:text="Chamoline"
+            android:text="chamomile"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"
@@ -133,7 +133,7 @@
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_below="@+id/chamoline_brewed_tea_button"
+            android:layout_below="@+id/chamomile_brewed_tea_button"
             android:layout_centerHorizontal="true"
             android:onClick="selectSize"
             android:stateListAnimator="@null"/>

@@ -4,11 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class SelectSizeSlushieSmoothie extends AppCompatActivity {
 
@@ -25,6 +30,9 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
     TextView smallSlushiePrice;
     TextView largeSlushiePrice;
 
+    Spinner selectFlavor1;
+    Spinner selectFlavor2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +42,10 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
         largeSmoothiePrice = (TextView) findViewById(R.id.large_smoothie_price);
         smallSlushiePrice = (TextView) findViewById(R.id.small_slushie_price);
         largeSlushiePrice = (TextView) findViewById(R.id.large_slushie_price);
+        selectFlavor1 = (Spinner) findViewById(R.id.flavorOption1);
+        selectFlavor2 = (Spinner) findViewById(R.id.flavorOption2);
+
+        Flavors flavors = new Flavors();
 
         Intent intent = this.getIntent();
         itemName = intent.getStringExtra("itemName");
@@ -46,13 +58,31 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
         largeSmoothiePrice.setText("Price: $" + String.format("%.2f", largeSmoothieSize));
         smallSlushiePrice.setText("Price: $" + String.format("%.2f", smallSlushieSize));
         largeSlushiePrice.setText("Price: $" + String.format("%.2f", largeSlushieSize));
+
+        ArrayList<String> additionalFlavors = flavors.getSlushie_smoothie_milkshakes_flavors();
+        System.out.println("--------------ITEM: " + itemName);
+        additionalFlavors.remove(additionalFlavors.indexOf(itemName));
+        additionalFlavors.add(0, "None");
+        ArrayAdapter<String> flavors1 =
+                new ArrayAdapter<String>(this,
+                        android.R.layout.simple_spinner_item,
+                        additionalFlavors);
+
+        ArrayAdapter<String> flavors2 =
+                new ArrayAdapter<String>(this,
+                        android.R.layout.simple_spinner_item,
+                        additionalFlavors);
+
+        selectFlavor1.setAdapter(flavors1);
+        selectFlavor2.setAdapter(flavors2);
     }
 
     public void addToCart(View view) {
         Button b = (Button) view;
+        StringBuilder stringBuilder = new StringBuilder();
         String newItemName = "";
+        String itemWithFlavors = "";
         String itemNameWithSize = "";
-
         int id = b.getId();
         if(id == R.id.small_smoothie || id == R.id.large_smoothie) {
             newItemName = "SMOOTHIE: " + itemName;
@@ -74,18 +104,31 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
             }
             itemNameWithSize = "LARGE " + newItemName;
         }
-        if(LandingPage.cart.containsKey(itemNameWithSize)) {
+        stringBuilder.append(itemNameWithSize);
+        String selectedFlavor1 = selectFlavor1.getSelectedItem().toString();
+        String selectedFlavor2 = selectFlavor2.getSelectedItem().toString();
+
+        if(selectedFlavor1.equalsIgnoreCase("None")) {
+            stringBuilder.append("");
+        } else stringBuilder.append(" w/ " + selectedFlavor1);
+
+        if(selectedFlavor2.equalsIgnoreCase("None")) {
+            stringBuilder.append("");
+        } else stringBuilder.append(" w/ " + selectedFlavor2);
+
+        itemWithFlavors = stringBuilder.toString();
+        if(LandingPage.cart.containsKey(itemWithFlavors)) {
             double quantity = LandingPage.cart.get(itemName)[1];
             quantity++;
             double price=itemPrice*quantity;
             if((int) quantity == maxQuantity) {
                 Toast.makeText(this, "Cannot add anymore of this item! Reached max limit!", Toast.LENGTH_LONG).show();
             } else {
-                LandingPage.cart.put(itemNameWithSize, new double[]{price, quantity});
+                LandingPage.cart.put(itemWithFlavors, new double[]{price, quantity});
                 Toast.makeText(this, "Added to cart!", Toast.LENGTH_LONG).show();
             }
         } else {
-            LandingPage.cart.put(itemNameWithSize, new double[]{itemPrice, 1});
+            LandingPage.cart.put(itemWithFlavors, new double[]{itemPrice, 1});
             Toast.makeText(this, "Added to cart!", Toast.LENGTH_LONG).show();
         }
         startActivity(new Intent(SelectSizeSlushieSmoothie.this, MenuActivity.class));

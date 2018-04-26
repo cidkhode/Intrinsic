@@ -101,7 +101,7 @@ public class MenuCoffeeActivity extends AppCompatActivity
 
     public void selectSize(View view) {
         Button itemButton = (Button) view;
-        String buttonText = itemButton.getText().toString();
+        String buttonText = itemButton.getText().toString().toUpperCase();
         String itemName = "COFFEE: " + buttonText;
 
         double smallPrice = 0.00;
@@ -142,8 +142,6 @@ public class MenuCoffeeActivity extends AppCompatActivity
         }
 
         Intent selectSize = new Intent(MenuCoffeeActivity.this, SelectSizeBrewedBubbleMilkshakeCoffee.class);
-
-
         selectSize
                 .putExtra("itemName", itemName)
                 .putExtra("smallSize", smallPrice)
