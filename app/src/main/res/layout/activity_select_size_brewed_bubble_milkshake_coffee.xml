@@ -14,12 +14,48 @@
         android:layout_height="match_parent" >
 
         <TextView
-            android:id="@+id/selectSizeTextView"
+            android:id="@+id/selectFlavorsView_brewed_bubble_milkshake_coffee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="?android:attr/actionBarSize"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="11dp"
+            android:text="SELECT ADDITIONAL FLAVORS:"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/flavorOption1_brewed_bubble_milkshake_coffee"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/selectFlavorsView_brewed_bubble_milkshake_coffee"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentLeft="true" />
+
+        <Spinner
+            android:id="@+id/flavorOption2_brewed_bubble_milkshake_coffee"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/flavorOption1_brewed_bubble_milkshake_coffee"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/selectSizeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flavorOption2_brewed_bubble_milkshake_coffee"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
             android:text="SELECT SIZE:"
             android:textColor="@color/black"
             android:textSize="30sp" />
@@ -28,14 +64,17 @@
             android:id="@+id/smallSize"
             android:layout_width="100dp"
             android:layout_height="35dp"
-            android:layout_below="@id/selectSizeTextView"
-            android:padding="5dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/selectSizeTextView"
+            android:layout_marginStart="50dp"
             android:background="@color/black"
-            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
             android:onClick="addToCart"
-            android:text="S M A L L" />
+            android:padding="5dp"
+            android:text="S M A L L"
+            android:textColor="@color/white"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp" />
 
         <Button
             android:id="@+id/largeSize"
@@ -45,7 +84,7 @@
             android:layout_alignTop="@+id/smallSize"
             android:layout_marginEnd="50dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="41dp"
+            android:layout_marginRight="50dp"
             android:background="@color/black"
             android:textColor="@color/white"
             android:onClick="addToCart"
@@ -55,10 +94,8 @@
             android:id="@+id/smallPriceTextView"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/smallSize"
-            android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/smallSize"
-            android:layout_marginTop="174dp"
+            android:layout_below="@+id/smallSize"
             android:text="Price: $2.00"
             android:textAlignment="center"
             android:textColor="@color/black" />
@@ -70,6 +107,7 @@
             android:layout_alignLeft="@+id/largeSize"
             android:layout_alignStart="@+id/largeSize"
             android:layout_alignTop="@+id/smallPriceTextView"
+            android:layout_below="@+id/selectSizeTextView"
             android:text="Price: $3.00"
             android:textAlignment="center"
             android:textColor="@color/black" />

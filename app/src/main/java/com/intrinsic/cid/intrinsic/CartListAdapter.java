@@ -59,6 +59,7 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
 
         if (p != null && !p.getItemName().equals("EMPTY")) {
             price = p.getPriceOfItems();
+            System.out.println("PPPPPPPPPPPP------Price: " + price);
             final String itemName = p.getItemName();
             quantity = p.getQuantity();
             if((int) quantity == 1) {
@@ -88,17 +89,20 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
             quantityOfItemInCart.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    System.out.println("------HEREEEEEEe-------");
                     RelativeLayout rl = (RelativeLayout) ((ViewGroup) view.getParent().getParent());
                     TextView title = (TextView) rl.getChildAt(0);
                     String name = title.getText().toString();
                     price = p.getPriceOfItems();
+                    System.out.println("PRICE HERE: " + price);
                     ViewCart.totalPrice -= price;
                     quantity = i+1;
                     p.setItemQuantity((int)quantity);
                     price = p.getPriceOfItems();
+                    System.out.println("PRICE HEREeeeeee: " + price);
                     ViewCart.totalPrice += price;
                     ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
-                    LandingPage.cart.put(name, new double[]{price, quantity});
+                    LandingPage.cart.put(name, new double[]{p.getPriceOfItem(), quantity});
                     itemPriceInCart.setText("$ " + String.format("%.2f", price));
                     //Toast.makeText(getContext(), "Quantity: " + quantity + " for: " + title.getText().toString() + " and price is now: " + price, Toast.LENGTH_SHORT).show();
                 }
@@ -116,11 +120,12 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
                     Spinner quantitySelector = (Spinner) rl.getChildAt(1);
                     TextView title = (TextView) rl.getChildAt(0);
                     String name = title.getText().toString();
-                    ViewCart.totalPrice -= LandingPage.cart.get(name)[0];
+                    ViewCart.totalPrice -= (LandingPage.cart.get(name)[0]*LandingPage.cart.get(name)[1]);
                     LandingPage.cart.remove(itemName);
                     disableButton(deleteItemFromCart, quantitySelector, itemPriceInCart);
                     ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
-                    if(ViewCart.totalPrice == 0) {
+                    if(ViewCart.totalPrice == 0 || ViewCart.totalPrice < 0) {
+                        ViewCart.totalPrice+= 0.00;
                         ViewCart.placeOrder.setEnabled(false);
                         ViewCart.placeOrder.setBackgroundResource(R.color.fadedBlack);
                         ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.fadedWhite));

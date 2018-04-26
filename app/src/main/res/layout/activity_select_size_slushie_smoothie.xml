@@ -14,7 +14,7 @@
         android:layout_height="match_parent" >
 
         <TextView
-            android:id="@+id/selectFlavorsView"
+            android:id="@+id/selectFlavorsView_smoothies_slushies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -27,25 +27,25 @@
 
 
         <Spinner
-            android:id="@+id/flavorOption1"
+            android:id="@+id/flavorOption1_slushie_smoothie"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/selectFlavorsView"
+            android:layout_below="@+id/selectFlavorsView_smoothies_slushies"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_alignParentLeft="true" />
 
         <Spinner
-            android:id="@+id/flavorOption2"
+            android:id="@+id/flavorOption2_slushie_smoothie"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/flavorOption1"
+            android:layout_below="@+id/flavorOption1_slushie_smoothie"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_alignParentLeft="true" />
@@ -54,11 +54,11 @@
             android:id="@+id/selectTypeSlushieSmoothieTextView"
             android:layout_width="282dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/flavorOption2"
+            android:layout_below="@+id/flavorOption2_slushie_smoothie"
             android:layout_centerHorizontal="true"
             android:text="SELECT SIZE:"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="20dp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp" />
@@ -69,7 +69,6 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/selectTypeSlushieSmoothieTextView"
             android:layout_below="@+id/selectTypeSlushieSmoothieTextView"
-            android:layout_marginTop="-20dp"
             android:text="Smoothies"
             android:textColor="@color/black"
             android:textSize="24sp"

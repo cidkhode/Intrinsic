@@ -14,5 +14,6 @@ public class ItemInCart {
     public String getItemName(){ return itemName; }
     public int getQuantity(){ return itemQuantity; }
     public void setItemQuantity(int quantity) { itemQuantity = quantity; }
+    public double getPriceOfItem(){ return itemPriceOfItems; }
     public double getPriceOfItems(){ return getQuantity()* itemPriceOfItems; }
 }
