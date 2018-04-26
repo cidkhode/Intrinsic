@@ -193,7 +193,7 @@
             android:id="@+id/red_bean_smoothie_button"
             android:background="@color/colorBasic"
             android:clickable="true"
-            android:text="Red Bear"
+            android:text="Red Bean"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"

@@ -60,7 +60,9 @@ CartListAdapter cartListAdapter;
 
     public void payOrder(View view) {
         Intent intent = new Intent(ViewCart.this, PayPalOrder.class);
-        intent.putExtra("amount", priceOfCart.getText().toString().replaceAll("$", ""));
+        String priceOfCartText = priceOfCart.getText().toString();
+        String price = priceOfCartText.substring(1, priceOfCartText.length());
+        intent.putExtra("amount", price);
         startActivity(intent);
     }
 }
