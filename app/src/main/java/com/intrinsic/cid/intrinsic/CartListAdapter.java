@@ -104,7 +104,7 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
                     ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.white));
                     ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
                 }
-            }else{
+            } else {
                 deleteItemFromCart.setEnabled(true);
                 enableButton(deleteItemFromCart, quantityOfItemInCart, itemPriceInCart);
                 if(ViewCart.totalPrice == 0 || ViewCart.totalPrice < 0) {
@@ -128,23 +128,25 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
             quantityOfItemInCart.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    String name = itemNameInCart.getText().toString();
-                    price = p.getPriceOfItems();
-                    System.out.println("PRICE HERE: " + price);
-                    ViewCart.totalPrice -= price;
-                    quantity = i+1;
-                    p.setItemQuantity((int)quantity);
-                    price = p.getPriceOfItems();
-                    //System.out.println("PRICE HEREeeeeee: " + price);
-                    LandingPage.cart.put(name, new double[]{p.getPriceOfItem(), quantity});
-                    ViewCart.totalPrice = 0.00;
-                    for (String key: LandingPage.cart.keySet()) {
-                        ViewCart.totalPrice += (LandingPage.cart.get(key)[0]*LandingPage.cart.get(key)[1]);
+                    if(disabledButtons.get((int)deleteItemFromCart.getTag()) == false) {
+                        String name = itemNameInCart.getText().toString();
+                        price = p.getPriceOfItems();
+                        System.out.println("PRICE HERE: " + price);
+                        ViewCart.totalPrice -= price;
+                        quantity = i + 1;
+                        p.setItemQuantity((int) quantity);
+                        price = p.getPriceOfItems();
+                        //System.out.println("PRICE HEREeeeeee: " + price);
+                        LandingPage.cart.put(name, new double[]{p.getPriceOfItem(), quantity});
+                        ViewCart.totalPrice = 0.00;
+                        for (String key : LandingPage.cart.keySet()) {
+                            ViewCart.totalPrice += (LandingPage.cart.get(key)[0] * LandingPage.cart.get(key)[1]);
+                        }
+                        //ViewCart.totalPrice += price;
+                        ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
+                        itemPriceInCart.setText("$ " + String.format("%.2f", price));
+                        //Toast.makeText(getContext(), "Quantity: " + quantity + " for: " + title.getText().toString() + " and price is now: " + price, Toast.LENGTH_SHORT).show();
                     }
-                    //ViewCart.totalPrice += price;
-                    ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
-                    itemPriceInCart.setText("$ " + String.format("%.2f", price));
-                    //Toast.makeText(getContext(), "Quantity: " + quantity + " for: " + title.getText().toString() + " and price is now: " + price, Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
@@ -152,6 +154,10 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
 
                 }
             });
+
+
+            System.out.println("--------------------- " + ViewCart.totalPrice + " ---------------------");
+
 
             deleteItemFromCart.setOnClickListener(new View.OnClickListener() {
                 @Override
