@@ -22,10 +22,14 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Type;
 import java.util.HashMap;
 
 public class LandingPage extends AppCompatActivity
@@ -40,10 +44,20 @@ public class LandingPage extends AppCompatActivity
         setContentView(R.layout.activity_landing_page);
 
         Intent intent = getIntent();
-
-        //display name using shared preferences
-        cart = new HashMap<String, double[]>();
         SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+        String cartString = displayUserInfo.getString("CART", "EMPTY");
+        if(cartString.equals("EMPTY")) {
+            System.out.println("-----------CREATED FOR THE FIRST TIME!-----------");
+            cart = new HashMap<String, double[]>();
+        }
+        else {
+            Type typeOfHashMap = new TypeToken<HashMap<String, double[]>>() { }.getType();
+            Gson gson = new GsonBuilder().create();
+            cart = (HashMap) gson.fromJson(cartString, typeOfHashMap);
+            System.out.println("-----------CART LOADED FROM LAST TIME!-----------");
+        }
+        //display name using shared preferences
         String name = displayUserInfo.getString("name", "");
         String oldPhoneNumber = displayUserInfo.getString("oldPhoneNumber", "");
         String oldSecQues = displayUserInfo.getString("oldSecQues", "");

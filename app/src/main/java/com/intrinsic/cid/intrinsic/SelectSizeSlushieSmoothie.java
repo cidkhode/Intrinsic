@@ -1,6 +1,8 @@
 package com.intrinsic.cid.intrinsic;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +11,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -29,11 +33,13 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
 
     Spinner selectFlavor1;
     Spinner selectFlavor2;
+    SharedPreferences.Editor cartDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_size_slushie_smoothie);
+        cartDetails = PreferenceManager.getDefaultSharedPreferences(this).edit();
 
         smallSmoothiePrice = (TextView) findViewById(R.id.small_smoothie_price);
         largeSmoothiePrice = (TextView) findViewById(R.id.large_smoothie_price);
@@ -126,6 +132,12 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
             LandingPage.cart.put(itemWithFlavors, new double[]{itemPrice, 1});
             Toast.makeText(this, "Added to cart!", Toast.LENGTH_LONG).show();
         }
+
+        Gson gson = new Gson();
+        String json = gson.toJson(LandingPage.cart);
+        cartDetails.putString("CART", json);
+        cartDetails.commit();
+
         startActivity(new Intent(SelectSizeSlushieSmoothie.this, MenuActivity.class));
         finish();
     }

@@ -1,6 +1,8 @@
 package com.intrinsic.cid.intrinsic;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -15,6 +17,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -23,6 +27,8 @@ import java.util.List;
 public class CartListAdapter extends ArrayAdapter<ItemInCart> {
     double price;
     double quantity;
+    SharedPreferences.Editor cartDetails = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
+
     ArrayList<Boolean> disabledButtons = new ArrayList<Boolean>();
 
     public CartListAdapter(Context context, int resource) {
@@ -138,6 +144,10 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
                         price = p.getPriceOfItems();
                         //System.out.println("PRICE HEREeeeeee: " + price);
                         LandingPage.cart.put(name, new double[]{p.getPriceOfItem(), quantity});
+                        Gson gson = new Gson();
+                        String json = gson.toJson(LandingPage.cart);
+                        cartDetails.putString("CART", json);
+                        cartDetails.commit();
                         ViewCart.totalPrice = 0.00;
                         for (String key : LandingPage.cart.keySet()) {
                             ViewCart.totalPrice += (LandingPage.cart.get(key)[0] * LandingPage.cart.get(key)[1]);
@@ -167,8 +177,12 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
                     disabledButtons.set(realPosition, true);
                     notifyDataSetChanged();
                     String name = itemNameInCart.getText().toString();
-                    ViewCart.totalPrice = 0.00;
                     LandingPage.cart.remove(name);
+                    Gson gson = new Gson();
+                    String json = gson.toJson(LandingPage.cart);
+                    cartDetails.putString("CART", json);
+                    cartDetails.commit();
+                    ViewCart.totalPrice = 0.00;
                     for (String key: LandingPage.cart.keySet()) {
                         ViewCart.totalPrice += (LandingPage.cart.get(key)[0]*LandingPage.cart.get(key)[1]);
                     }
