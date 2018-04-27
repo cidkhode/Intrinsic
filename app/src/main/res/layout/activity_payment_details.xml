@@ -1,32 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/plain_intrinsic"
+    android:fillViewport="true"
     tools:context=".PaymentDetails">
 
-    <LinearLayout
+    <android.widget.RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="114dp"
+            android:text="Your Order Details:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtId"
             android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/display" />
+
         <TextView
             android:id="@+id/txtAmount"
             android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtId" />
+
         <TextView
             android:id="@+id/txtStatus"
             android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-</android.widget.RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAmount" />
+        <TextView
+            android:id="@+id/starStatus"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="starStatus"
+            android:layout_below="@+id/txtStatus" />
+        <TextView
+            android:id="@+id/rewardStatus"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rewardStatus"
+            android:layout_below="@+id/starStatus" />
+        <Button
+            android:id="@+id/advanceButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="Done Reviewing?"
+            android:textAllCaps="false"
+            android:onClick="landingPage"
+            android:layout_below="@+id/rewardStatus" />
+    </android.widget.RelativeLayout>
+</ScrollView>

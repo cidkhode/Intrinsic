@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 /*
-4-7-2018    CS 491 - Senior Project     Intrinsic Cafe App
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
 Group Members:
 Connor Watson   (PM, Developer)
 Chidanand Khode (Co-PM, Developer)
@@ -17,7 +17,7 @@ This is the first activity a user interacts with.
 They will have two options:
 1) Log In to their existing account
 2) Sign Up for a new account
- */
+*/
 
 public class MainActivity extends AppCompatActivity {
 
