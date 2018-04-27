@@ -116,7 +116,7 @@ public class SelectSizeSlushieSmoothie extends AppCompatActivity {
         if(LandingPage.cart.containsKey(itemWithFlavors)) {
             double quantity = LandingPage.cart.get(itemWithFlavors)[1];
             quantity++;
-            if((int) quantity == maxQuantity) {
+            if((int) quantity > maxQuantity) {
                 Toast.makeText(this, "Cannot add anymore of this item! Reached max limit!", Toast.LENGTH_LONG).show();
             } else {
                 LandingPage.cart.put(itemWithFlavors, new double[]{itemPrice, quantity});

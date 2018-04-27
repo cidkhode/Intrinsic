@@ -141,7 +141,7 @@
             android:id="@+id/mango_passionfruit_brewed_tea_button"
             android:background="@color/colorBasic"
             android:clickable="true"
-            android:text="Mango Passion Fruit"
+            android:text="Mango PassionFruit"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"

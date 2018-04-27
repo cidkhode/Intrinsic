@@ -45,6 +45,7 @@ CartListAdapter cartListAdapter;
             for(String key: LandingPage.cart.keySet()) {
                 double priceOfEach = LandingPage.cart.get(key)[0];
                 int quantityOfEach = (int) LandingPage.cart.get(key)[1];
+                System.out.println("----------QUANTITY HERE: " + quantityOfEach);
                 itemNames.add(new ItemInCart(key, priceOfEach, quantityOfEach));
                 totalPrice+=(priceOfEach*quantityOfEach);
             }

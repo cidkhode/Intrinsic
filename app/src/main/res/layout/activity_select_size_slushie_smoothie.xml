@@ -19,11 +19,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="11dp"
             android:layout_marginBottom="10dp"
-            android:text="SELECT ADDITIONAL FLAVORS:"
+            android:layout_marginTop="11dp"
+            android:textAlignment="center"
+            android:text="SELECT ADD-ONS:"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
 
         <Spinner

@@ -44,6 +44,8 @@
         android:layout_height="25dp"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/itemNameInCart"
+        android:focusable="true"
+        android:clickable="true"
         android:layout_alignTop="@+id/priceOfCartTextView"
         android:background="@drawable/rounded_red_outline"
         android:text="X"

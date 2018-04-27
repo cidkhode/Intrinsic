@@ -46,9 +46,26 @@ public class SelectSizeBrewedBubbleMilkshakeCoffee extends AppCompatActivity {
 
         Flavors flavors = new Flavors();
 
-        ArrayList<String> additionalFlavors = flavors.getSlushie_smoothie_milkshakes_flavors();
+        String selectedFlavor = itemName.substring(itemName.indexOf(":") + 2);
         System.out.println("-----------NAME: " + itemName);
-        additionalFlavors.remove(additionalFlavors.indexOf(itemName));
+        System.out.println("--------------SELECTED FLAVOR: " + selectedFlavor);
+
+        ArrayList<String> additionalFlavors;
+
+        if(itemName.contains("BREWED")) {
+            additionalFlavors = flavors.getBrewed_tea_flavors();
+            additionalFlavors.remove(additionalFlavors.indexOf(selectedFlavor));
+        } else if(itemName.contains("JUICE")) {
+            additionalFlavors = flavors.getBubble_juice_flavors();
+            additionalFlavors.remove(additionalFlavors.indexOf(selectedFlavor));
+        } else if(itemName.contains("CREAMY")) {
+            additionalFlavors = flavors.getBubble_tea_flavors();
+            additionalFlavors.remove(additionalFlavors.indexOf(selectedFlavor));
+        } else if(itemName.contains("MILKSHAKE")) {
+            additionalFlavors = flavors.getSlushie_smoothie_milkshakes_flavors();
+            additionalFlavors.remove(additionalFlavors.indexOf(selectedFlavor));
+        } else additionalFlavors = flavors.getCoffee_and_other_flavors();
+
         additionalFlavors.add(0, "None");
         ArrayAdapter<String> flavors1 =
                 new ArrayAdapter<String>(this,
@@ -96,7 +113,7 @@ public class SelectSizeBrewedBubbleMilkshakeCoffee extends AppCompatActivity {
             double quantity = LandingPage.cart.get(itemWithFlavors)[1];
             quantity++;
             System.out.println("-----------------QUANTITY: " + quantity + " and ITEM PRICE: " + itemPrice + " and multiplied: " + itemPrice*quantity);
-            if((int) quantity == maxQuantity) {
+            if((int) quantity > maxQuantity) {
                 Toast.makeText(this, "Cannot add anymore of this item! Reached max limit!", Toast.LENGTH_LONG).show();
             } else {
                 LandingPage.cart.put(itemWithFlavors, new double[]{itemPrice, quantity});

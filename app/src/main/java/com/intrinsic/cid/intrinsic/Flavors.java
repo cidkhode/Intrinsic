@@ -19,13 +19,12 @@ public class Flavors {
                     "MINT", "ORANGE", "PASSIONFRUIT", "PEACH", "POMEGRANATE", "PINEAPPLE", "STRAWBERRY", "YOGURT"));
 
     public ArrayList<String> brewed_tea_flavors =
-            new ArrayList<String>(Arrays.asList("ENGLISH BREAKFAST", "WILD RASPBERRY HIBISICUS", "POMEGRANATE RASPBERRY",
+            new ArrayList<String>(Arrays.asList("ENGLISH BREAKFAST", "WILD RASPBERRY HIBISCUS", "POMEGRANATE RASPBERRY",
                     "WILD RASPBERRY", "CHAI SPICE", "CHAMOMILE", "LEMON GINGER", "MANGO PASSIONFRUIT", "EARL GRAY / DECAF",
-                    "BLACK TEA", "BLACK TEA", "GREEN TEA", "WHITE TEA", "OOLONG TEA", "JASMINE GREEN TEA"));
+                    "BLACK TEA", "GREEN TEA", "WHITE TEA", "OOLONG TEA", "JASMINE GREEN TEA"));
 
     public ArrayList<String> coffee_and_other_flavors =
-            new ArrayList<String>(Arrays.asList("LATTE", "CAPPUCCINO", "CARAMEL MACCHIATO", "MOCHA", "WHITE MOCHA",
-                    "BLACK + WHITE MOCHA", "COFFEE", "VIETNAMESE COFFEE", "THE LOVER", "ESPRESSO", "CON PANNA", "AMERICANO"));
+            new ArrayList<String>(Arrays.asList("ALMOND MILK", "SOY MILK", "CREAM", "SUGAR"));
 
     public ArrayList<String> getBrewed_tea_flavors() {
         return brewed_tea_flavors;

@@ -414,7 +414,7 @@
             android:id="@+id/passionfruit_smoothie_button"
             android:background="@color/colorBasic"
             android:clickable="true"
-            android:text="Passion Fruit"
+            android:text="PassionFruit"
             android:textAlignment="center"
             android:textSize="20sp"
             android:layout_width="match_parent"

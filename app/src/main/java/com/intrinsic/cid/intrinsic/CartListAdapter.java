@@ -17,11 +17,13 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartListAdapter extends ArrayAdapter<ItemInCart> {
     double price;
     double quantity;
+    ArrayList<Boolean> disabledButtons = new ArrayList<Boolean>();
 
     public CartListAdapter(Context context, int resource) {
         super(context, resource);
@@ -29,10 +31,13 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
 
     public CartListAdapter(Context context, int resource, List<ItemInCart> items) {
         super(context, resource, items);
+        for(int i=0;i<items.size();i++) {
+            disabledButtons.add(false);
+        }
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, final View convertView, ViewGroup parent) {
         View v = convertView;
 
         if (v == null) {
@@ -53,13 +58,13 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
 
         final ItemInCart p = getItem(position);
         final Spinner quantityOfItemInCart = (Spinner) v.findViewById(R.id.quantityOfItemInCart);
-        TextView itemNameInCart = (TextView) v.findViewById(R.id.itemNameInCart);
+        final TextView itemNameInCart = (TextView) v.findViewById(R.id.itemNameInCart);
         final TextView itemPriceInCart = (TextView) v.findViewById(R.id.itemPriceInCart);
         final Button deleteItemFromCart = (Button) v.findViewById(R.id.deleteItemFromCart);
 
         if (p != null && !p.getItemName().equals("EMPTY")) {
             price = p.getPriceOfItems();
-            System.out.println("PPPPPPPPPPPP------Price: " + price);
+           // System.out.println("PPPPPPPPPPPP------Price: " + price);
             final String itemName = p.getItemName();
             quantity = p.getQuantity();
             if((int) quantity == 1) {
@@ -84,25 +89,60 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
                 quantityOfItemInCart.setSelection(9);
             }
 
+            if(disabledButtons.get(position)){
+                deleteItemFromCart.setEnabled(false);
+                disableButton(deleteItemFromCart, quantityOfItemInCart, itemPriceInCart);
+                if(ViewCart.totalPrice == 0 || ViewCart.totalPrice < 0) {
+                    ViewCart.totalPrice+= 0.00;
+                    ViewCart.placeOrder.setEnabled(false);
+                    ViewCart.placeOrder.setBackgroundResource(R.color.fadedBlack);
+                    ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.fadedWhite));
+                    ViewCart.priceOfCart.setText("$" + String.format("%.2f", 0.00));
+                } else {
+                    ViewCart.placeOrder.setEnabled(true);
+                    ViewCart.placeOrder.setBackgroundResource(R.color.black);
+                    ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.white));
+                    ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
+                }
+            }else{
+                deleteItemFromCart.setEnabled(true);
+                enableButton(deleteItemFromCart, quantityOfItemInCart, itemPriceInCart);
+                if(ViewCart.totalPrice == 0 || ViewCart.totalPrice < 0) {
+                    ViewCart.totalPrice+= 0.00;
+                    ViewCart.placeOrder.setEnabled(false);
+                    ViewCart.placeOrder.setBackgroundResource(R.color.fadedBlack);
+                    ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.fadedWhite));
+                    ViewCart.priceOfCart.setText("$" + String.format("%.2f", 0.00));
+                } else {
+                    ViewCart.placeOrder.setEnabled(true);
+                    ViewCart.placeOrder.setBackgroundResource(R.color.black);
+                    ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.white));
+                    ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
+                }
+            }
+
+            itemPriceInCart.setText("$ " + String.format("%.2f", price));
+            itemNameInCart.setText(itemName);
             itemPriceInCart.setText("$ " + String.format("%.2f", price));
 
             quantityOfItemInCart.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    System.out.println("------HEREEEEEEe-------");
-                    RelativeLayout rl = (RelativeLayout) ((ViewGroup) view.getParent().getParent());
-                    TextView title = (TextView) rl.getChildAt(0);
-                    String name = title.getText().toString();
+                    String name = itemNameInCart.getText().toString();
                     price = p.getPriceOfItems();
                     System.out.println("PRICE HERE: " + price);
                     ViewCart.totalPrice -= price;
                     quantity = i+1;
                     p.setItemQuantity((int)quantity);
                     price = p.getPriceOfItems();
-                    System.out.println("PRICE HEREeeeeee: " + price);
-                    ViewCart.totalPrice += price;
-                    ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
+                    //System.out.println("PRICE HEREeeeeee: " + price);
                     LandingPage.cart.put(name, new double[]{p.getPriceOfItem(), quantity});
+                    ViewCart.totalPrice = 0.00;
+                    for (String key: LandingPage.cart.keySet()) {
+                        ViewCart.totalPrice += (LandingPage.cart.get(key)[0]*LandingPage.cart.get(key)[1]);
+                    }
+                    //ViewCart.totalPrice += price;
+                    ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
                     itemPriceInCart.setText("$ " + String.format("%.2f", price));
                     //Toast.makeText(getContext(), "Quantity: " + quantity + " for: " + title.getText().toString() + " and price is now: " + price, Toast.LENGTH_SHORT).show();
                 }
@@ -116,28 +156,35 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
             deleteItemFromCart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    RelativeLayout rl = (RelativeLayout) view.getParent();
-                    Spinner quantitySelector = (Spinner) rl.getChildAt(1);
-                    TextView title = (TextView) rl.getChildAt(0);
-                    String name = title.getText().toString();
-                    ViewCart.totalPrice -= (LandingPage.cart.get(name)[0]*LandingPage.cart.get(name)[1]);
-                    LandingPage.cart.remove(itemName);
-                    disableButton(deleteItemFromCart, quantitySelector, itemPriceInCart);
-                    ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
+                    view.setBackgroundResource(R.drawable.rounded_blue_faded_button);
+                    Integer realPosition = (Integer) view.getTag();
+                    disabledButtons.set(realPosition, true);
+                    notifyDataSetChanged();
+                    String name = itemNameInCart.getText().toString();
+                    ViewCart.totalPrice = 0.00;
+                    LandingPage.cart.remove(name);
+                    for (String key: LandingPage.cart.keySet()) {
+                        ViewCart.totalPrice += (LandingPage.cart.get(key)[0]*LandingPage.cart.get(key)[1]);
+                    }
+
                     if(ViewCart.totalPrice == 0 || ViewCart.totalPrice < 0) {
                         ViewCart.totalPrice+= 0.00;
                         ViewCart.placeOrder.setEnabled(false);
                         ViewCart.placeOrder.setBackgroundResource(R.color.fadedBlack);
                         ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.fadedWhite));
+                        ViewCart.priceOfCart.setText("$" + String.format("%.2f", 0.00));
+                        Toast.makeText(getContext(), "BALANCE = $0.00", Toast.LENGTH_SHORT).show();
                     } else {
                         ViewCart.placeOrder.setEnabled(true);
                         ViewCart.placeOrder.setBackgroundResource(R.color.black);
                         ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.white));
+                        ViewCart.priceOfCart.setText("$" + String.format("%.2f", ViewCart.totalPrice));
+                        System.out.println("---------------------PRICEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE------------- " + ViewCart.totalPrice);
+                        Toast.makeText(getContext(), "BALANCE: " + ViewCart.totalPrice, Toast.LENGTH_LONG).show();
                     }
                 }
             });
-            itemNameInCart.setText(itemName);
-            itemPriceInCart.setText("$ " + String.format("%.2f", price));
+            deleteItemFromCart.setTag(new Integer(position));
         } else {
             quantityOfItemInCart.setVisibility(View.GONE);
             itemNameInCart.setText("Nothing to show!");
@@ -159,6 +206,21 @@ public class CartListAdapter extends ArrayAdapter<ItemInCart> {
             ViewCart.placeOrder.setEnabled(false);
             ViewCart.placeOrder.setBackgroundResource(R.color.fadedBlack);
             ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.fadedWhite));
+        }
+    }
+
+    public void enableButton(Button button, Spinner quantity, TextView price) {
+        button.setEnabled(true);
+        button.setBackgroundResource(R.drawable.rounded_red_outline);
+        button.setTextColor(button.getResources().getColor(R.color.red));
+        quantity.setEnabled(true);
+        quantity.setBackgroundResource(R.drawable.rounded_black_outline);
+        price.setBackgroundResource(R.drawable.rounded_blue_button);
+        price.setTextColor(getContext().getResources().getColor(R.color.blue));
+        if(ViewCart.totalPrice > 0) {
+            ViewCart.placeOrder.setEnabled(true);
+            ViewCart.placeOrder.setBackgroundResource(R.color.black);
+            ViewCart.placeOrder.setTextColor(getContext().getResources().getColor(R.color.white));
         }
     }
 }

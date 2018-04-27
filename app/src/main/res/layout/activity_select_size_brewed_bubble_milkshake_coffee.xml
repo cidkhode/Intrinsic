@@ -21,9 +21,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="11dp"
-            android:text="SELECT ADDITIONAL FLAVORS:"
+            android:text="SELECT ADD-ONS:"
+            android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <Spinner
             android:id="@+id/flavorOption1_brewed_bubble_milkshake_coffee"
