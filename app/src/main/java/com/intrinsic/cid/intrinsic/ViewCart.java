@@ -14,6 +14,18 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This activity lets the user check out
+their cart. They can place an order here.
+*/
+
 public class ViewCart extends AppCompatActivity {
 TextView cart;
 ListView cartListView;

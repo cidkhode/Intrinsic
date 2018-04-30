@@ -15,6 +15,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Button;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This is the activity which shows the user the different
+coffee and other related options they can order. Each button is clickable,
+and allows the user to add a product to their order.
+*/
+
 public class MenuCoffeeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     double smallLattePrice = 2.65;
@@ -84,11 +97,9 @@ public class MenuCoffeeActivity extends AppCompatActivity
         if (id == R.id.menu_option) {
             startActivity(new Intent(MenuCoffeeActivity.this, MenuActivity.class));
         } else if (id == R.id.rewards_option) {
-
+            startActivity(new Intent(MenuCoffeeActivity.this, RewardsActivity.class));
         } else if (id == R.id.music_option) {
             startActivity(new Intent(MenuCoffeeActivity.this, SpotifyActivity.class));
-        } else if (id == R.id.specials_option) {
-
         } else if (id == R.id.contact_us_option) {
             startActivity(new Intent(MenuCoffeeActivity.this, ContactActivity.class));
         }  else if (id == R.id.logout_option) {

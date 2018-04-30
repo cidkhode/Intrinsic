@@ -2,6 +2,17 @@ package com.intrinsic.cid.intrinsic;
 
 import java.util.HashMap;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This class is the cart for storing user orders.
+*/
+
 public class Cart {
     public HashMap<String, double[]> items_with_prices;
     public Cart(HashMap<String, double[]> item_with_prices) {

@@ -18,6 +18,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This activity is for contacting us (quite literally).
+Users can reach out to intrinsic cafe through email
+or phone call. They have access to the social media links.
+Also, they can get directions to Intrinsic Cafe.
+*/
+
 public class ContactActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -86,11 +100,9 @@ public class ContactActivity extends AppCompatActivity
         if (id == R.id.menu_option) {
             startActivity(new Intent(ContactActivity.this, MenuActivity.class));
         } else if (id == R.id.rewards_option) {
-
+            startActivity(new Intent(ContactActivity.this, RewardsActivity.class));
         } else if (id == R.id.music_option) {
             startActivity(new Intent(ContactActivity.this, SpotifyActivity.class));
-        } else if (id == R.id.specials_option) {
-
         } else if (id == R.id.contact_us_option) {
             //do nothing
         } else if (id == R.id.logout_option) {
@@ -131,7 +143,7 @@ public class ContactActivity extends AppCompatActivity
     }
     public void intrinsicWebsite(View view)
     {
-        Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://intrinsiccafeweb.wixsite.com/intrinsiccafe"));
+        Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://intrinsiccafeweb.wixsite.com/mysite"));
         startActivity(spotifyIntent);
     }
     public void googlemaps(View view)

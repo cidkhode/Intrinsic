@@ -16,6 +16,18 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This activity shows the user how many
+rewards they have.
+*/
+
 public class RewardsActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -27,14 +39,7 @@ public class RewardsActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        //String name = displayUserInfo.getString("name", "");
-        //String oldPhoneNumber = displayUserInfo.getString("oldPhoneNumber", "");
-        //String oldSecQues = displayUserInfo.getString("oldSecQues", "");
-        //String oldSecAns = displayUserInfo.getString("oldSecAns", "");
-        //String oldBirthdate = displayUserInfo.getString("oldBirthdate", "");
-        //String oldEmail = displayUserInfo.getString("oldEmail", "");
-        //int custIDint = displayUserInfo.getInt("custID", 0);
-        //final String custID = Integer.toString(custIDint);
+
         int stars = displayUserInfo.getInt("stars", 0);
         String starsStr = Integer.toString(stars); //string to display on top
         String starsStr2 = ""; //string to display on bottom if needed
@@ -178,8 +183,6 @@ public class RewardsActivity extends AppCompatActivity
             //do nothing
         } else if (id == R.id.music_option) {
             startActivity(new Intent(RewardsActivity.this, SpotifyActivity.class));
-        } else if (id == R.id.specials_option) {
-
         } else if (id == R.id.contact_us_option) {
             startActivity(new Intent(RewardsActivity.this, ContactActivity.class));
         } else if (id == R.id.logout_option) {

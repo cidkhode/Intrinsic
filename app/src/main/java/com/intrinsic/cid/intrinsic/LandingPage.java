@@ -34,6 +34,20 @@ import org.json.JSONObject;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This activity is the landing page the user gets
+to upon successful login. They can edit their profile
+here (optional), or use the navigation drawer to bounce
+between activities.
+*/
+
 public class LandingPage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 

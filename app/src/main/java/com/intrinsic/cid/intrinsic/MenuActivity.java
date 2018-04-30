@@ -14,6 +14,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This is the first menu activity a user interacts with.
+They will have the following options:
+View Cart
+Bubble Tea
+Brewed Tea
+Smoothies/Slushies
+Milkshakes
+Coffee
+*/
+
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -55,11 +73,9 @@ public class MenuActivity extends AppCompatActivity
         if (id == R.id.menu_option) {
             //do nothing
         } else if (id == R.id.rewards_option) {
-
+            startActivity(new Intent(MenuActivity.this, RewardsActivity.class));
         } else if (id == R.id.music_option) {
             startActivity(new Intent(MenuActivity.this, SpotifyActivity.class));
-        } else if (id == R.id.specials_option) {
-
         } else if (id == R.id.contact_us_option) {
             startActivity(new Intent(MenuActivity.this, ContactActivity.class));
         }  else if (id == R.id.logout_option) {

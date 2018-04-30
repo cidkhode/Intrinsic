@@ -21,6 +21,18 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This works together with the Card class to allow
+users to interact with their orders in the cart.
+*/
+
 public class CartListAdapter extends ArrayAdapter<ItemInCart> {
     double price;
     double quantity;

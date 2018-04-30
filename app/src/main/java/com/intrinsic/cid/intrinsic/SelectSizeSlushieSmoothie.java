@@ -16,6 +16,18 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This is the activity which allows the user to select flavors and size
+for slushies and smoothies. This also adds the items to the cart.
+*/
+
 public class SelectSizeSlushieSmoothie extends AppCompatActivity {
 
     String itemName;

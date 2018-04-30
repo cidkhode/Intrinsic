@@ -16,6 +16,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This activity lets the user check out
+Intrinsic's Spotify playlists.
+*/
+
 public class SpotifyActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -56,11 +68,9 @@ public class SpotifyActivity extends AppCompatActivity
         if (id == R.id.menu_option) {
             startActivity(new Intent(SpotifyActivity.this, MenuActivity.class));
         } else if (id == R.id.rewards_option) {
-
+            startActivity(new Intent(SpotifyActivity.this, RewardsActivity.class));
         } else if (id == R.id.music_option) {
             //do nothing
-        } else if (id == R.id.specials_option) {
-
         } else if (id == R.id.contact_us_option) {
             startActivity(new Intent(SpotifyActivity.this, ContactActivity.class));
         } else if (id == R.id.logout_option) {

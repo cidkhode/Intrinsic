@@ -16,6 +16,20 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This class is for allowing users to reset their password.
+This is where they can actually reset their password.
+They must enter a valid password, and this will get sent
+hashed to the DB if it is valid.
+*/
+
 public class ForgotPassword3 extends AppCompatActivity {
 
     @Override

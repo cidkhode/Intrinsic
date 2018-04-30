@@ -25,6 +25,17 @@ import java.io.IOException;
 import static com.intrinsic.cid.intrinsic.AESCrypt.decrypt;
 import static com.intrinsic.cid.intrinsic.AESCrypt.encrypt;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This activity is for attempting a login.
+*/
+
 public class LoginActivity extends AppCompatActivity {
     CheckBox checkbox;
 

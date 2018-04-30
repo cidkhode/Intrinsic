@@ -3,6 +3,17 @@ package com.intrinsic.cid.intrinsic;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This class is for storing flavors.
+*/
+
 public class Flavors {
     public ArrayList<String> slushie_smoothie_milkshakes_flavors
             = new ArrayList<String>(Arrays.asList("ALMOND", "BANANA", "BLUEBERRY", "CHOCOLATE", "COCONUT", "GREEN TEA",

@@ -13,6 +13,18 @@ import com.intrinsic.cid.intrinsic.Payment.Payment;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/*
+4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
+Group Members:
+Connor Watson   (PM, Developer)
+Chidanand Khode (Co-PM, Developer)
+Kevin Le        (Developer)
+Spruha Shah     (UX/UI, Web Developer)
+
+This activity is the activity that opens up
+after a user has successfully completed a transaction.
+*/
+
 public class PaymentDetails extends AppCompatActivity {
 
     TextView txtId;
