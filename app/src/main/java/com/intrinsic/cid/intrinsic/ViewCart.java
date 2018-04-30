@@ -24,6 +24,7 @@ Spruha Shah     (UX/UI, Web Developer)
 
 This activity lets the user check out
 their cart. They can place an order here.
+It will bring the user to paypal.
 */
 
 public class ViewCart extends AppCompatActivity {
