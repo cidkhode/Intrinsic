@@ -48,14 +48,22 @@ public class PaymentDetails extends AppCompatActivity {
         try {
             JSONObject jsonObject = new JSONObject(intent.getStringExtra("PaymentDetails"));
             showDetails(jsonObject.getJSONObject("response"), payment_amount, stars, reward);
+            clearCart();
+            System.out.println("----------------------CART CLEARED-----------------------");
         } catch(JSONException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    public void onBackPressed() {
-        //do nothing to prevent going back to login screen without signing out
+    public void onBackPressed() { }
+
+    public void clearCart() {
+        LandingPage.cart.clear();
+        SharedPreferences cartClearer = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = cartClearer.edit();
+        editor.putString("CART", "EMPTY");
+        editor.apply();
     }
 
     private void showDetails(JSONObject response, String paymentAmount, String starsV, String rewardV){

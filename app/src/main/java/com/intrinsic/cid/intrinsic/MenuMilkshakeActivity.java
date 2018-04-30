@@ -1,7 +1,10 @@
 package com.intrinsic.cid.intrinsic;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -70,6 +73,31 @@ public class MenuMilkshakeActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void logout(){
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(this);
+        builder.setTitle(R.string.app_name);
+        builder.setMessage("Do you want to logout? Cart will be cleared!");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                LandingPage.cart.clear();
+                SharedPreferences cartClearer = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor editor = cartClearer.edit();
+                editor.putString("CART", "EMPTY");
+                startActivity(new Intent(MenuMilkshakeActivity.this, MainActivity.class));
+                editor.putString("logout","1");
+                editor.putString("password","");
+                editor.apply();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        android.support.v7.app.AlertDialog alert = builder.create();
+        alert.show();
     }
 
     public void selectSize(View view) {

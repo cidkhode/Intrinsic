@@ -29,4 +29,13 @@
             android:icon="@drawable/ic_message_black_24dp"
             android:title="Contact Us" />
     </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/logout_option"
+                android:icon="@drawable/ic_directions_car_black_24dp"
+                android:title="Logout" />
+        </menu>
+    </item>
 </menu>

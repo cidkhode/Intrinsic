@@ -1,5 +1,6 @@
 package com.intrinsic.cid.intrinsic;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -63,12 +64,7 @@ public class SpotifyActivity extends AppCompatActivity
         } else if (id == R.id.contact_us_option) {
             startActivity(new Intent(SpotifyActivity.this, ContactActivity.class));
         } else if (id == R.id.logout_option) {
-            startActivity(new Intent(SpotifyActivity.this, MainActivity.class));
-            SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-            SharedPreferences.Editor editor = UserInfo.edit();
-            editor.putString("logout","1");
-            editor.putString("password","");
-            editor.apply();
+            logout();
         } else if (id == R.id.my_account_option) {
             startActivity(new Intent(SpotifyActivity.this, LandingPage.class));
         }
@@ -107,5 +103,30 @@ public class SpotifyActivity extends AppCompatActivity
     {
         Intent spotifyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://open.spotify.com/user/intrinsiccafe/playlist/3ktL1Q2N0rsntPJpfYGuSB?si=URMUNyBmT2a_ccg5qqIbdQ"));
         startActivity(spotifyIntent);
+    }
+
+    public void logout(){
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(this);
+        builder.setTitle(R.string.app_name);
+        builder.setMessage("Do you want to logout? Cart will be cleared!");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                LandingPage.cart.clear();
+                SharedPreferences cartClearer = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor editor = cartClearer.edit();
+                editor.putString("CART", "EMPTY");
+                startActivity(new Intent(SpotifyActivity.this, MainActivity.class));
+                editor.putString("logout","1");
+                editor.putString("password","");
+                editor.apply();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        android.support.v7.app.AlertDialog alert = builder.create();
+        alert.show();
     }
 }
