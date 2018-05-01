@@ -178,7 +178,7 @@ public class RewardsActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.menu_option) {
-            startActivity(new Intent(RewardsActivity.this, MenuActivity.class));
+            startActivity(new Intent(RewardsActivity.this, LandingPage.class));
         } else if (id == R.id.rewards_option) {
             //do nothing
         } else if (id == R.id.music_option) {

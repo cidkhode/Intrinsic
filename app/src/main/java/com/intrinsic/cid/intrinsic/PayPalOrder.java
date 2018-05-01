@@ -115,7 +115,7 @@ public class PayPalOrder extends AppCompatActivity {
                 if(confirmation != null) {
                     try {
                         //___________________________________________________________________________________________________________
-                        if (amountInt >= 4) {
+                        if (amountInt >= 0) {
                             String amountIntString = Integer.toString(amountInt);
                             Response.Listener<String> responseListener = new Response.Listener<String>() {
                                 @Override
