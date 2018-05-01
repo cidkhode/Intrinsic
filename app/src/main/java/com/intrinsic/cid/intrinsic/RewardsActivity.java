@@ -12,9 +12,19 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /*
 4-26-2018    CS 491 - Senior Project     Intrinsic Cafe App
@@ -40,6 +50,7 @@ public class RewardsActivity extends AppCompatActivity
 
         SharedPreferences displayUserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
+        final String phoneNumber = displayUserInfo.getString("oldPhoneNumber", "");
         int stars = displayUserInfo.getInt("stars", 0);
         String starsStr = Integer.toString(stars); //string to display on top
         String starsStr2 = ""; //string to display on bottom if needed
@@ -48,7 +59,8 @@ public class RewardsActivity extends AppCompatActivity
         int starsLeft = stars;
         TextView starsView = (TextView) findViewById(R.id.starsCount);
         TextView rewardView = (TextView) findViewById(R.id.rewardView);
-
+        final Button redeemButton = (Button) findViewById(R.id.redeemReward);
+        redeemButton.setEnabled(false);
         if (stars < 10) {
             starsLeft = 10 - stars;
             starsStr2 = Integer.toString(starsLeft);
@@ -64,16 +76,16 @@ public class RewardsActivity extends AppCompatActivity
         progressBar.setMax(10);
         progressBar.setProgress(stars);
 
-        ImageView star1 = (ImageView) findViewById(R.id.starProg1);
-        ImageView star2 = (ImageView) findViewById(R.id.starProg2);
-        ImageView star3 = (ImageView) findViewById(R.id.starProg3);
-        ImageView star4 = (ImageView) findViewById(R.id.starProg4);
-        ImageView star5 = (ImageView) findViewById(R.id.starProg5);
-        ImageView star6 = (ImageView) findViewById(R.id.starProg6);
-        ImageView star7 = (ImageView) findViewById(R.id.starProg7);
-        ImageView star8 = (ImageView) findViewById(R.id.starProg8);
-        ImageView star9 = (ImageView) findViewById(R.id.starProg9);
-        ImageView star10 = (ImageView) findViewById(R.id.starProg10);
+        final ImageView star1 = (ImageView) findViewById(R.id.starProg1);
+        final ImageView star2 = (ImageView) findViewById(R.id.starProg2);
+        final ImageView star3 = (ImageView) findViewById(R.id.starProg3);
+        final ImageView star4 = (ImageView) findViewById(R.id.starProg4);
+        final ImageView star5 = (ImageView) findViewById(R.id.starProg5);
+        final ImageView star6 = (ImageView) findViewById(R.id.starProg6);
+        final ImageView star7 = (ImageView) findViewById(R.id.starProg7);
+        final ImageView star8 = (ImageView) findViewById(R.id.starProg8);
+        final ImageView star9 = (ImageView) findViewById(R.id.starProg9);
+        final ImageView star10 = (ImageView) findViewById(R.id.starProg10);
         if (stars == 1){
             star1.setColorFilter(getResources().getColor(R.color.yellow));
         }
@@ -138,6 +150,7 @@ public class RewardsActivity extends AppCompatActivity
             star9.setColorFilter(getResources().getColor(R.color.yellow));
         }
         else if (stars == 10){
+            redeemButton.setEnabled(true);
             star1.setColorFilter(getResources().getColor(R.color.yellow));
             star2.setColorFilter(getResources().getColor(R.color.yellow));
             star3.setColorFilter(getResources().getColor(R.color.yellow));
@@ -159,6 +172,50 @@ public class RewardsActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.getMenu().getItem(2).setChecked(true);
         navigationView.setNavigationItemSelectedListener(this);
+
+        redeemButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Response.Listener<String> responseListener = new Response.Listener<String>(){
+                    @Override
+                    public void onResponse(String response){
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
+                            if (success) {
+                                redeemButton.setEnabled(false);
+                                SharedPreferences UserInfo = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                                SharedPreferences.Editor editor = UserInfo.edit();
+                                editor.putInt("stars", 0);
+                                editor.apply();
+                                star1.setColorFilter(getResources().getColor(R.color.yellow));
+                                star2.setColorFilter(getResources().getColor(R.color.yellow));
+                                star3.setColorFilter(getResources().getColor(R.color.yellow));
+                                star4.setColorFilter(getResources().getColor(R.color.yellow));
+                                star5.setColorFilter(getResources().getColor(R.color.yellow));
+                                star6.setColorFilter(getResources().getColor(R.color.yellow));
+                                star7.setColorFilter(getResources().getColor(R.color.yellow));
+                                star8.setColorFilter(getResources().getColor(R.color.yellow));
+                                star9.setColorFilter(getResources().getColor(R.color.yellow));
+                                star10.setColorFilter(getResources().getColor(R.color.yellow));
+                                Toast.makeText(RewardsActivity.this, "Reward redeemed!.", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(RewardsActivity.this, LandingPage.class);
+                                RewardsActivity.this.startActivity(intent);
+                            } else {
+                                String warnings = jsonResponse.getString("warnings");
+                                Toast.makeText(RewardsActivity.this,warnings, Toast.LENGTH_LONG).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                RewardsRequest rewardsRequest = new RewardsRequest(phoneNumber, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(RewardsActivity.this);
+                queue.add(rewardsRequest);
+            }
+        });
     }
 
     @Override
